@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>GPX2JSGI（GPX→KMLコンバータ）</title>
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+</head>
+<body>
+<div class="menu">
+<ul>
+<li><a href="index.html">電脳覚書</a> &gt;</li>
+<li><a href="gpsweb.html">TOP</a> &gt;</li>
+<li>GPX2JSGI |</li>
+<li><a href="omap.html">地理院地図</a> |</li>
+<li><a href="gmap.html">Googleマップ</a> |</li>
+<li><a href="ymap.html">Yahoo!地図</a> |</li>
+<li><a href="transition.html">旧版からの移行</a></li>
+</ul>
+</div><!-- end menu -->
+<h1>GPX2JSGI（GPX→KMLコンバータ）</h1>
+<ul>
+<li>更新情報（2014-11-03）：GPX2JSGI Ver.1.5 を公開しました（<a href="download.shtml">ダウンロード</a>）。
+<img src="images/new.gif" alt="NEW" height="11" width="20" /><br />
+(1) 出力形式の初期値をKML形式に変更。<br />
+(2) データフォルダの iconlut.xml が参照されないことがあるバグを修正。</li>
+<li>このサイトに関するご意見・ご質問・ご要望は、<a href="bbs/index.cgi">サポート掲示板</a>へお願いします。</li>
+</ul>
+<h2>GPX2JSGIとは？</h2>
+<p>GPX2JSGI（GPX→KMLコンバータ）は、カシミール3Dで作成してGPX形式で保存したGPSデータ（ウェイポイント、ルート、トラック）を、地理院地図やGoogleマップ、Yahoo!地図にオーバーレイ（上乗せ表示）できるKML形式に変換するデスクトップアプリケーションです。当初は、電子国土Webシステムで上乗せデータとして用いられるJSGI形式への変換を行うソフトウェアとして開発したものですが、その後、KML形式への変換も行えるように機能を拡張したものです。</p>
+<p>電子国土Webシステムが旧版となった現在では、JSGI形式への変換は不要な機能となってしましましたが、GPX2JSGIの名称は当面そのままとする予定です。ここでは、KML形式への変換機能についてのみ説明します。</p>
+<h3>主な機能と特徴</h3>
+<ul>
+<li>カシミール3Dで保存したGPX形式のファイルを、KML形式のファイルに変換します。</li>
+<li>グラフィカルユーザインタフェース（GUI）を備え、データ形式の詳細を知らなくても、簡単に変換できます。</li>
+<li>カシミール3Dで設定したルート、トラックの表示色・線幅や、ウェイポイント、ルートのアイコンを忠実に変換します。</li>
+<li>複数のGPXファイルをまとめて、単一の出力ファイルに変換します（マージ機能）。</li>
+<li>変換の際、トラックポイントを cross track error アルゴリズムを用いて間引くことができます（GPSBabelを利用）。</li>
+<li>KML形式に変換後、引き続いてKMZ形式に圧縮できます。これにより、ファイルサイズは約1/3になります。</li>
+<!-- <li>KMZ形式への圧縮の際、必要なシンボル画像も含んだ自立型パッケージを作成できます。</li> -->
+<li>GPX2JSGIのソフトウェアは、全てスクリプト言語（変換部分はXSLT、GUI部分はTcl/Tk）で記述されています。</li>
+</ul>
+<h3>動作環境</h3>
+<p>Windows Vista/7/8で動作します。動作確認はWindows 7とカシミール3D 最新版で行っています。</p>
+<p>GPX2JSGIは、XSLTプロセッサとしてxsltproc、Tcl/Tkインタプリタとしてtclkitを用いています。トラックポイントの間引きにはGPSBabel、KMZ形式へのZIP圧縮にはInfo-ZIPを利用しています。付属ユーティリティのICONVIEWでは、ImageMagickのconvertコマンドを利用しています。これらの外部プログラムは、すぐに利用できる形で統合されて配布パッケージに含まれており、別途入手してインストールする必要はありません。</p>
+<h3>著作権について</h3>
+<p>GPX2JSGIのソフトウェアおよび付属文書の著作権は、作者のあにねこ（anineco@nifty.com）が保持します。本ソフトウェアは無償で提供され、複製を入手した人は商用・非商用を問わず自由に使用、複写、変更、結合、掲載、配布することができます。本ソフトウェアの複製または変更した物を掲載、配布する場合は、ソースコード中の著作権表示は削除できません。</p>
+<p>GPX2JSGIの配布パッケージに同梱されている外部プログラムの著作権については、表1のリンク先を参照して下さい。</p>
+<table border="1" cellpadding="1" cellspacing="1">
+<caption>表1 GPX2JSGIの配布パッケージに同梱される外部プログラム</caption>
+<tbody>
+<tr>
+<th valign="top">配布元</th>
+<th valign="top">利用している配布ファイル</th>
+<th valign="top">ライセンス</th>
+</tr>
+<tr>
+<td valign="top"><a href="http://code.google.com/p/tclkit/" class="extern">tclkit</a></td>
+<td valign="top">tclkitsh-8.5.9-win32.upx.exe<br />tclkit-8.5.9-win32.upx.exe<br />sdx-20110317.kit</td>
+<td valign="top"><a href="http://code.google.com/p/tclkit/#License" class="extern">free</a><br />
+</td>
+</tr>
+<tr>
+<td valign="top"><a href="http://xmlsoft.org/" class="extern">libxml</a></td>
+<td valign="top">libxslt-1.1.26.win32.zip<br />libxml2-2.7.8.win32.zip</td>
+<td valign="top"><a href="http://www.opensource.org/licenses/mit-license.html" class="extern">MIT License</a></td>
+</tr>
+<tr>
+<td valign="top"><a href="http://www.gnu.org/software/libiconv/" class="extern">iconv</a></td>
+<td valign="top">iconv-1.9.2.win32.zip</td>
+<td valign="top"><a href="http://www.gnu.org/copyleft/lesser.html" class="extern">LGPL</a></td>
+</tr>
+<tr>
+<td valign="top"><a href="http://zlib.net/" class="extern">zlib</a></td>
+<td valign="top">zlib-1.2.5.win32.zip</td>
+<td valign="top"><a href="http://www.zlib.net/zlib_license.html" class="extern">free</a></td>
+</tr>
+<tr>
+<td valign="top"><a href="http://www.gpsbabel.org/" class="extern">GPSBabel</a></td>
+<td valign="top">GPSBabel-1.4.4-Setup.exe</td>
+<td valign="top"><a href="http://www.gnu.org/copyleft/gpl.html" class="extern">GPL</a></td>
+</tr>
+<tr>
+<td valign="top"><a href="http://www.info-zip.org/" class="extern">Info-ZIP</a></td>
+<td valign="top">zip300xn.zip</td>
+<td valign="top"><a href="http://www.info-zip.org/license.html" class="extern">BSD-like</a></td>
+</tr>
+<tr>
+<td valign="top"><a href="http://www.imagemagick.org/" class="extern">ImageMagick</a></td>
+<td valign="top">ImageMagick-6.8.8-0-Q16-x86-windows.zip</td>
+<td valign="top"><a href="http://www.imagemagick.org/script/license.php" class="extern">free</a></td>
+</tr>
+</tbody>
+</table>
+<h3>免責事項</h3>
+<p>本ソフトウェアは無保証です。特に、変換結果のデータ形式の正当性・正確性については保証しません。作者は本ソフトウェアに起因するいかなる義務（サポートを含む）についても責任を負いません。</p>
+<h2>導入方法</h2>
+<h3>インストール</h3>
+<p>GPX2JSGIのインストールは、<a href="download.shtml">ダウンロード</a>のページから最新版の配布パッケージ gpx2jsgi-X.X.zip（X.Xはバージョン番号）をダウンロードして、適当なフォルダの下に展開するだけです。配布パッケージを展開すると、gpx2jsgiというフォルダ（以下、GPX2JSGIの<b>アプリフォルダ</b>と呼びます）の元に、下記のファイルが配置されます。</p>
+<pre>
+center.xsl         … 中心座標計算用スタイルシート。
+filter1.xsl        … 軌跡データ間引き用スタイルシート。
+filter2.xsl        … 　〃
+fixver.xsl         … GPX形式修正用スタイルシート。
+geturl.xsl         … KMZ形式作成用スタイルシート。
+gpx2jsgi.exe       … GPX→JSGI/KMLコンバータ実行形式ファイル。
+gpx2jsgi.html      … マニュアル。この文書です。
+gpx2jsgi.tcl       … gpx2jsgi.exeのソースファイル（Tcl/Tkスクリプト）。
+gpx2jsgi.xsl       … GPX→JSGI変換スタイルシート。
+gpx2kml.xsl        … GPX→KML変換スタイルシート。
+iconlut.dtd        … iconlut.xml用DTD。
+iconlut.xml        … アイコン変換表（GPX→JSGI）。
+iconlut_common.xml … アイコン変換表（電子国土共通シンボル）。
+iconlut2html.xsl   … iconlut.xml閲覧用スタイルシート。
+iconview.exe       … シンボル画像作成・一覧実行形式ファイル。
+iconview.tcl       … iconview.exeのソースファイル（Tcl/Tkスクリプト）。
+identity.xsl       … 汎用恒等変換スタイルシート（XML Hacks p.129 から転載）。
+jsgi2gpx.xsl
+jsgi2kml.exe       … JSGI→KMLコンバータ実行形式ファイル。
+jsgi2kml.tcl       … jsgi2kml.exeのソースファイル（Tcl/Tkスクリプト）。
+jsgi2kml.xsl       … JSGI→KML変換スタイルシート。
+mkexe.bat          … Tck/Tkスクリプトをラッピングして実行形式ファイルを作成するバッチファイル。
+puturl.xsl         … KMZ形式作成用スタイルシート。
+bin/*              … 外部プログラム。
+css/*              … マニュアル用CSS。
+example/*          … サンプルのGPXデータと、それを変換して得られたファイル。
+images/*           … マニュアル用画像ファイル。
+js/*               … マニュアル用JavaScript。
+</pre>
+<h3>バージョンアップ</h3>
+<p>GPX2JSGIのバージョンアップは、旧バージョンのアプリフォルダをまるごと削除して、新バージョンのアプリフォルダで置き換えます。</p>
+<p>Ver.1.2以前のGPX2JSGIでシンボル画像をカスタマイズしていた場合は、アプリフォルダを削除する前に中のiconlut.xmlのバックアップを作成し、GPX2JSGIのデータフォルダにコピーします。データフォルダの場所については、<a href="#datafolder">データフォルダ</a>の項を参照して下さい。</p>
+<h3>アンインストール</h3>
+<p>GPX2JSGIのアンインストールは、GPX2JSGIのアプリフォルダをまるごと削除して下さい。また、GPX2JSGIの<a href="#datafolder">データフォルダ</a>も、不要であれば削除して差し支えありません。</p>
+<h2>操作方法</h2>
+<h3>起動</h3>
+<p>GPX2JSGIのアプリフォルダ内のgpx2jsgi.exe（青い羽根のアイコン）をクリックすると、GUIが起動して図1のような窓が開きます。ActiveTclがインストール済ならば、gpx2jsgi.tclをクリックしても全く同じ窓が開きます。両者は、Tcl/Tkのインタプリタが内蔵か、外部かが異なるだけで、機能・動作は全く同じです。</p>
+<p style="text-align:center;"><img src="images/gui.png" alt="図1" height="408" width="772" /><br />図1 GUI画面</p>
+<h3>入出力ファイル指定</h3>
+<p>変換したいGPXファイル（1個以上）を、右側の『←追加』ボタンを押してファイル選択ダイアログを開き、「GPXファイル」のリストに追加します。ファイル選択ダイアログでは、ControlキーやShiftキーを押しながらクリックすることにより、複数ファイルを同時に選択することができます。リスト中のファイルをマウスで選択して『除外』ボタンを押すと、リストから取り除くことが出来ます。また、『クリア』ボタンを押すと、リストは空になります。</p>
+<p>次に、「出力形式」をJSGI、KML、GPXの中から選択し（起動時はKMLが選択されています）、「出力ファイル」を右側の『選択』ボタンを押して指定します。出力ファイルの拡張子は、出力形式に対応してそれぞれ .xml、.kml、.gpx として下さい。拡張子を指定しなかった場合は、自動的に付加されます。</p>
+<h3>メタデータ設定</h3>
+<p>通常は「メタデータを付加」欄のチェックは外したままで差し支えありません。</p>
+<p>「メタデータを付加」欄にチェックを入れると、その下の各欄が図2のように編集可能になり、設定した文字列がメタデータとして出力ファイルに書き込まれます。GPX2JSGIを初めて立ち上げたときは「提供者」以下は空欄になっているので、適宜記入して下さい。</p>
+<p>各項目の意味は、次の通りです。図2に記入例があります。</p>
+<ul>
+  <li><b>データセット名</b>：データのタイトル。</li>
+  <li><b>作成日</b>：データを作成した日付。YYYY-MM-DDの形式で設定します。</li>
+  <li><b>提供者</b>：データ作成者の名称。</li>
+  <li><b>Email</b>：データ作成者のEmail。</li>
+  <li><b>URL</b>：データ作成者のウェブサイトのURL。</li>
+  <li><b>摘要</b>：よくわかりません(^^;)</li>
+</ul>
+<p>出力形式がKMLの場合は、データセット名、作成日、提供者、URLが出力ファイルに書き込まれます。</p>
+<p>記入したメタデータのうち、提供者、Email、URL、摘要は自動的に保存され、次にGPX2JSGIを起動したときに自動的に読み込まれます。</p>
+<h3>トラックポイント間引き設定</h3>
+<p>トラックポイントを間引く場合は、「軌跡を間引く」欄にチェックを入れて下さい。すると、その下の「許容誤差」のスピンボックスが編集可能になるので、正の数値（単位はkm）を設定します。間引きには、cross track errorアルゴリズムを用いたGPSBabelのSimplifyフィルタを利用しています。許容誤差を大きくすると間引かれる点数が増えますが、軌跡の細部の形状が失われるので、調節が必要です。最初は初期設定値（0.005km）で試してみて下さい。</p>
+<p style="text-align:center;"><img src="images/gui_setup.png" alt="図2" height="408" width="772" /><br />図2 変換準備完了後のGUI画面</p>
+<h3>変換実行</h3>
+<p>全ての必要項目を記入したのちに『変換』ボタンを押すと、変換結果が「出力ファイル」に指定したファイルに出力されます。変換が成功すると、図3に示すように、変換後のトラックポイント数と中心座標の計算結果（緯度、経度。単位は度）を表示します。中心座標は『コピー』ボタンを押すとクリップボードにコピーされ、他のアプリケーションにペーストすることができます。</p>
+<p style="text-align:center;"><img src="images/gui_result.png" alt="図3" height="408" width="772" /><br />図3 変換実行後のGUI画面</p>
+<p>KMLファイルに変換後に『KML→KMZ』ボタンを押すと、引き続いてKMZ形式に変換し、拡張子を.kmzに変えたファイル名で出力します。</p>
+<p>『終了』ボタンを押すと、プログラムを終了します。</p>
+<h2>変換仕様</h2>
+<h3>ウェイポイント</h3>
+<p>カシミール3Dの「ウェイポイント/ルートポイントのプロパティ」（図4）の設定項目が、地理院地図でどのように表示されるかを説明します。</p>
+<p style="text-align:center;"><img src="images/wptprop.png" alt="図4" height="343" width="403" /><br />図4 ウェイポイント/ルートポイントのプロパティ</p>
+<ul>
+  <li><b>アイコン</b>：カシミール3Dで指定したアイコンは、GPX形式の中では「コード番号」で記録されます。GPX2JSGIは、<a href="#datafolder">データフォルダ</a>の「アイコン変換表」（ファイル名 iconlut.xml）を参照して、コード番号を対応するシンボル画像のURLに変換します。初期設定では、http://map.jpn.org/（GPX2JSGIの配布サイトの別名です）に設置済のシンボル画像のセットにアクセスします。この画像セットは、カシミール3Dのアイコンの全てに対応しています。アイコン変換表の詳細と、シンボル画像のカスタマイズの方法については、<a href="#technote">技術情報</a>を参照して下さい。</li>
+  <li><b>名前</b>、<b>GPSでの備考</b>：地理院地図において、シンボル（点型データ）にマウスポインタを重ねると、ポップアップ窓で表示されます。GPSでの備考にはシンボルの属性情報を「項目名1=値1,項目名2=値2,…」のように項目名と値を「=」（イコール）で接続し、カンマ区切りで列挙して記述します。項目名の先頭に「@」（アットマーク）を付けると、その項目は表示されません。また、項目名を「URL」とすると、値はURLと解釈されてハイパーリンクが張られます。</li>
+</ul>
+<h3>ルート</h3>
+<p>カシミール3Dの「ルートデータプロパティ」（図5）の設定項目が、地理院地図でどのように表示されるかを説明します。</p>
+<p style="text-align:center;"><img src="images/rteprop.png" alt="図5" height="232" width="455" /><br />図5 ルートデータプロパティ</p>
+<ul>
+  <li><b>表示色</b>：カシミール3Dで指定した色は、透過率50%で表示されます。</li>
+  <li><b>線幅</b>：カシミール3Dで指定した幅（1〜9）を地図上の幅（単位はピクセル）として表示します。地図の縮尺を変えても線幅は変化しません。</li>
+  <li><b>線種</b>：カシミール3Dで指定した種類に関わらず実線で表示されます。</li>
+</ul>
+<p>カシミール3Dでは、ルート上の各ポイントに対しても図4の「ウェイポイントのプロパティ」を開いて、全く同様のプロパティを設定することができます。GPX2JSGI Ver.1.2より、ルートポイントもウェイポイントと同様にJSGI形式に変換するように、仕様が変更されました。ただし、アイコンが「地名」グループの「なし」（コード番号903001）のルートポイントは例外で、変換されません（「なし」アイコンのウェイポイントは変換されます）。ルートポイントを変換したくない場合は、アイコンを「なし」に設定して下さい。複数のルートポイントを選択してから「ウェイポイントのプロパティ」を開くと、アイコンの一括変更が可能です。</p>
+<h3>トラック</h3>
+<p>カシミール3Dの「トラックデータプロパティ」（図6）の設定項目が、地理院地図でどのように表示されるかを説明します。</p>
+<p style="text-align:center;"><img src="images/trkprop.png" alt="図6" height="235" width="494" /><br />図6 トラックデータプロパティ</p>
+<ul>
+  <li><b>表示色</b>、<b>線幅</b>、<b>線種</b>：ルートの場合と同様です。</li>
+  <li><b>アイコン</b>：トラックデータに指定したアイコンは変換対象外です。</li>
+</ul>
+<h2><a name="technote"></a>技術情報</h2>
+<h3><a name="datafolder"></a>データフォルダ</h3>
+<p>Ver.1.2およびそれ以降のGPX2JSGIでは、実行時に参照するアイコン変換表やその他のデータを %APPDATA%\map.jpn.org\gpx2jsgi をパスとするフォルダに置きます。このフォルダを、GPX2JSGIの<b>データフォルダ</b>と呼びます。ここで、%APPDATA%はWindowsのApplication Dataフォルダを指す環境変数で、OSによって次のように定められています。</p>
+<table summary="*" border="1" cellpadding="1" cellspacing="1" width="100%">
+  <tbody>
+    <tr>
+      <th>OS</th>
+      <th>Application Dataフォルダ</th>
+    </tr>
+    <tr>
+      <td valign="top">Windows XP</td>
+	  <td valign="top">\Documents and Settings\<var>&lt;ユーザ名&gt;</var>\Application Data</td>
+    </tr>
+    <tr>
+      <td valign="top">Windows Vista/7</td>
+	  <td valign="top">\Users\<var>&lt;ユーザ名&gt;</var>\AppData\Roaming</td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align:center;">（参考：<a href="http://msdn.microsoft.com/ja-jp/windows/dd882533.aspx" class="extern">リソースの管理 - Windows 7 対応アプリケーションの互換性</a>）</p>
+<p>Application Dataフォルダは隠しフォルダになっているので、通常はエクスプローラに表示されませんが、アドレスバーに%APPDATA%と入力すると開くことができます。</p>
+<h3><a name="iconlut"></a>アイコン変換表</h3>
+<p>アイコン変換表は、カシミール3Dのアイコンのコード番号と、シンボル画像のURLの対応を定義します。GPX2JSGIが変換を実行する際には、データフォルダのiconlut.xmlがアイコン変換表として参照されます。GPX2JSGIを起動した際にこのファイルがない場合は、アプリフォルダから自動的にコピーされます。アイコン変換表を編集することにより、シンボル画像を自由にカスタマイズすることができます。</p>
+<p>下記は、アイコン変換表のファイル形式を説明するために、iconlut.xmlの冒頭の数行を抜粋したものです。丸数字は説明のために付したもので、実際のファイルには書かれていません。</p>
+<pre class="verbatim-hard">
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?&gt;
+&lt;!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
+&lt;!ENTITY baseurl "<var>http://map.jpn.org/icons/</var>"&gt;&nbsp;<span style="color:red;">①</span>
+]&gt;
+&lt;iconlut&gt;
+&lt;icon code="901001" src="&amp;baseurl;901001.png" size="24"&gt;ピン&lt;/icon&gt;&nbsp;<span style="color:red;">②</span>
+&nbsp;：
+</pre>
+<p>行①は、baseurlという名前（実体名）の内容が、文字列<var>http://map.jpn.org/icons/</var>を示すことを宣言しています。行②は、コード番号901001に対応するシンボル画像のURLとサイズ（24x24画素）を定義しています。シンボル画像の位置の基準は画像の中央で固定です。&amp;baseurl;を実体参照と言い、行①の宣言により実体名の内容に置き換えられるので、このコード番号に対応するシンボル画像のURLは<var>http://map.jpn.org/icons/901001.png</var>となります。</p>
+<h3>付属ユーティリティ</h3>
+<p>ICONVIEWは、カシミール3Dでウェイポイントに設定可能なアイコンをシンボル画像（透過処理済PNG形式）に一括変換し、それ用のアイコン変換表を作成するユーティリティです。動作には、カシミール3Dがインストールされていることが必要です。</p>
+<p>アプリフォルダの中のiconview.exe（青い羽根のアイコン）をクリックしてGUIを起動し、『画像作成』ボタンを押します。作成完了のメッセージを確認してから、引き続いて『一覧表示』ボタンを押します。ブラウザが起動し、作成したシンボル画像の一覧を表示します。『終了』ボタンでICONVIEWを終了します。</p>
+<p>ICONVIEWを実行すると、シンボル画像セットがデータフォルダ内のiconsというフォルダに、アイコン変換表がデータフォルダのiconlut_local.xmlというファイルにそれぞれ出力されます。iconlut_local.xmlのファイル名をiconkml.xmlに変えて、KML形式用のアイコン変換表として用いると、KMLファイルと使用されるシンボル画像をすべて含んだ自立型パッケージのKMZファイルを作成することができます。</p>
+<p><span style="color:red;">！注意！</span>カシミール3Dに付随するデータの著作権は、作者のDAN杉本氏に属するものとされています（<a href="http://www.kashmir3d.com/kash/manual/" class="extern">カシミール3Dマニュアル</a>の24.著作権の章を参照）。ICONVIEWで作成したシンボル画像（カシミール3Dに付随するデータと看做される）は、地図系Web APIやGoogle Earth等を用いて表示されるルート地図の上への表示、および、それらに関連する凡例や説明のための表示に限って、かつ非商用で使用し、その他の用途や商用での使用、特に画像ファイルを単体で配布することはご遠慮下さい。</p>
+<h2>謝辞</h2>
+<p>カシミール3Dという素晴らしいソフトウェアを開発して、無償で提供頂いている作者のDAN杉本氏に感謝致します。また、tclkit、libxml、iconv、zlib、GPSBabel、Info-ZIP、ImageMagickという強力なオープンソフトウェアの開発者にも感謝です。本ソフトウェアが、カシミール3Dと電子国土Webシステムのさらなる活用のお役に立てば幸いです。</p>
+<h2>参考文献</h2>
+<p>各データ形式についての情報と、XSLT、Tck/Tkのプログラミングで大変役に立った書籍を挙げます。</p>
+<ul>
+  <li><a href="http://www.topografix.com/gpx.asp" class="extern">GPX:the GPS Exchange Format</a></li>
+  <li><a href="http://portal.cyberjapan.jp/" class="extern">地理院地図</a>の「技術情報」。</li>
+  <li><a href="https://developers.google.com/kml/documentation/?hl=ja" class="extern">KML 入門用ドキュメント</a></li>
+  <li>Webコンテンツ作成のためのXSLT入門、井上孝司、2002、毎日コミュニケーションズ</li>
+  <li>XML Hacks―エキスパートのためのデータ処理テクニック、マイケル・フィッツジェラルド、2005、オライリー・ジャパン</li>
+  <li>入門 tcl/tk (My UNIX Series)、久野靖、1997、アスキー</li>
+  <li>詳解 Tcl/Tk GUI プログラミング、須栗歩人、2000、秀和システム<br />
+  </li>
+  <li><a href="http://www.freesoftnet.co.jp/tclkits/doc/TclCmdRef/tcl_contents_jp.htm" class="extern">Tcl 8.4.1 Manual Command Reference</a>、</li>
+  <li><a href="http://docs.activestate.com/activetcl/8.5/" class="extern">ActiveTcl User Guide</a></li>
+</ul>
+<h2><a name="history">更新履歴</a></h2>
+<table summary="*" border="1" cellpadding="1" cellspacing="1" width="100%">
+  <tbody>
+    <tr>
+      <td valign="top" nowrap="nowrap">2014-11-03</td>
+      <td valign="top">GPX2JSGI Ver.1.5を公開（Ver.1.4は未公開）。<br />
+(1) 出力形式の初期値をKML形式に変更。<br />
+(2) データフォルダの iconlut.xml が参照されないことがあるバグを修正。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2013-12-28</td>
+      <td valign="top">GPX2JSGI Ver.1.3 （地理院地図対応版）を公開。<br />
+(1) GPX形式から、地理院地図が読み込めるKML形式（KMLウェブ地図プロファイル）に変換。<br />
+(2) JSGI2KML（JSGI→KMLコンバータ）Ver.1.3をGPX2JSGI Ver.1.3に同梱。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2011-03-28</td>
+      <td valign="top">GPX2JSGIの公式サイトを<a href="http://anineco.nyanta.jp/gpx2jsgi.html">http://anineco.nyanta.jp/gpx2jsgi.html</a>に移転して、全面的にリニューアル。<br />
+GPX2JSGI（GPX→JSGIコンバータ）Ver.1.2 を公開。<br />
+(1) インストールの簡易化<br />
+・必要な外部プログラム全てを配布パッケージに同梱。<br />
+・Tclスクリプトをtclkitを用いて実行形式にラッピング。ActiveTclのインストールも不要。<br />
+(2) アイコン変換機能の拡充<br />
+・カシミール3Dのアイコンに対応するシンボル画像をhttp://map.jpn.org/に設置。<br />
+・ルートポイントに設定したアイコンをシンボル画像に変換する機能を追加。<br />
+(3) KML形式への変換にフル対応<br />
+・JSGI形式と同様に、アイコンをシンボル画像に変換。<br />
+・KMZ形式への圧縮の際、必要なシンボル画像も含んだ自立型パッケージの作成が可能。<br />
+(4) GUIの改良<br />
+・GPXファイル選択ダイアログで、複数のファイルを同時に選択可。<br />
+・軌跡間引きの許容誤差の設定にスピンボックスを設置。<br />
+(5) その他<br />
+・設定ファイルや実行時の一時ファイルは、Application Data フォルダの配下に配置するように変更<br />
+・iconviewが生成するシンボル画像が、電子国土プラグイン版で透過しなかった問題を修正。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2010-10-23</td>
+      <td valign="top">GPX2JSGI Ver.1.1β 公開。<br />
+・カシミール3D Ver.8.8.5に対応。<br />
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2010-10-12</td>
+      <td valign="top">カシミール3D Ver.8.8.5 に関する注記を追加。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2010-08-04</td>
+      <td valign="top">GPX2JSGI Ver.1.0β 公開。<br />
+・GPSBabel-1.4.1に対応。<br />
+・外部プログラム（xsltproc,Info-ZIP）を同梱。<br />
+・トラックデータ間引きの許容誤差の初期値を2mから5mに変更。<br />
+・GI要素にXML Schema instance関連の属性を追加。<br />
+      </td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2009-04-26</td>
+      <td valign="top">GPX2JSGI Ver.1.0α 公開。 <br />
+・GPSBabelを利用したトラックデータの間引き機能を追加。 <br />
+・変換後のトラックデータの点数を表示する機能を追加。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2009-01-25</td>
+      <td valign="top">GPX2JSGI Ver.0.9α 公開。 <br />
+・おまけ機能として、KML形式およびGPX形式に変換する機能を追加。 <br />
+・KML形式に変換後、引き続いてKMZ形式に圧縮できる（要、Info-ZIP）。 <br />
+・GPX形式に変換したものは、再びカシミール3Dで読み込める（マージ機能）。 <br />
+・機能追加に対応して、GUIを変更。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2009-01-06</td>
+      <td valign="top">GPX2JSGI Ver.0.8α 公開。 <br />
+・JSGI形式に変換後、中心座標を計算して表示する機能を追加。 <br />
+・変換元のJSGIファイルの数の制限（最大3個）をなくした。これに対応して、ファイル選択のGUIを改善。 <br />
+・プログラム終了時にメタデータの設定項目（提供者、Email、URL、摘要）を gpx2jsgi_init.txt に保存。 <br />
+・カシミール3Dのシンボル画像を表示するツール（iconview）を同梱。 <br />
+・xsltprocとXML2HTMのバイナリファイルは、すべてbinフォルダの下に置くように変更。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2008-12-13</td>
+      <td valign="top">GPX2JSGI Ver.0.7α 公開。 <br />
+・JSGI形式に変換後、引き続いてネイティブ化する機能を追加。 <br />
+・カシミール3Dの全てのアイコン画像に対応するように、iconlut.xmlを拡充。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2008-10-31</td>
+      <td valign="top">GPX2JSGI Ver.0.6α 公開。 <br />
+・異なるシンボルなのに同じ画像で表示されるバグを修正。 <br />
+・ウェイポイントの「GPSでの備考」の変換仕様を変更。 <br />
+・ルートとトラックの線幅・線種の変換仕様を変更。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2008-10-09</td>
+      <td valign="top">TODOに追記。 <br />
+・NDB2JSGIの開発。 <br />
+・公開を検討中の「カシミール3Dフル対応シンボル画像」のスクリーンショットを掲載。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2008-08-18</td>
+      <td valign="top">GPX2JSGI Ver.0.5α 公開。 <br />
+・電子国土Webシステム用XMLデータ仕様書第1.0版（平成20年4月15日更新）に対応。 <br />
+・GI要素のexchangeMode属性を削除。 <br />
+・点型データのCRS要素をposition要素の前に移動。 <br />
+・線型データのCurve要素はcurve要素に変更（先頭小文字）。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap">2008-01-19</td>
+      <td valign="top">GPX2JSGI Ver.0.4α 公開。</td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<address>Copyright &copy; 2008 - 2014 <a href="index.html">あにねこ電脳覚書</a></address>
+</body>
+</html>

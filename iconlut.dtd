@@ -1,0 +1,6 @@
+<?xml encoding="UTF-8"?>
+<!ELEMENT iconlut (icon*)>
+<!ELEMENT icon (#PCDATA)>
+<!ATTLIST icon code CDATA #REQUIRED
+               size CDATA #REQUIRED
+               src  CDATA #REQUIRED>

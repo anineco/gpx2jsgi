@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+version="1.1"
+creator="Kashmir3D 9.101 - http://www.kashmir3d.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://www.topografix.com/GPX/1/1"
+xmlns:kashmir3d="http://www.kashmir3d.com/namespace/kashmir3d"
+xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
+	http://www.kashmir3d.com/namespace/kashmir3d http://www.kashmir3d.com/namespace/kashmir3d.xsd">
+<wpt lat="37.863628" lon="140.675914">
+ <ele>392.350000</ele>
+ <time>2014-01-02T03:37:23Z</time>
+ <name><![CDATA[双子岩]]></name>
+ <cmt><![CDATA[　=　]]></cmt>
+ <sym>Scenic Area</sym>
+ <extensions>
+ <kashmir3d:icon>952014</kashmir3d:icon>
+ </extensions>
+</wpt>
+<wpt lat="37.864992" lon="140.676353">
+ <ele>454.360000</ele>
+ <time>2014-01-02T03:18:38Z</time>
+ <name><![CDATA[羽山]]></name>
+ <cmt><![CDATA[標高=458m]]></cmt>
+ <sym>Summit</sym>
+ <extensions>
+ <kashmir3d:icon>952015</kashmir3d:icon>
+ </extensions>
+</wpt>
+<wpt lat="37.863572" lon="140.668761">
+ <ele>210.180000</ele>
+ <time>2014-01-02T01:48:43Z</time>
+ <name><![CDATA[羽山神社]]></name>
+ <cmt><![CDATA[駐車=2台]]></cmt>
+ <sym>Parking Area</sym>
+ <extensions>
+ <kashmir3d:icon>954025</kashmir3d:icon>
+ </extensions>
+</wpt>
+<wpt lat="37.864281" lon="140.671525">
+ <ele>281.800000</ele>
+ <time>2014-01-02T02:02:13Z</time>
+ <name><![CDATA[羽山登山口]]></name>
+ <cmt><![CDATA[　=　]]></cmt>
+ <sym>Trail Head</sym>
+ <extensions>
+ <kashmir3d:icon>952002</kashmir3d:icon>
+ </extensions>
+</wpt>
+<wpt lat="37.864442" lon="140.677214">
+ <ele>415.900000</ele>
+ <time>2014-01-02T03:33:23Z</time>
+ <name><![CDATA[山頂下駐車場]]></name>
+ <cmt><![CDATA[駐車=15台]]></cmt>
+ <sym>Parking Area</sym>
+ <extensions>
+ <kashmir3d:icon>954025</kashmir3d:icon>
+ </extensions>
+</wpt>
+<wpt lat="37.865822" lon="140.671975">
+ <ele>376.010000</ele>
+ <time>2014-01-02T02:27:43Z</time>
+ <name><![CDATA[出戸羽山]]></name>
+ <cmt><![CDATA[　=　]]></cmt>
+ <sym>Summit</sym>
+ <extensions>
+ <kashmir3d:icon>952015</kashmir3d:icon>
+ </extensions>
+</wpt>
+<wpt lat="37.865297" lon="140.674422">
+ <ele>407.250000</ele>
+ <time>2014-01-02T02:42:58Z</time>
+ <name><![CDATA[中羽山]]></name>
+ <cmt><![CDATA[　=　]]></cmt>
+ <sym>Pin, Green</sym>
+ <extensions>
+ <kashmir3d:icon>951005</kashmir3d:icon>
+ </extensions>
+</wpt>
+</gpx>

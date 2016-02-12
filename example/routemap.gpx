@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:kashmir3d="http://www.kashmir3d.com/namespace/kashmir3d" xmlns:xi="http://www.w3.org/2001/XInclude" version="1.1" creator="GPX2JSGI Ver.1.4">
+  <metadata>
+<name>ルート地図：羽山</name>
+<author>
+<name>あにねこ</name>
+<email id="anineco" domain="nifty.com"/>
+<link href="http://anineco.org/">
+<text>なし</text>
+</link>
+</author>
+<time>2014-01-02</time>
+</metadata>
+  <wpt lat="37.863628" lon="140.675914">
+ <ele>392.350000</ele>
+ <time>2014-01-02T03:37:23Z</time>
+ <name>双子岩</name>
+ <cmt>　=　</cmt>
+ <sym>Scenic Area</sym>
+ <extensions>
+ <kashmir3d:icon>952014</kashmir3d:icon>
+ </extensions>
+</wpt>
+  <wpt lat="37.864992" lon="140.676353">
+ <ele>454.360000</ele>
+ <time>2014-01-02T03:18:38Z</time>
+ <name>羽山</name>
+ <cmt>標高=458m</cmt>
+ <sym>Summit</sym>
+ <extensions>
+ <kashmir3d:icon>952015</kashmir3d:icon>
+ </extensions>
+</wpt>
+  <wpt lat="37.863572" lon="140.668761">
+ <ele>210.180000</ele>
+ <time>2014-01-02T01:48:43Z</time>
+ <name>羽山神社</name>
+ <cmt>駐車=2台</cmt>
+ <sym>Parking Area</sym>
+ <extensions>
+ <kashmir3d:icon>954025</kashmir3d:icon>
+ </extensions>
+</wpt>
+  <wpt lat="37.864281" lon="140.671525">
+ <ele>281.800000</ele>
+ <time>2014-01-02T02:02:13Z</time>
+ <name>羽山登山口</name>
+ <cmt>　=　</cmt>
+ <sym>Trail Head</sym>
+ <extensions>
+ <kashmir3d:icon>952002</kashmir3d:icon>
+ </extensions>
+</wpt>
+  <wpt lat="37.864442" lon="140.677214">
+ <ele>415.900000</ele>
+ <time>2014-01-02T03:33:23Z</time>
+ <name>山頂下駐車場</name>
+ <cmt>駐車=15台</cmt>
+ <sym>Parking Area</sym>
+ <extensions>
+ <kashmir3d:icon>954025</kashmir3d:icon>
+ </extensions>
+</wpt>
+  <wpt lat="37.865822" lon="140.671975">
+ <ele>376.010000</ele>
+ <time>2014-01-02T02:27:43Z</time>
+ <name>出戸羽山</name>
+ <cmt>　=　</cmt>
+ <sym>Summit</sym>
+ <extensions>
+ <kashmir3d:icon>952015</kashmir3d:icon>
+ </extensions>
+</wpt>
+  <wpt lat="37.865297" lon="140.674422">
+ <ele>407.250000</ele>
+ <time>2014-01-02T02:42:58Z</time>
+ <name>中羽山</name>
+ <cmt>　=　</cmt>
+ <sym>Pin, Green</sym>
+ <extensions>
+ <kashmir3d:icon>951005</kashmir3d:icon>
+ </extensions>
+</wpt>
+  <trk>
+    <name>羽山（往路）</name>
+    <number>1</number>
+    <extensions>
+ <kashmir3d:line_color>0000ff</kashmir3d:line_color>
+ <kashmir3d:line_size>2</kashmir3d:line_size>
+ <kashmir3d:line_style>1</kashmir3d:line_style>
+ <kashmir3d:icon>901001</kashmir3d:icon>
+ </extensions>
+    <trkseg>
+<trkpt lat="37.863465000" lon="140.668557000">
+  <ele>205.378784</ele>
+  <time>2014-01-02T01:40:28Z</time>
+</trkpt>
+<trkpt lat="37.863499000" lon="140.668671000">
+  <ele>202.014282</ele>
+  <time>2014-01-02T01:40:58Z</time>
+</trkpt>
+<trkpt lat="37.863512000" lon="140.668494000">
+  <ele>200.572266</ele>
+  <time>2014-01-02T01:42:43Z</time>
+</trkpt>
+<trkpt lat="37.863609000" lon="140.668463000">
+  <ele>198.168945</ele>
+  <time>2014-01-02T01:42:58Z</time>
+</trkpt>
+<trkpt lat="37.863576000" lon="140.668580000">
+  <ele>202.494873</ele>
+  <time>2014-01-02T01:43:28Z</time>
+</trkpt>
+<trkpt lat="37.863639000" lon="140.668538000">
+  <ele>204.417480</ele>
+  <time>2014-01-02T01:43:43Z</time>
+</trkpt>
+<trkpt lat="37.863543000" lon="140.668503000">
+  <ele>208.743408</ele>
+  <time>2014-01-02T01:44:13Z</time>
+</trkpt>
+<trkpt lat="37.863522000" lon="140.668639000">
+  <ele>213.069336</ele>
+  <time>2014-01-02T01:44:43Z</time>
+</trkpt>
+<trkpt lat="37.863531000" lon="140.668489000">
+  <ele>207.301392</ele>
+  <time>2014-01-02T01:46:58Z</time>
+</trkpt>
+<trkpt lat="37.863611000" lon="140.668501000">
+  <ele>208.262817</ele>
+  <time>2014-01-02T01:47:13Z</time>
+</trkpt>
+<trkpt lat="37.863584000" lon="140.668875000">
+  <ele>211.627441</ele>
+  <time>2014-01-02T01:47:58Z</time>
+</trkpt>
+<trkpt lat="37.863583000" lon="140.668743000">
+  <ele>210.185425</ele>
+  <time>2014-01-02T01:48:58Z</time>
+</trkpt>
+<trkpt lat="37.863489000" lon="140.668970000">
+  <ele>211.146729</ele>
+  <time>2014-01-02T01:49:43Z</time>
+</trkpt>
+<trkpt lat="37.863605000" lon="140.669153000">
+  <ele>217.395386</ele>
+  <time>2014-01-02T01:50:28Z</time>
+</trkpt>
+<trkpt lat="37.863396000" lon="140.669384000">
+  <ele>227.489136</ele>
+  <time>2014-01-02T01:51:28Z</time>
+</trkpt>
+<trkpt lat="37.862690000" lon="140.669626000">
+  <ele>228.931152</ele>
+  <time>2014-01-02T01:53:13Z</time>
+</trkpt>
+<trkpt lat="37.862642000" lon="140.669755000">
+  <ele>233.257080</ele>
+  <time>2014-01-02T01:53:28Z</time>
+</trkpt>
+<trkpt lat="37.862837000" lon="140.670212000">
+  <ele>242.389648</ele>
+  <time>2014-01-02T01:54:28Z</time>
+</trkpt>
+<trkpt lat="37.862961000" lon="140.670191000">
+  <ele>244.312256</ele>
+  <time>2014-01-02T01:54:43Z</time>
+</trkpt>
+<trkpt lat="37.863057000" lon="140.669975000">
+  <ele>245.754150</ele>
+  <time>2014-01-02T01:55:28Z</time>
+</trkpt>
+<trkpt lat="37.863405000" lon="140.670038000">
+  <ele>250.560791</ele>
+  <time>2014-01-02T01:56:13Z</time>
+</trkpt>
+<trkpt lat="37.864016000" lon="140.670794000">
+  <ele>266.422485</ele>
+  <time>2014-01-02T01:58:28Z</time>
+</trkpt>
+<trkpt lat="37.864070000" lon="140.670969000">
+  <ele>268.345093</ele>
+  <time>2014-01-02T01:58:58Z</time>
+</trkpt>
+<trkpt lat="37.864276000" lon="140.670988000">
+  <ele>274.113037</ele>
+  <time>2014-01-02T01:59:43Z</time>
+</trkpt>
+<trkpt lat="37.864375000" lon="140.671145000">
+  <ele>276.035645</ele>
+  <time>2014-01-02T02:00:13Z</time>
+</trkpt>
+<trkpt lat="37.864182000" lon="140.671535000">
+  <ele>281.803589</ele>
+  <time>2014-01-02T02:01:13Z</time>
+</trkpt>
+<trkpt lat="37.864322000" lon="140.671486000">
+  <ele>281.322998</ele>
+  <time>2014-01-02T02:01:58Z</time>
+</trkpt>
+<trkpt lat="37.864258000" lon="140.671628000">
+  <ele>280.842407</ele>
+  <time>2014-01-02T02:02:58Z</time>
+</trkpt>
+<trkpt lat="37.864487000" lon="140.672075000">
+  <ele>300.068726</ele>
+  <time>2014-01-02T02:04:58Z</time>
+</trkpt>
+<trkpt lat="37.864459000" lon="140.672135000">
+  <ele>301.029907</ele>
+  <time>2014-01-02T02:07:13Z</time>
+</trkpt>
+<trkpt lat="37.864815000" lon="140.672649000">
+  <ele>326.024170</ele>
+  <time>2014-01-02T02:11:43Z</time>
+</trkpt>
+<trkpt lat="37.865081000" lon="140.672678000">
+  <ele>342.366699</ele>
+  <time>2014-01-02T02:12:58Z</time>
+</trkpt>
+<trkpt lat="37.865153000" lon="140.672795000">
+  <ele>341.885986</ele>
+  <time>2014-01-02T02:13:28Z</time>
+</trkpt>
+<trkpt lat="37.865302000" lon="140.672713000">
+  <ele>351.499146</ele>
+  <time>2014-01-02T02:14:58Z</time>
+</trkpt>
+<trkpt lat="37.865519000" lon="140.672748000">
+  <ele>373.609497</ele>
+  <time>2014-01-02T02:17:28Z</time>
+</trkpt>
+<trkpt lat="37.865505000" lon="140.672604000">
+  <ele>376.974243</ele>
+  <time>2014-01-02T02:17:58Z</time>
+</trkpt>
+<trkpt lat="37.865562000" lon="140.672593000">
+  <ele>377.454834</ele>
+  <time>2014-01-02T02:18:13Z</time>
+</trkpt>
+<trkpt lat="37.865552000" lon="140.671923000">
+  <ele>377.454834</ele>
+  <time>2014-01-02T02:20:43Z</time>
+</trkpt>
+<trkpt lat="37.865649000" lon="140.671814000">
+  <ele>376.493530</ele>
+  <time>2014-01-02T02:21:58Z</time>
+</trkpt>
+<trkpt lat="37.865789000" lon="140.671843000">
+  <ele>372.648193</ele>
+  <time>2014-01-02T02:26:28Z</time>
+</trkpt>
+<trkpt lat="37.865966000" lon="140.672400000">
+  <ele>378.416138</ele>
+  <time>2014-01-02T02:36:43Z</time>
+</trkpt>
+<trkpt lat="37.865946000" lon="140.673152000">
+  <ele>373.128906</ele>
+  <time>2014-01-02T02:38:13Z</time>
+</trkpt>
+<trkpt lat="37.865805000" lon="140.673529000">
+  <ele>375.532104</ele>
+  <time>2014-01-02T02:38:58Z</time>
+</trkpt>
+<trkpt lat="37.865877000" lon="140.673740000">
+  <ele>382.261353</ele>
+  <time>2014-01-02T02:39:43Z</time>
+</trkpt>
+<trkpt lat="37.865762000" lon="140.674237000">
+  <ele>390.913208</ele>
+  <time>2014-01-02T02:41:13Z</time>
+</trkpt>
+<trkpt lat="37.865481000" lon="140.674502000">
+  <ele>406.294312</ele>
+  <time>2014-01-02T02:42:28Z</time>
+</trkpt>
+<trkpt lat="37.865295000" lon="140.674421000">
+  <ele>406.774902</ele>
+  <time>2014-01-02T02:43:13Z</time>
+</trkpt>
+<trkpt lat="37.865512000" lon="140.674433000">
+  <ele>406.294312</ele>
+  <time>2014-01-02T02:44:13Z</time>
+</trkpt>
+<trkpt lat="37.865651000" lon="140.674923000">
+  <ele>402.449097</ele>
+  <time>2014-01-02T02:46:28Z</time>
+</trkpt>
+<trkpt lat="37.865533000" lon="140.675359000">
+  <ele>407.736328</ele>
+  <time>2014-01-02T02:48:43Z</time>
+</trkpt>
+<trkpt lat="37.864912000" lon="140.676292000">
+  <ele>453.879639</ele>
+  <time>2014-01-02T03:01:43Z</time>
+</trkpt>
+<trkpt lat="37.864958000" lon="140.676202000">
+  <ele>456.282959</ele>
+  <time>2014-01-02T03:03:43Z</time>
+</trkpt>
+<trkpt lat="37.865009000" lon="140.676327000">
+  <ele>457.244263</ele>
+  <time>2014-01-02T03:05:13Z</time>
+</trkpt>
+<trkpt lat="37.864931000" lon="140.676309000">
+  <ele>459.166870</ele>
+  <time>2014-01-02T03:05:28Z</time>
+</trkpt>
+<trkpt lat="37.864987000" lon="140.676334000">
+  <ele>457.244263</ele>
+  <time>2014-01-02T03:06:41Z</time>
+</trkpt>
+</trkseg>
+  </trk>
+  <trk>
+    <name>羽山（復路）</name>
+    <number>2</number>
+    <extensions>
+ <kashmir3d:line_color>ff0000</kashmir3d:line_color>
+ <kashmir3d:line_size>2</kashmir3d:line_size>
+ <kashmir3d:line_style>1</kashmir3d:line_style>
+ <kashmir3d:icon>901001</kashmir3d:icon>
+ </extensions>
+    <trkseg>
+<trkpt lat="37.864978000" lon="140.676163000">
+  <ele>445.227661</ele>
+  <time>2014-01-02T03:07:23Z</time>
+</trkpt>
+<trkpt lat="37.864981000" lon="140.676389000">
+  <ele>453.879639</ele>
+  <time>2014-01-02T03:07:38Z</time>
+</trkpt>
+<trkpt lat="37.864924000" lon="140.676288000">
+  <ele>456.282959</ele>
+  <time>2014-01-02T03:19:08Z</time>
+</trkpt>
+<trkpt lat="37.864694000" lon="140.676422000">
+  <ele>454.360229</ele>
+  <time>2014-01-02T03:22:53Z</time>
+</trkpt>
+<trkpt lat="37.864359000" lon="140.676843000">
+  <ele>422.156006</ele>
+  <time>2014-01-02T03:31:23Z</time>
+</trkpt>
+<trkpt lat="37.864574000" lon="140.676966000">
+  <ele>421.675415</ele>
+  <time>2014-01-02T03:31:53Z</time>
+</trkpt>
+<trkpt lat="37.864644000" lon="140.677260000">
+  <ele>416.388184</ele>
+  <time>2014-01-02T03:32:38Z</time>
+</trkpt>
+<trkpt lat="37.864441000" lon="140.677215000">
+  <ele>415.907471</ele>
+  <time>2014-01-02T03:33:23Z</time>
+</trkpt>
+<trkpt lat="37.864145000" lon="140.676954000">
+  <ele>410.620239</ele>
+  <time>2014-01-02T03:34:23Z</time>
+</trkpt>
+<trkpt lat="37.863879000" lon="140.676134000">
+  <ele>396.200562</ele>
+  <time>2014-01-02T03:36:23Z</time>
+</trkpt>
+<trkpt lat="37.863628000" lon="140.675915000">
+  <ele>392.355347</ele>
+  <time>2014-01-02T03:37:23Z</time>
+</trkpt>
+<trkpt lat="37.863566000" lon="140.676008000">
+  <ele>388.510010</ele>
+  <time>2014-01-02T03:38:23Z</time>
+</trkpt>
+<trkpt lat="37.863478000" lon="140.675902000">
+  <ele>383.703247</ele>
+  <time>2014-01-02T03:39:23Z</time>
+</trkpt>
+<trkpt lat="37.863555000" lon="140.675697000">
+  <ele>373.128906</ele>
+  <time>2014-01-02T03:40:53Z</time>
+</trkpt>
+<trkpt lat="37.863483000" lon="140.675595000">
+  <ele>372.167480</ele>
+  <time>2014-01-02T03:41:23Z</time>
+</trkpt>
+<trkpt lat="37.863660000" lon="140.675528000">
+  <ele>366.880249</ele>
+  <time>2014-01-02T03:41:53Z</time>
+</trkpt>
+<trkpt lat="37.863677000" lon="140.675213000">
+  <ele>365.438354</ele>
+  <time>2014-01-02T03:42:38Z</time>
+</trkpt>
+<trkpt lat="37.863759000" lon="140.675074000">
+  <ele>369.283691</ele>
+  <time>2014-01-02T03:43:23Z</time>
+</trkpt>
+<trkpt lat="37.863751000" lon="140.674724000">
+  <ele>368.802979</ele>
+  <time>2014-01-02T03:45:38Z</time>
+</trkpt>
+<trkpt lat="37.863629000" lon="140.674520000">
+  <ele>370.244873</ele>
+  <time>2014-01-02T03:46:23Z</time>
+</trkpt>
+<trkpt lat="37.863680000" lon="140.674384000">
+  <ele>368.322266</ele>
+  <time>2014-01-02T03:47:23Z</time>
+</trkpt>
+<trkpt lat="37.863889000" lon="140.674292000">
+  <ele>361.593140</ele>
+  <time>2014-01-02T03:47:53Z</time>
+</trkpt>
+<trkpt lat="37.863965000" lon="140.674157000">
+  <ele>358.708984</ele>
+  <time>2014-01-02T03:48:08Z</time>
+</trkpt>
+<trkpt lat="37.863897000" lon="140.673794000">
+  <ele>357.747803</ele>
+  <time>2014-01-02T03:49:23Z</time>
+</trkpt>
+<trkpt lat="37.863805000" lon="140.673743000">
+  <ele>358.228394</ele>
+  <time>2014-01-02T03:49:53Z</time>
+</trkpt>
+<trkpt lat="37.863973000" lon="140.673227000">
+  <ele>348.134644</ele>
+  <time>2014-01-02T03:50:53Z</time>
+</trkpt>
+<trkpt lat="37.863881000" lon="140.673016000">
+  <ele>348.615234</ele>
+  <time>2014-01-02T03:51:38Z</time>
+</trkpt>
+<trkpt lat="37.863895000" lon="140.672648000">
+  <ele>341.885986</ele>
+  <time>2014-01-02T03:52:38Z</time>
+</trkpt>
+<trkpt lat="37.863996000" lon="140.672541000">
+  <ele>338.521484</ele>
+  <time>2014-01-02T03:52:53Z</time>
+</trkpt>
+<trkpt lat="37.864215000" lon="140.672661000">
+  <ele>331.311523</ele>
+  <time>2014-01-02T03:53:23Z</time>
+</trkpt>
+<trkpt lat="37.864325000" lon="140.672348000">
+  <ele>318.333618</ele>
+  <time>2014-01-02T03:55:08Z</time>
+</trkpt>
+<trkpt lat="37.864271000" lon="140.672266000">
+  <ele>317.853027</ele>
+  <time>2014-01-02T03:55:53Z</time>
+</trkpt>
+<trkpt lat="37.864376000" lon="140.672074000">
+  <ele>312.085205</ele>
+  <time>2014-01-02T03:56:53Z</time>
+</trkpt>
+<trkpt lat="37.864315000" lon="140.672022000">
+  <ele>312.565796</ele>
+  <time>2014-01-02T03:57:38Z</time>
+</trkpt>
+<trkpt lat="37.864301000" lon="140.671456000">
+  <ele>307.278564</ele>
+  <time>2014-01-02T03:58:53Z</time>
+</trkpt>
+<trkpt lat="37.864428000" lon="140.671281000">
+  <ele>307.278564</ele>
+  <time>2014-01-02T03:59:23Z</time>
+</trkpt>
+<trkpt lat="37.864307000" lon="140.671526000">
+  <ele>304.875244</ele>
+  <time>2014-01-02T04:00:08Z</time>
+</trkpt>
+<trkpt lat="37.864204000" lon="140.671465000">
+  <ele>302.952515</ele>
+  <time>2014-01-02T04:00:23Z</time>
+</trkpt>
+<trkpt lat="37.864353000" lon="140.671132000">
+  <ele>293.820068</ele>
+  <time>2014-01-02T04:01:08Z</time>
+</trkpt>
+<trkpt lat="37.864050000" lon="140.671039000">
+  <ele>286.610229</ele>
+  <time>2014-01-02T04:01:38Z</time>
+</trkpt>
+<trkpt lat="37.864028000" lon="140.670859000">
+  <ele>281.803589</ele>
+  <time>2014-01-02T04:01:53Z</time>
+</trkpt>
+<trkpt lat="37.863791000" lon="140.670630000">
+  <ele>277.958252</ele>
+  <time>2014-01-02T04:02:23Z</time>
+</trkpt>
+<trkpt lat="37.863562000" lon="140.670097000">
+  <ele>276.035645</ele>
+  <time>2014-01-02T04:04:38Z</time>
+</trkpt>
+<trkpt lat="37.863038000" lon="140.670011000">
+  <ele>263.538574</ele>
+  <time>2014-01-02T04:05:23Z</time>
+</trkpt>
+<trkpt lat="37.862835000" lon="140.670248000">
+  <ele>258.251343</ele>
+  <time>2014-01-02T04:05:53Z</time>
+</trkpt>
+<trkpt lat="37.862703000" lon="140.670139000">
+  <ele>256.809326</ele>
+  <time>2014-01-02T04:06:08Z</time>
+</trkpt>
+<trkpt lat="37.862616000" lon="140.669642000">
+  <ele>249.599487</ele>
+  <time>2014-01-02T04:07:23Z</time>
+</trkpt>
+<trkpt lat="37.862743000" lon="140.669506000">
+  <ele>246.715454</ele>
+  <time>2014-01-02T04:07:38Z</time>
+</trkpt>
+<trkpt lat="37.863392000" lon="140.669328000">
+  <ele>236.140991</ele>
+  <time>2014-01-02T04:08:38Z</time>
+</trkpt>
+<trkpt lat="37.863545000" lon="140.669177000">
+  <ele>228.931152</ele>
+  <time>2014-01-02T04:09:38Z</time>
+</trkpt>
+<trkpt lat="37.863418000" lon="140.668964000">
+  <ele>222.201782</ele>
+  <time>2014-01-02T04:10:08Z</time>
+</trkpt>
+<trkpt lat="37.863525000" lon="140.668539000">
+  <ele>214.511230</ele>
+  <time>2014-01-02T04:10:53Z</time>
+</trkpt>
+<trkpt lat="37.863449000" lon="140.668550000">
+  <ele>215.472656</ele>
+  <time>2014-01-02T04:11:27Z</time>
+</trkpt>
+</trkseg>
+  </trk>
+</gpx>

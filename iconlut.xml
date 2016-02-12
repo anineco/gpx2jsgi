@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?>
+<!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
+<!ENTITY baseurl "http://map.jpn.org/icons/">
+]>
+<iconlut>
+<icon code="901001" src="&baseurl;901001.png" size="24">ピン</icon>
+<icon code="901002" src="&baseurl;901002.png" size="24">ポイント</icon>
+<icon code="902001" src="&baseurl;902001.png" size="24">記号</icon>
+<icon code="902002" src="&baseurl;902002.png" size="24">記号</icon>
+<icon code="902003" src="&baseurl;902003.png" size="24">記号</icon>
+<icon code="902004" src="&baseurl;902004.png" size="24">記号</icon>
+<icon code="902005" src="&baseurl;902005.png" size="24">記号</icon>
+<icon code="902006" src="&baseurl;902006.png" size="24">記号</icon>
+<icon code="902007" src="&baseurl;902007.png" size="24">記号</icon>
+<icon code="902008" src="&baseurl;902008.png" size="24">記号</icon>
+<icon code="902009" src="&baseurl;902009.png" size="24">記号</icon>
+<icon code="902010" src="&baseurl;902010.png" size="24">記号</icon>
+<icon code="902011" src="&baseurl;902011.png" size="24">記号</icon>
+<icon code="902012" src="&baseurl;902012.png" size="24">記号</icon>
+<icon code="902013" src="&baseurl;902013.png" size="24">記号</icon>
+<icon code="902014" src="&baseurl;902014.png" size="24">記号</icon>
+<icon code="902015" src="&baseurl;902015.png" size="24">記号</icon>
+<icon code="902016" src="&baseurl;902016.png" size="24">記号</icon>
+<icon code="902017" src="&baseurl;902017.png" size="24">記号</icon>
+<icon code="902018" src="&baseurl;902018.png" size="24">記号</icon>
+<icon code="902019" src="&baseurl;902019.png" size="24">記号</icon>
+<icon code="902020" src="&baseurl;902020.png" size="24">記号</icon>
+<icon code="902021" src="&baseurl;902021.png" size="24">記号</icon>
+<icon code="902022" src="&baseurl;902022.png" size="24">記号</icon>
+<icon code="902023" src="&baseurl;902023.png" size="24">記号</icon>
+<icon code="902024" src="&baseurl;902024.png" size="24">記号</icon>
+<icon code="902025" src="&baseurl;902025.png" size="24">記号</icon>
+<icon code="902026" src="&baseurl;902026.png" size="24">記号</icon>
+<icon code="902027" src="&baseurl;902027.png" size="24">記号</icon>
+<icon code="902028" src="&baseurl;902028.png" size="24">記号</icon>
+<icon code="902029" src="&baseurl;902029.png" size="24">記号</icon>
+<icon code="902030" src="&baseurl;902030.png" size="24">記号</icon>
+<icon code="902031" src="&baseurl;902031.png" size="24">記号</icon>
+<icon code="902032" src="&baseurl;902032.png" size="24">記号</icon>
+<icon code="902033" src="&baseurl;902033.png" size="24">記号</icon>
+<icon code="902034" src="&baseurl;902034.png" size="24">記号</icon>
+<icon code="902035" src="&baseurl;902035.png" size="24">記号</icon>
+<icon code="902036" src="&baseurl;902036.png" size="24">記号</icon>
+<icon code="902037" src="&baseurl;902037.png" size="24">記号</icon>
+<icon code="902038" src="&baseurl;902038.png" size="24">記号</icon>
+<icon code="902039" src="&baseurl;902039.png" size="24">記号</icon>
+<icon code="903001" src="&baseurl;903001.png" size="24">なし</icon>
+<icon code="903002" src="&baseurl;903002.png" size="24">アイコン</icon>
+<icon code="903003" src="&baseurl;903003.png" size="24">アイコン</icon>
+<icon code="903004" src="&baseurl;903004.png" size="24">アイコン</icon>
+<icon code="903005" src="&baseurl;903005.png" size="24">アイコン</icon>
+<icon code="903006" src="&baseurl;903006.png" size="24">アイコン</icon>
+<icon code="903007" src="&baseurl;903007.png" size="24">アイコン</icon>
+<icon code="903008" src="&baseurl;903008.png" size="24">アイコン</icon>
+<icon code="903009" src="&baseurl;903009.png" size="24">アイコン</icon>
+<icon code="903010" src="&baseurl;903010.png" size="24">アイコン</icon>
+<icon code="903011" src="&baseurl;903011.png" size="24">アイコン</icon>
+<icon code="903012" src="&baseurl;903012.png" size="24">アイコン</icon>
+<icon code="903013" src="&baseurl;903013.png" size="24">アイコン</icon>
+<icon code="903014" src="&baseurl;903014.png" size="24">アイコン</icon>
+<icon code="903015" src="&baseurl;903015.png" size="24">アイコン</icon>
+<icon code="903016" src="&baseurl;903016.png" size="24">アイコン</icon>
+<icon code="903017" src="&baseurl;903017.png" size="24">アイコン</icon>
+<icon code="903018" src="&baseurl;903018.png" size="24">アイコン</icon>
+<icon code="903019" src="&baseurl;903019.png" size="24">アイコン</icon>
+<icon code="903020" src="&baseurl;903020.png" size="24">アイコン</icon>
+<icon code="903021" src="&baseurl;903021.png" size="24">アイコン</icon>
+<icon code="903022" src="&baseurl;903022.png" size="24">アイコン</icon>
+<icon code="903023" src="&baseurl;903023.png" size="24">アイコン</icon>
+<icon code="903024" src="&baseurl;903024.png" size="24">アイコン</icon>
+<icon code="903025" src="&baseurl;903025.png" size="24">アイコン</icon>
+<icon code="903026" src="&baseurl;903026.png" size="24">アイコン</icon>
+<icon code="903027" src="&baseurl;903027.png" size="24">アイコン</icon>
+<icon code="903028" src="&baseurl;903028.png" size="24">アイコン</icon>
+<icon code="903029" src="&baseurl;903029.png" size="24">アイコン</icon>
+<icon code="903030" src="&baseurl;903030.png" size="24">アイコン</icon>
+<icon code="903031" src="&baseurl;903031.png" size="24">アイコン</icon>
+<icon code="903032" src="&baseurl;903032.png" size="24">アイコン</icon>
+<icon code="903033" src="&baseurl;903033.png" size="24">アイコン</icon>
+<icon code="903034" src="&baseurl;903034.png" size="24">アイコン</icon>
+<icon code="903035" src="&baseurl;903035.png" size="24">アイコン</icon>
+<icon code="903036" src="&baseurl;903036.png" size="24">アイコン</icon>
+<icon code="903037" src="&baseurl;903037.png" size="24">アイコン</icon>
+<icon code="903038" src="&baseurl;903038.png" size="24">アイコン</icon>
+<icon code="903039" src="&baseurl;903039.png" size="24">アイコン</icon>
+<icon code="903040" src="&baseurl;903040.png" size="24">アイコン</icon>
+<icon code="903041" src="&baseurl;903041.png" size="24">アイコン</icon>
+<icon code="903042" src="&baseurl;903042.png" size="24">アイコン</icon>
+<icon code="903043" src="&baseurl;903043.png" size="24">アイコン</icon>
+<icon code="903044" src="&baseurl;903044.png" size="24">アイコン</icon>
+<icon code="903045" src="&baseurl;903045.png" size="24">アイコン</icon>
+<icon code="903046" src="&baseurl;903046.png" size="24">アイコン</icon>
+<icon code="903047" src="&baseurl;903047.png" size="24">アイコン</icon>
+<icon code="903048" src="&baseurl;903048.png" size="24">アイコン</icon>
+<icon code="903049" src="&baseurl;903049.png" size="24">アイコン</icon>
+<icon code="903050" src="&baseurl;903050.png" size="24">アイコン</icon>
+<icon code="903051" src="&baseurl;903051.png" size="24">アイコン</icon>
+<icon code="903052" src="&baseurl;903052.png" size="24">アイコン</icon>
+<icon code="903053" src="&baseurl;903053.png" size="24">アイコン</icon>
+<icon code="903054" src="&baseurl;903054.png" size="24">アイコン</icon>
+<icon code="903055" src="&baseurl;903055.png" size="24">アイコン</icon>
+<icon code="903056" src="&baseurl;903056.png" size="24">アイコン</icon>
+<icon code="903057" src="&baseurl;903057.png" size="24">アイコン</icon>
+<icon code="903058" src="&baseurl;903058.png" size="24">アイコン</icon>
+<icon code="903059" src="&baseurl;903059.png" size="24">アイコン</icon>
+<icon code="903060" src="&baseurl;903060.png" size="24">アイコン</icon>
+<icon code="903061" src="&baseurl;903061.png" size="24">アイコン</icon>
+<icon code="903062" src="&baseurl;903062.png" size="24">アイコン</icon>
+<icon code="903063" src="&baseurl;903063.png" size="24">アイコン</icon>
+<icon code="903064" src="&baseurl;903064.png" size="24">アイコン</icon>
+<icon code="903065" src="&baseurl;903065.png" size="24">アイコン</icon>
+<icon code="903066" src="&baseurl;903066.png" size="24">アイコン</icon>
+<icon code="903067" src="&baseurl;903067.png" size="24">アイコン</icon>
+<icon code="903068" src="&baseurl;903068.png" size="24">アイコン</icon>
+<icon code="903069" src="&baseurl;903069.png" size="24">アイコン</icon>
+<icon code="903070" src="&baseurl;903070.png" size="24">アイコン</icon>
+<icon code="903071" src="&baseurl;903071.png" size="24">アイコン</icon>
+<icon code="903072" src="&baseurl;903072.png" size="24">アイコン</icon>
+<icon code="903073" src="&baseurl;903073.png" size="24">アイコン</icon>
+<icon code="903074" src="&baseurl;903074.png" size="24">アイコン</icon>
+<icon code="903075" src="&baseurl;903075.png" size="24">アイコン</icon>
+<icon code="903076" src="&baseurl;903076.png" size="24">アイコン</icon>
+<icon code="903077" src="&baseurl;903077.png" size="24">アイコン</icon>
+<icon code="903078" src="&baseurl;903078.png" size="24">アイコン</icon>
+<icon code="903079" src="&baseurl;903079.png" size="24">アイコン</icon>
+<icon code="903080" src="&baseurl;903080.png" size="24">アイコン</icon>
+<icon code="903081" src="&baseurl;903081.png" size="24">アイコン</icon>
+<icon code="903082" src="&baseurl;903082.png" size="24">アイコン</icon>
+<icon code="903083" src="&baseurl;903083.png" size="24">アイコン</icon>
+<icon code="903084" src="&baseurl;903084.png" size="24">アイコン</icon>
+<icon code="903085" src="&baseurl;903085.png" size="24">アイコン</icon>
+<icon code="903086" src="&baseurl;903086.png" size="24">アイコン</icon>
+<icon code="909001" src="&baseurl;909001.png" size="24">[GPS] Waypoint</icon>
+<icon code="909002" src="&baseurl;909002.png" size="24">[GPS] Residence</icon>
+<icon code="909003" src="&baseurl;909003.png" size="24">[GPS] Gas Station</icon>
+<icon code="909004" src="&baseurl;909004.png" size="24">[GPS] Car</icon>
+<icon code="909005" src="&baseurl;909005.png" size="24">[GPS] Fishing Area</icon>
+<icon code="909006" src="&baseurl;909006.png" size="24">[GPS] Boat Ramp</icon>
+<icon code="909007" src="&baseurl;909007.png" size="24">[GPS] Anchor</icon>
+<icon code="909008" src="&baseurl;909008.png" size="24">[GPS] Shipwreck</icon>
+<icon code="909009" src="&baseurl;909009.png" size="24">[GPS] </icon>
+<icon code="909010" src="&baseurl;909010.png" size="24">[GPS] Danger Area</icon>
+<icon code="909011" src="&baseurl;909011.png" size="24">[GPS] Flag</icon>
+<icon code="909012" src="&baseurl;909012.png" size="24">[GPS] Campground</icon>
+<icon code="909013" src="&baseurl;909013.png" size="24">[GPS] </icon>
+<icon code="909014" src="&baseurl;909014.png" size="24">[GPS] Hunting Area</icon>
+<icon code="909015" src="&baseurl;909015.png" size="24">[GPS] Medical Facility</icon>
+<icon code="909016" src="&baseurl;909016.png" size="24">[GPS] Telephone</icon>
+<icon code="909017" src="&baseurl;909017.png" size="24">[GPS] Airport</icon>
+<icon code="909018" src="&baseurl;909018.png" size="24">[GPS] Amusement Park</icon>
+<icon code="909019" src="&baseurl;909019.png" size="24">[GPS] Ball Park</icon>
+<icon code="909020" src="&baseurl;909020.png" size="24">[GPS] Bank</icon>
+<icon code="909021" src="&baseurl;909021.png" size="24">[GPS] Bar</icon>
+<icon code="909022" src="&baseurl;909022.png" size="24">[GPS] Bowling</icon>
+<icon code="909023" src="&baseurl;909023.png" size="24">[GPS] Bridge</icon>
+<icon code="909024" src="&baseurl;909024.png" size="24">[GPS] Building</icon>
+<icon code="909025" src="&baseurl;909025.png" size="24">[GPS] Car Rental</icon>
+<icon code="909026" src="&baseurl;909026.png" size="24">[GPS] Car Repair</icon>
+<icon code="909027" src="&baseurl;909027.png" size="24">[GPS] Cemetery</icon>
+<icon code="909028" src="&baseurl;909028.png" size="24">[GPS] Church</icon>
+<icon code="909029" src="&baseurl;909029.png" size="24">[GPS] City (Large)</icon>
+<icon code="909030" src="&baseurl;909030.png" size="24">[GPS] City (Medium)</icon>
+<icon code="909031" src="&baseurl;909031.png" size="24">[GPS] City (Small)</icon>
+<icon code="909032" src="&baseurl;909032.png" size="24">[GPS] Convenience Store</icon>
+<icon code="909033" src="&baseurl;909033.png" size="24">[GPS] Crossing</icon>
+<icon code="909034" src="&baseurl;909034.png" size="24">[GPS] Dam</icon>
+<icon code="909035" src="&baseurl;909035.png" size="24">[GPS] Dangerous Area</icon>
+<icon code="909036" src="&baseurl;909036.png" size="24">[GPS] Department Store</icon>
+<icon code="909037" src="&baseurl;909037.png" size="24">[GPS] Drinking Water</icon>
+<icon code="909038" src="&baseurl;909038.png" size="24">[GPS] Fast Food</icon>
+<icon code="909039" src="&baseurl;909039.png" size="24">[GPS] Fitness Center</icon>
+<icon code="909040" src="&baseurl;909040.png" size="24">[GPS] Forest</icon>
+<icon code="909041" src="&baseurl;909041.png" size="24">[GPS] Glinder Area</icon>
+<icon code="909042" src="&baseurl;909042.png" size="24">[GPS] Golf</icon>
+<icon code="909043" src="&baseurl;909043.png" size="24">[GPS] Hotel</icon>
+<icon code="909044" src="&baseurl;909044.png" size="24">[GPS] Information</icon>
+<icon code="909045" src="&baseurl;909045.png" size="24">[GPS] Live Theater</icon>
+<icon code="909046" src="&baseurl;909046.png" size="24">[GPS] Man Overboard</icon>
+<icon code="909047" src="&baseurl;909047.png" size="24">[GPS] Mine</icon>
+<icon code="909048" src="&baseurl;909048.png" size="24">[GPS] Movie Theater</icon>
+<icon code="909049" src="&baseurl;909049.png" size="24">[GPS] Museum</icon>
+<icon code="909050" src="&baseurl;909050.png" size="24">[GPS] Oil Field</icon>
+<icon code="909051" src="&baseurl;909051.png" size="24">[GPS] Parachute Area</icon>
+<icon code="909052" src="&baseurl;909052.png" size="24">[GPS] Park</icon>
+<icon code="909053" src="&baseurl;909053.png" size="24">[GPS] Parking Area</icon>
+<icon code="909054" src="&baseurl;909054.png" size="24">[GPS] Pharmacy</icon>
+<icon code="909055" src="&baseurl;909055.png" size="24">[GPS] Picnic Area</icon>
+<icon code="909056" src="&baseurl;909056.png" size="24">[GPS] Pizza</icon>
+<icon code="909057" src="&baseurl;909057.png" size="24">[GPS] Post Office</icon>
+<icon code="909058" src="&baseurl;909058.png" size="24">[GPS] RV Park</icon>
+<icon code="909059" src="&baseurl;909059.png" size="24">[GPS] Restaurant</icon>
+<icon code="909060" src="&baseurl;909060.png" size="24">[GPS] Restroom</icon>
+<icon code="909061" src="&baseurl;909061.png" size="24">[GPS] Scales</icon>
+<icon code="909062" src="&baseurl;909062.png" size="24">[GPS] Scenic Area</icon>
+<icon code="909063" src="&baseurl;909063.png" size="24">[GPS] School</icon>
+<icon code="909064" src="&baseurl;909064.png" size="24">[GPS] Seaplane Base</icon>
+<icon code="909065" src="&baseurl;909065.png" size="24">[GPS] Shopping Center</icon>
+<icon code="909066" src="&baseurl;909066.png" size="24">[GPS] Short Tower</icon>
+<icon code="909067" src="&baseurl;909067.png" size="24">[GPS] Shower</icon>
+<icon code="909068" src="&baseurl;909068.png" size="24">[GPS] Skiing Area</icon>
+<icon code="909069" src="&baseurl;909069.png" size="24">[GPS] Stadium</icon>
+<icon code="909070" src="&baseurl;909070.png" size="24">[GPS] Summit</icon>
+<icon code="909071" src="&baseurl;909071.png" size="24">[GPS] Swimming Area</icon>
+<icon code="909072" src="&baseurl;909072.png" size="24">[GPS] Tall Tower</icon>
+<icon code="909073" src="&baseurl;909073.png" size="24">[GPS] Toll Booth</icon>
+<icon code="909074" src="&baseurl;909074.png" size="24">[GPS] Trail Head</icon>
+<icon code="909075" src="&baseurl;909075.png" size="24">[GPS] Truck Stop</icon>
+<icon code="909076" src="&baseurl;909076.png" size="24">[GPS] Tunnel</icon>
+<icon code="909077" src="&baseurl;909077.png" size="24">[GPS] Ultralight Area</icon>
+<icon code="909078" src="&baseurl;909078.png" size="24">[GPS] Zoo</icon>
+<icon code="909079" src="&baseurl;909079.png" size="24">Geocaching</icon>
+<icon code="909080" src="&baseurl;909080.png" size="24">Geocaching Found</icon>
+<icon code="911001" src="&baseurl;911001.png" size="24">花</icon>
+<icon code="911002" src="&baseurl;911002.png" size="24">紅葉</icon>
+<icon code="911003" src="&baseurl;911003.png" size="24">海</icon>
+<icon code="911004" src="&baseurl;911004.png" size="24">滝</icon>
+<icon code="911005" src="&baseurl;911005.png" size="24">川</icon>
+<icon code="911006" src="&baseurl;911006.png" size="24">水</icon>
+<icon code="911007" src="&baseurl;911007.png" size="24">森</icon>
+<icon code="911008" src="&baseurl;911008.png" size="24">山</icon>
+<icon code="911009" src="&baseurl;911009.png" size="24">温泉</icon>
+<icon code="912001" src="&baseurl;912001.png" size="24">自動車</icon>
+<icon code="912002" src="&baseurl;912002.png" size="24">飛行機</icon>
+<icon code="912003" src="&baseurl;912003.png" size="24">列車</icon>
+<icon code="912004" src="&baseurl;912004.png" size="24">バス</icon>
+<icon code="912005" src="&baseurl;912005.png" size="24">ロープウェイ</icon>
+<icon code="912006" src="&baseurl;912006.png" size="24">リフト</icon>
+<icon code="913001" src="&baseurl;913001.png" size="24">駐車場</icon>
+<icon code="913002" src="&baseurl;913002.png" size="24">案内</icon>
+<icon code="913003" src="&baseurl;913003.png" size="24">小屋</icon>
+<icon code="913004" src="&baseurl;913004.png" size="24">ホテル</icon>
+<icon code="913005" src="&baseurl;913005.png" size="24">教会</icon>
+<icon code="914001" src="&baseurl;914001.png" size="24">食事</icon>
+<icon code="914002" src="&baseurl;914002.png" size="24">酒</icon>
+<icon code="914003" src="&baseurl;914003.png" size="24">土産</icon>
+<icon code="915001" src="&baseurl;915001.png" size="24">カメラ</icon>
+<icon code="915002" src="&baseurl;915002.png" size="24">テント</icon>
+<icon code="915003" src="&baseurl;915003.png" size="24">釣り</icon>
+<icon code="915004" src="&baseurl;915004.png" size="24">スキー</icon>
+<icon code="915005" src="&baseurl;915005.png" size="24">スケート</icon>
+<icon code="915006" src="&baseurl;915006.png" size="24">自転車</icon>
+<icon code="915007" src="&baseurl;915007.png" size="24">ヨット</icon>
+<icon code="915008" src="&baseurl;915008.png" size="24">ゴルフ</icon>
+<icon code="916001" src="&baseurl;916001.png" size="24">トイレ</icon>
+<icon code="916002" src="&baseurl;916002.png" size="24">神社</icon>
+<icon code="916003" src="&baseurl;916003.png" size="24">寺</icon>
+<icon code="916004" src="&baseurl;916004.png" size="24">郵便局</icon>
+<icon code="916005" src="&baseurl;916005.png" size="24">学校</icon>
+<icon code="916006" src="&baseurl;916006.png" size="24">銀行</icon>
+<icon code="916007" src="&baseurl;916007.png" size="24">名所</icon>
+<icon code="916008" src="&baseurl;916008.png" size="24">病院</icon>
+<icon code="916009" src="&baseurl;916009.png" size="24">発電所</icon>
+<icon code="916010" src="&baseurl;916010.png" size="24">道の駅</icon>
+<icon code="919001" src="&baseurl;919001.png" size="24">グループ</icon>
+<icon code="919002" src="&baseurl;919002.png" size="24">フォルダ</icon>
+<icon code="919003" src="&baseurl;919003.png" size="24">プログラム</icon>
+<icon code="919004" src="&baseurl;919004.png" size="24">プログラム</icon>
+<icon code="919005" src="&baseurl;919005.png" size="24">文書</icon>
+<icon code="919006" src="&baseurl;919006.png" size="24">リンク</icon>
+<icon code="919007" src="&baseurl;919007.png" size="24">画像</icon>
+<icon code="919008" src="&baseurl;919008.png" size="24">ムービー</icon>
+<icon code="919009" src="&baseurl;919009.png" size="24">その他</icon>
+<icon code="919010" src="&baseurl;919010.png" size="24">カシミール</icon>
+<icon code="919011" src="&baseurl;919011.png" size="24">山</icon>
+<icon code="919012" src="&baseurl;919012.png" size="24">地図</icon>
+<icon code="919013" src="&baseurl;919013.png" size="24">カシバード</icon>
+<icon code="919014" src="&baseurl;919014.png" size="24">LML</icon>
+<icon code="919015" src="&baseurl;919015.png" size="24">地名</icon>
+<icon code="919016" src="&baseurl;919016.png" size="24">森</icon>
+<icon code="919017" src="&baseurl;919017.png" size="24">不明</icon>
+<icon code="919018" src="&baseurl;919018.png" size="24">トラック</icon>
+<icon code="919019" src="&baseurl;919019.png" size="24">湖</icon>
+<icon code="919020" src="&baseurl;919020.png" size="24">図名</icon>
+<icon code="919021" src="&baseurl;919021.png" size="24">ポイント</icon>
+<icon code="919022" src="&baseurl;919022.png" size="24">検索</icon>
+<icon code="919023" src="&baseurl;919023.png" size="24">アイコン</icon>
+<icon code="919024" src="&baseurl;919024.png" size="24">アイコン</icon>
+<icon code="919025" src="&baseurl;919025.png" size="24">アイコン</icon>
+<icon code="919026" src="&baseurl;919026.png" size="24">アイコン</icon>
+<icon code="919101" src="&baseurl;919101.png" size="24">カメラ  北 </icon>
+<icon code="919102" src="&baseurl;919102.png" size="24">カメラ 北東</icon>
+<icon code="919103" src="&baseurl;919103.png" size="24">カメラ  東 </icon>
+<icon code="919104" src="&baseurl;919104.png" size="24">カメラ 南東</icon>
+<icon code="919105" src="&baseurl;919105.png" size="24">カメラ  南 </icon>
+<icon code="919106" src="&baseurl;919106.png" size="24">カメラ 南西</icon>
+<icon code="919107" src="&baseurl;919107.png" size="24">カメラ  西 </icon>
+<icon code="919108" src="&baseurl;919108.png" size="24">カメラ 北西</icon>
+<icon code="919109" src="&baseurl;919109.png" size="24">コンパス  北 </icon>
+<icon code="919110" src="&baseurl;919110.png" size="24">コンパス 北東</icon>
+<icon code="919111" src="&baseurl;919111.png" size="24">コンパス  東 </icon>
+<icon code="919112" src="&baseurl;919112.png" size="24">コンパス 南東</icon>
+<icon code="919113" src="&baseurl;919113.png" size="24">コンパス  南 </icon>
+<icon code="919114" src="&baseurl;919114.png" size="24">コンパス 南西</icon>
+<icon code="919115" src="&baseurl;919115.png" size="24">コンパス  西 </icon>
+<icon code="919116" src="&baseurl;919116.png" size="24">コンパス 北西</icon>
+<icon code="920001" src="&baseurl;920001.png" size="24">徒歩</icon>
+<icon code="920002" src="&baseurl;920002.png" size="24">自転車</icon>
+<icon code="920003" src="&baseurl;920003.png" size="24">ハンググライダー</icon>
+<icon code="920004" src="&baseurl;920004.png" size="24">パラグライダー</icon>
+<icon code="920005" src="&baseurl;920005.png" size="24">カヌー</icon>
+<icon code="920006" src="&baseurl;920006.png" size="24">スキー</icon>
+<icon code="920007" src="&baseurl;920007.png" size="24">自動車</icon>
+<icon code="920008" src="&baseurl;920008.png" size="24">バイク</icon>
+<icon code="920100" src="&baseurl;920100.png" size="24">マーカー１</icon>
+<icon code="920101" src="&baseurl;920101.png" size="24">マーカー２</icon>
+<icon code="920102" src="&baseurl;920102.png" size="24">マーカー３</icon>
+<icon code="920103" src="&baseurl;920103.png" size="24">マーカー４</icon>
+<icon code="920104" src="&baseurl;920104.png" size="24">マーカー５</icon>
+<icon code="921001" src="&baseurl;921001.png" size="24">バツ</icon>
+<icon code="921002" src="&baseurl;921002.png" size="24">チェック</icon>
+<icon code="921003" src="&baseurl;921003.png" size="24">旗</icon>
+<icon code="921004" src="&baseurl;921004.png" size="24">家</icon>
+<icon code="921005" src="&baseurl;921005.png" size="24">十字</icon>
+<icon code="921006" src="&baseurl;921006.png" size="24">Ｙ字</icon>
+<icon code="921007" src="&baseurl;921007.png" size="24">Ｔ字</icon>
+<icon code="921008" src="&baseurl;921008.png" size="24">山</icon>
+<icon code="921009" src="&baseurl;921009.png" size="24">船</icon>
+<icon code="921010" src="&baseurl;921010.png" size="24">飛行機</icon>
+<icon code="921011" src="&baseurl;921011.png" size="24">動物</icon>
+<icon code="921012" src="&baseurl;921012.png" size="24">カップ</icon>
+<icon code="921013" src="&baseurl;921013.png" size="24">音符</icon>
+<icon code="921014" src="&baseurl;921014.png" size="24">電話</icon>
+<icon code="921015" src="&baseurl;921015.png" size="24">ドクロ</icon>
+<icon code="925001" src="&baseurl;925001.png" size="24">指差し</icon>
+<icon code="925002" src="&baseurl;925002.png" size="24">花１</icon>
+<icon code="925003" src="&baseurl;925003.png" size="24">花２</icon>
+<icon code="925004" src="&baseurl;925004.png" size="24">虫１</icon>
+<icon code="925005" src="&baseurl;925005.png" size="24">虫２</icon>
+<icon code="925006" src="&baseurl;925006.png" size="24">注意</icon>
+<icon code="925007" src="&baseurl;925007.png" size="24">徒歩</icon>
+<icon code="925008" src="&baseurl;925008.png" size="24">団子</icon>
+<icon code="925009" src="&baseurl;925009.png" size="24">おむすび</icon>
+<icon code="925010" src="&baseurl;925010.png" size="24">水</icon>
+<icon code="925011" src="&baseurl;925011.png" size="24">トイレ</icon>
+<icon code="925012" src="&baseurl;925012.png" size="24">マル</icon>
+<icon code="925013" src="&baseurl;925013.png" size="24">バツ</icon>
+<icon code="925014" src="&baseurl;925014.png" size="24">旗１</icon>
+<icon code="925015" src="&baseurl;925015.png" size="24">旗２</icon>
+<icon code="925016" src="&baseurl;925016.png" size="24">旗３</icon>
+<icon code="925017" src="&baseurl;925017.png" size="24">鳥１</icon>
+<icon code="925018" src="&baseurl;925018.png" size="24">鳥２</icon>
+<icon code="925019" src="&baseurl;925019.png" size="24">鳥３</icon>
+<icon code="925020" src="&baseurl;925020.png" size="24">星</icon>
+<icon code="925021" src="&baseurl;925021.png" size="24">ハート</icon>
+<icon code="925022" src="&baseurl;925022.png" size="24">金</icon>
+<icon code="925023" src="&baseurl;925023.png" size="24">不明</icon>
+<icon code="925024" src="&baseurl;925024.png" size="24">注</icon>
+<icon code="925025" src="&baseurl;925025.png" size="24">秘密</icon>
+<icon code="925026" src="&baseurl;925026.png" size="24">時計</icon>
+<icon code="925027" src="&baseurl;925027.png" size="24">ブイ</icon>
+<icon code="925028" src="&baseurl;925028.png" size="24">浮き輪</icon>
+<icon code="925029" src="&baseurl;925029.png" size="24">ヨット</icon>
+<icon code="925030" src="&baseurl;925030.png" size="24">船</icon>
+<icon code="925031" src="&baseurl;925031.png" size="24">くじら</icon>
+<icon code="925032" src="&baseurl;925032.png" size="24">カニ</icon>
+<icon code="925033" src="&baseurl;925033.png" size="24">イカ</icon>
+<icon code="925034" src="&baseurl;925034.png" size="24">魚１</icon>
+<icon code="925035" src="&baseurl;925035.png" size="24">魚２</icon>
+<icon code="925036" src="&baseurl;925036.png" size="24">釣り</icon>
+<icon code="925037" src="&baseurl;925037.png" size="24">採集</icon>
+<icon code="925038" src="&baseurl;925038.png" size="24">きのこ</icon>
+<icon code="925039" src="&baseurl;925039.png" size="24">つくし</icon>
+<icon code="925040" src="&baseurl;925040.png" size="24">タケノコ</icon>
+<icon code="925041" src="&baseurl;925041.png" size="24">三角</icon>
+<icon code="925042" src="&baseurl;925042.png" size="24">四角</icon>
+<icon code="925043" src="&baseurl;925043.png" size="24">丸</icon>
+<icon code="925044" src="&baseurl;925044.png" size="24">女性１</icon>
+<icon code="925045" src="&baseurl;925045.png" size="24">女性２</icon>
+<icon code="925046" src="&baseurl;925046.png" size="24">女性３</icon>
+<icon code="925047" src="&baseurl;925047.png" size="24">女性４</icon>
+<icon code="925048" src="&baseurl;925048.png" size="24">男性１</icon>
+<icon code="925049" src="&baseurl;925049.png" size="24">男性２</icon>
+<icon code="925050" src="&baseurl;925050.png" size="24">男性３</icon>
+<icon code="925051" src="&baseurl;925051.png" size="24">男性４</icon>
+<icon code="925052" src="&baseurl;925052.png" size="24">男性５</icon>
+<icon code="925053" src="&baseurl;925053.png" size="24">男性６</icon>
+<icon code="925054" src="&baseurl;925054.png" size="24">男性７</icon>
+<icon code="925055" src="&baseurl;925055.png" size="24">男性８</icon>
+<icon code="925056" src="&baseurl;925056.png" size="24">女性５</icon>
+<icon code="925057" src="&baseurl;925057.png" size="24">女性６</icon>
+<icon code="925058" src="&baseurl;925058.png" size="24">顔１</icon>
+<icon code="925059" src="&baseurl;925059.png" size="24">顔２</icon>
+<icon code="925060" src="&baseurl;925060.png" size="24">顔３</icon>
+<icon code="925061" src="&baseurl;925061.png" size="24">バック１</icon>
+<icon code="925062" src="&baseurl;925062.png" size="24">バック２</icon>
+<icon code="925063" src="&baseurl;925063.png" size="24">スタンド</icon>
+<icon code="925064" src="&baseurl;925064.png" size="24">ビル１</icon>
+<icon code="925065" src="&baseurl;925065.png" size="24">ビル２</icon>
+<icon code="925066" src="&baseurl;925066.png" size="24">ビル３</icon>
+<icon code="925067" src="&baseurl;925067.png" size="24">家１</icon>
+<icon code="925068" src="&baseurl;925068.png" size="24">家２</icon>
+<icon code="925069" src="&baseurl;925069.png" size="24">小屋１</icon>
+<icon code="925070" src="&baseurl;925070.png" size="24">小屋２</icon>
+<icon code="925071" src="&baseurl;925071.png" size="24">小屋３</icon>
+<icon code="925072" src="&baseurl;925072.png" size="24">小屋４</icon>
+<icon code="925073" src="&baseurl;925073.png" size="24">テント</icon>
+<icon code="925074" src="&baseurl;925074.png" size="24">病院</icon>
+<icon code="925075" src="&baseurl;925075.png" size="24">交番</icon>
+<icon code="925076" src="&baseurl;925076.png" size="24">郵便局</icon>
+<icon code="926001" src="&baseurl;926001.png" size="24">記号01</icon>
+<icon code="926002" src="&baseurl;926002.png" size="24">記号02</icon>
+<icon code="926003" src="&baseurl;926003.png" size="24">記号03</icon>
+<icon code="926004" src="&baseurl;926004.png" size="24">記号04</icon>
+<icon code="926005" src="&baseurl;926005.png" size="24">記号05</icon>
+<icon code="926006" src="&baseurl;926006.png" size="24">記号06</icon>
+<icon code="926007" src="&baseurl;926007.png" size="24">記号07</icon>
+<icon code="926008" src="&baseurl;926008.png" size="24">記号08</icon>
+<icon code="926009" src="&baseurl;926009.png" size="24">記号09</icon>
+<icon code="926010" src="&baseurl;926010.png" size="24">記号10</icon>
+<icon code="926011" src="&baseurl;926011.png" size="24">記号11</icon>
+<icon code="926012" src="&baseurl;926012.png" size="24">記号12</icon>
+<icon code="926013" src="&baseurl;926013.png" size="24">記号13</icon>
+<icon code="926014" src="&baseurl;926014.png" size="24">記号14</icon>
+<icon code="926015" src="&baseurl;926015.png" size="24">記号15</icon>
+<icon code="926016" src="&baseurl;926016.png" size="24">記号16</icon>
+<icon code="926017" src="&baseurl;926017.png" size="24">記号17</icon>
+<icon code="926018" src="&baseurl;926018.png" size="24">記号18</icon>
+<icon code="926019" src="&baseurl;926019.png" size="24">記号19</icon>
+<icon code="926020" src="&baseurl;926020.png" size="24">記号20</icon>
+<icon code="927001" src="&baseurl;927001.png" size="24">アイコン01</icon>
+<icon code="927002" src="&baseurl;927002.png" size="24">アイコン02</icon>
+<icon code="927003" src="&baseurl;927003.png" size="24">アイコン03</icon>
+<icon code="927004" src="&baseurl;927004.png" size="24">アイコン04</icon>
+<icon code="927005" src="&baseurl;927005.png" size="24">アイコン05</icon>
+<icon code="927006" src="&baseurl;927006.png" size="24">アイコン06</icon>
+<icon code="927007" src="&baseurl;927007.png" size="24">アイコン07</icon>
+<icon code="927008" src="&baseurl;927008.png" size="24">アイコン08</icon>
+<icon code="927009" src="&baseurl;927009.png" size="24">アイコン09</icon>
+<icon code="927010" src="&baseurl;927010.png" size="24">アイコン10</icon>
+<icon code="927011" src="&baseurl;927011.png" size="24">アイコン11</icon>
+<icon code="927012" src="&baseurl;927012.png" size="24">アイコン12</icon>
+<icon code="927013" src="&baseurl;927013.png" size="24">アイコン13</icon>
+<icon code="927014" src="&baseurl;927014.png" size="24">アイコン14</icon>
+<icon code="927015" src="&baseurl;927015.png" size="24">アイコン15</icon>
+<icon code="927016" src="&baseurl;927016.png" size="24">アイコン16</icon>
+<icon code="927017" src="&baseurl;927017.png" size="24">アイコン17</icon>
+<icon code="927018" src="&baseurl;927018.png" size="24">アイコン18</icon>
+<icon code="927019" src="&baseurl;927019.png" size="24">アイコン19</icon>
+<icon code="927020" src="&baseurl;927020.png" size="24">アイコン20</icon>
+<icon code="927021" src="&baseurl;927021.png" size="24">アイコン21</icon>
+<icon code="927022" src="&baseurl;927022.png" size="24">アイコン22</icon>
+<icon code="927023" src="&baseurl;927023.png" size="24">アイコン23</icon>
+<icon code="927024" src="&baseurl;927024.png" size="24">アイコン24</icon>
+<icon code="927025" src="&baseurl;927025.png" size="24">アイコン25</icon>
+<icon code="927026" src="&baseurl;927026.png" size="24">アイコン26</icon>
+<icon code="927027" src="&baseurl;927027.png" size="24">アイコン27</icon>
+<icon code="927028" src="&baseurl;927028.png" size="24">アイコン28</icon>
+<icon code="927029" src="&baseurl;927029.png" size="24">アイコン29</icon>
+<icon code="927030" src="&baseurl;927030.png" size="24">アイコン30</icon>
+<icon code="927031" src="&baseurl;927031.png" size="24">アイコン31</icon>
+<icon code="927032" src="&baseurl;927032.png" size="24">アイコン32</icon>
+<icon code="927033" src="&baseurl;927033.png" size="24">アイコン33</icon>
+<icon code="927034" src="&baseurl;927034.png" size="24">アイコン34</icon>
+<icon code="927035" src="&baseurl;927035.png" size="24">アイコン35</icon>
+<icon code="927036" src="&baseurl;927036.png" size="24">アイコン36</icon>
+<icon code="927037" src="&baseurl;927037.png" size="24">アイコン37</icon>
+<icon code="927038" src="&baseurl;927038.png" size="24">アイコン38</icon>
+<icon code="927039" src="&baseurl;927039.png" size="24">アイコン39</icon>
+<icon code="927040" src="&baseurl;927040.png" size="24">アイコン40</icon>
+<icon code="927041" src="&baseurl;927041.png" size="24">アイコン41</icon>
+<icon code="927042" src="&baseurl;927042.png" size="24">アイコン42</icon>
+<icon code="928001" src="&baseurl;928001.png" size="24">黄色↓</icon>
+<icon code="928002" src="&baseurl;928002.png" size="24">ATM(ドル)</icon>
+<icon code="928003" src="&baseurl;928003.png" size="24">キャンプ地</icon>
+<icon code="928004" src="&baseurl;928004.png" size="24">遊園地</icon>
+<icon code="928005" src="&baseurl;928005.png" size="24">気球</icon>
+<icon code="928006" src="&baseurl;928006.png" size="24">空港</icon>
+<icon code="928007" src="&baseurl;928007.png" size="24">けものみち</icon>
+<icon code="928008" src="&baseurl;928008.png" size="24">緑↓</icon>
+<icon code="928009" src="&baseurl;928009.png" size="24">ATM(ユーロ）</icon>
+<icon code="928010" src="&baseurl;928010.png" size="24">恐竜１</icon>
+<icon code="928011" src="&baseurl;928011.png" size="24">修理工場</icon>
+<icon code="928012" src="&baseurl;928012.png" size="24">ATM</icon>
+<icon code="928013" src="&baseurl;928013.png" size="24">花</icon>
+<icon code="928014" src="&baseurl;928014.png" size="24">虫１</icon>
+<icon code="928015" src="&baseurl;928015.png" size="24">恐竜２</icon>
+<icon code="928016" src="&baseurl;928016.png" size="24">恐竜３</icon>
+<icon code="928017" src="&baseurl;928017.png" size="24">虫２</icon>
+<icon code="928018" src="&baseurl;928018.png" size="24">虫３</icon>
+<icon code="928019" src="&baseurl;928019.png" size="24">山</icon>
+<icon code="928020" src="&baseurl;928020.png" size="24">銀行</icon>
+<icon code="928021" src="&baseurl;928021.png" size="24">樹木</icon>
+<icon code="928022" src="&baseurl;928022.png" size="24">ビーチ</icon>
+<icon code="928023" src="&baseurl;928023.png" size="24">クマ見物</icon>
+<icon code="928024" src="&baseurl;928024.png" size="24">双眼鏡</icon>
+<icon code="928025" src="&baseurl;928025.png" size="24">湿地帯</icon>
+<icon code="928026" src="&baseurl;928026.png" size="24">ボート</icon>
+<icon code="928027" src="&baseurl;928027.png" size="24">検問所</icon>
+<icon code="928028" src="&baseurl;928028.png" size="24">赤い箱</icon>
+<icon code="928029" src="&baseurl;928029.png" size="24">緑の箱</icon>
+<icon code="928030" src="&baseurl;928030.png" size="24">青い箱</icon>
+<icon code="928031" src="&baseurl;928031.png" size="24">黄色い箱</icon>
+<icon code="928032" src="&baseurl;928032.png" size="24">橋</icon>
+<icon code="928033" src="&baseurl;928033.png" size="24">ビジネスサービス</icon>
+<icon code="928034" src="&baseurl;928034.png" size="24">オフィス施設</icon>
+<icon code="928035" src="&baseurl;928035.png" size="24">キャンプファイヤー</icon>
+<icon code="928036" src="&baseurl;928036.png" size="24">キャンプ場</icon>
+<icon code="928037" src="&baseurl;928037.png" size="24">洗車場</icon>
+<icon code="928038" src="&baseurl;928038.png" size="24">キャンプファイヤー</icon>
+<icon code="928039" src="&baseurl;928039.png" size="24">車</icon>
+<icon code="928040" src="&baseurl;928040.png" size="24">カジノ</icon>
+<icon code="928041" src="&baseurl;928041.png" size="24">洞窟</icon>
+<icon code="928042" src="&baseurl;928042.png" size="24">映画</icon>
+<icon code="928043" src="&baseurl;928043.png" size="24">街</icon>
+<icon code="928044" src="&baseurl;928044.png" size="24">市民センター</icon>
+<icon code="928045" src="&baseurl;928045.png" size="24">クレータ</icon>
+<icon code="928046" src="&baseurl;928046.png" size="24">コーヒー</icon>
+<icon code="928047" src="&baseurl;928047.png" size="24">崖</icon>
+<icon code="928048" src="&baseurl;928048.png" size="24">法廷</icon>
+<icon code="928049" src="&baseurl;928049.png" size="24">緑の十字</icon>
+<icon code="928050" src="&baseurl;928050.png" size="24">青の十字</icon>
+<icon code="928051" src="&baseurl;928051.png" size="24">黄色の十字</icon>
+<icon code="928052" src="&baseurl;928052.png" size="24">赤の十字</icon>
+<icon code="928053" src="&baseurl;928053.png" size="24">紫の十字</icon>
+<icon code="928054" src="&baseurl;928054.png" size="24">電流</icon>
+<icon code="928055" src="&baseurl;928055.png" size="24">文化</icon>
+<icon code="928056" src="&baseurl;928056.png" size="24">デパート</icon>
+<icon code="928057" src="&baseurl;928057.png" size="24">危険</icon>
+<icon code="928058" src="&baseurl;928058.png" size="24">デフォルト</icon>
+<icon code="928059" src="&baseurl;928059.png" size="24">恐竜１１</icon>
+<icon code="928060" src="&baseurl;928060.png" size="24">恐竜１２</icon>
+<icon code="928061" src="&baseurl;928061.png" size="24">カモの猟場</icon>
+<icon code="928062" src="&baseurl;928062.png" size="24">恐竜１３</icon>
+<icon code="928063" src="&baseurl;928063.png" size="24">ごみ箱</icon>
+<icon code="928064" src="&baseurl;928064.png" size="24">教育</icon>
+<icon code="928065" src="&baseurl;928065.png" size="24">緊急</icon>
+<icon code="928066" src="&baseurl;928066.png" size="24">エンターテイメント</icon>
+<icon code="928067" src="&baseurl;928067.png" size="24">サービスエリア</icon>
+<icon code="928068" src="&baseurl;928068.png" size="24">展示会</icon>
+<icon code="928069" src="&baseurl;928069.png" size="24">滝</icon>
+<icon code="928070" src="&baseurl;928070.png" size="24">無料</icon>
+<icon code="928071" src="&baseurl;928071.png" size="24">フェリー乗り場</icon>
+<icon code="928072" src="&baseurl;928072.png" size="24">火</icon>
+<icon code="928073" src="&baseurl;928073.png" size="24">消防署</icon>
+<icon code="928074" src="&baseurl;928074.png" size="24">救急箱</icon>
+<icon code="928075" src="&baseurl;928075.png" size="24">釣り</icon>
+<icon code="928076" src="&baseurl;928076.png" size="24">黒い旗</icon>
+<icon code="928077" src="&baseurl;928077.png" size="24">航路標識</icon>
+<icon code="928078" src="&baseurl;928078.png" size="24">茶色い旗</icon>
+<icon code="928079" src="&baseurl;928079.png" size="24">青い旗</icon>
+<icon code="928080" src="&baseurl;928080.png" size="24">緑の旗</icon>
+<icon code="928081" src="&baseurl;928081.png" size="24">黒白の旗</icon>
+<icon code="928082" src="&baseurl;928082.png" size="24">グレーの旗</icon>
+<icon code="928083" src="&baseurl;928083.png" size="24">オレンジの旗</icon>
+<icon code="928084" src="&baseurl;928084.png" size="24">ピンクの旗</icon>
+<icon code="928085" src="&baseurl;928085.png" size="24">紫の旗</icon>
+<icon code="928086" src="&baseurl;928086.png" size="24">黄色い旗</icon>
+<icon code="928087" src="&baseurl;928087.png" size="24">白い旗</icon>
+<icon code="928088" src="&baseurl;928088.png" size="24">赤い旗</icon>
+<icon code="928089" src="&baseurl;928089.png" size="24">ブイ</icon>
+<icon code="928090" src="&baseurl;928090.png" size="24">赤い花</icon>
+<icon code="928091" src="&baseurl;928091.png" size="24">黄色い花</icon>
+<icon code="928092" src="&baseurl;928092.png" size="24">ガソリンスタンド</icon>
+<icon code="928093" src="&baseurl;928093.png" size="24">紫の花</icon>
+<icon code="928094" src="&baseurl;928094.png" size="24">森</icon>
+<icon code="928095" src="&baseurl;928095.png" size="24">間欠泉</icon>
+<icon code="928096" src="&baseurl;928096.png" size="24">画廊</icon>
+<icon code="928097" src="&baseurl;928097.png" size="24">氷河</icon>
+<icon code="928098" src="&baseurl;928098.png" size="24">スーパー</icon>
+<icon code="928099" src="&baseurl;928099.png" size="24">ゴルフ</icon>
+<icon code="928100" src="&baseurl;928100.png" size="24">身体障碍者</icon>
+<icon code="928101" src="&baseurl;928101.png" size="24">医療サービス</icon>
+<icon code="928102" src="&baseurl;928102.png" size="24">文化財</icon>
+<icon code="928103" src="&baseurl;928103.png" size="24">ホームセンター</icon>
+<icon code="928104" src="&baseurl;928104.png" size="24">家</icon>
+<icon code="928105" src="&baseurl;928105.png" size="24">病院</icon>
+<icon code="928106" src="&baseurl;928106.png" size="24">ホテル</icon>
+<icon code="928107" src="&baseurl;928107.png" size="24">青い屋根の家</icon>
+<icon code="928108" src="&baseurl;928108.png" size="24">迷彩柄の家</icon>
+<icon code="928109" src="&baseurl;928109.png" size="24">赤い屋根の家</icon>
+<icon code="928110" src="&baseurl;928110.png" size="24">狩猟</icon>
+<icon code="928111" src="&baseurl;928111.png" size="24">猟場</icon>
+<icon code="928112" src="&baseurl;928112.png" size="24">茶色い虫</icon>
+<icon code="928113" src="&baseurl;928113.png" size="24">緑の虫</icon>
+<icon code="928114" src="&baseurl;928114.png" size="24">赤い虫</icon>
+<icon code="928115" src="&baseurl;928115.png" size="24">ランドマーク</icon>
+<icon code="928116" src="&baseurl;928116.png" size="24">カヤック</icon>
+<icon code="928117" src="&baseurl;928117.png" size="24">大きな都市</icon>
+<icon code="928118" src="&baseurl;928118.png" size="24">図書館</icon>
+<icon code="928119" src="&baseurl;928119.png" size="24">展望台</icon>
+<icon code="928120" src="&baseurl;928120.png" size="24">灯台</icon>
+<icon code="928121" src="&baseurl;928121.png" size="24">主要都市</icon>
+<icon code="928122" src="&baseurl;928122.png" size="24">マリーナ</icon>
+<icon code="928123" src="&baseurl;928123.png" size="24">三日月</icon>
+<icon code="928124" src="&baseurl;928124.png" size="24">博物館</icon>
+<icon code="928125" src="&baseurl;928125.png" size="24">中都市</icon>
+<icon code="928126" src="&baseurl;928126.png" size="24">バー</icon>
+<icon code="928127" src="&baseurl;928127.png" size="24">海流</icon>
+<icon code="928128" src="&baseurl;928128.png" size="24">障害</icon>
+<icon code="928129" src="&baseurl;928129.png" size="24">その他サービス</icon>
+<icon code="928130" src="&baseurl;928130.png" size="24">オフィス施設</icon>
+<icon code="928131" src="&baseurl;928131.png" size="24">油田</icon>
+<icon code="928132" src="&baseurl;928132.png" size="24">公園</icon>
+<icon code="928133" src="&baseurl;928133.png" size="24">パークアンドライド</icon>
+<icon code="928134" src="&baseurl;928134.png" size="24">駐車場</icon>
+<icon code="928135" src="&baseurl;928135.png" size="24">薬局</icon>
+<icon code="928136" src="&baseurl;928136.png" size="24">ピクニックテーブル</icon>
+<icon code="928137" src="&baseurl;928137.png" size="24">警察</icon>
+<icon code="928138" src="&baseurl;928138.png" size="24">プラス印</icon>
+<icon code="928139" src="&baseurl;928139.png" size="24">公共施設</icon>
+<icon code="928140" src="&baseurl;928140.png" size="24">水場</icon>
+<icon code="928141" src="&baseurl;928141.png" size="24">案内所</icon>
+<icon code="928142" src="&baseurl;928142.png" size="24">レース場</icon>
+<icon code="928143" src="&baseurl;928143.png" size="24">信仰</icon>
+<icon code="928144" src="&baseurl;928144.png" size="24">レンタカー</icon>
+<icon code="928145" src="&baseurl;928145.png" size="24">レンジャー</icon>
+<icon code="928146" src="&baseurl;928146.png" size="24">ゴミ処理場</icon>
+<icon code="928147" src="&baseurl;928147.png" size="24">リゾートアイランド</icon>
+<icon code="928148" src="&baseurl;928148.png" size="24">リゾート</icon>
+<icon code="928149" src="&baseurl;928149.png" size="24">レストラン</icon>
+<icon code="928150" src="&baseurl;928150.png" size="24">スキーリゾート</icon>
+<icon code="928151" src="&baseurl;928151.png" size="24">休憩所</icon>
+<icon code="928152" src="&baseurl;928152.png" size="24">トイレ</icon>
+<icon code="928153" src="&baseurl;928153.png" size="24">連絡道路</icon>
+<icon code="928154" src="&baseurl;928154.png" size="24">落石</icon>
+<icon code="928155" src="&baseurl;928155.png" size="24">遺跡</icon>
+<icon code="928156" src="&baseurl;928156.png" size="24">岩</icon>
+<icon code="928157" src="&baseurl;928157.png" size="24">RVサービス</icon>
+<icon code="928158" src="&baseurl;928158.png" size="24">美容室</icon>
+<icon code="928159" src="&baseurl;928159.png" size="24">避難所</icon>
+<icon code="928160" src="&baseurl;928160.png" size="24">学校</icon>
+<icon code="928161" src="&baseurl;928161.png" size="24">射撃</icon>
+<icon code="928162" src="&baseurl;928162.png" size="24">ショッピング</icon>
+<icon code="928163" src="&baseurl;928163.png" size="24">観光</icon>
+<icon code="928164" src="&baseurl;928164.png" size="24">シャワー</icon>
+<icon code="928165" src="&baseurl;928165.png" size="24">測深調査</icon>
+<icon code="928166" src="&baseurl;928166.png" size="24">小都市</icon>
+<icon code="928167" src="&baseurl;928167.png" size="24">SNS</icon>
+<icon code="928168" src="&baseurl;928168.png" size="24">雪結晶</icon>
+<icon code="928169" src="&baseurl;928169.png" size="24">ネズミ捕り</icon>
+<icon code="928170" src="&baseurl;928170.png" size="24">フットボール</icon>
+<icon code="928171" src="&baseurl;928171.png" size="24">バスケットボール</icon>
+<icon code="928172" src="&baseurl;928172.png" size="24">スポーツ</icon>
+<icon code="928173" src="&baseurl;928173.png" size="24">湧水</icon>
+<icon code="928174" src="&baseurl;928174.png" size="24">アリーナ</icon>
+<icon code="928175" src="&baseurl;928175.png" size="24">サッカー</icon>
+<icon code="928176" src="&baseurl;928176.png" size="24">星</icon>
+<icon code="928177" src="&baseurl;928177.png" size="24">倉庫</icon>
+<icon code="928178" src="&baseurl;928178.png" size="24">急勾配</icon>
+<icon code="928179" src="&baseurl;928179.png" size="24">太陽</icon>
+<icon code="928180" src="&baseurl;928180.png" size="24">頂上</icon>
+<icon code="928181" src="&baseurl;928181.png" size="24">水泳</icon>
+<icon code="928182" src="&baseurl;928182.png" size="24">虫ピン</icon>
+<icon code="928183" src="&baseurl;928183.png" size="24">旅行者案内</icon>
+<icon code="928184" src="&baseurl;928184.png" size="24">ターゲット</icon>
+<icon code="928185" src="&baseurl;928185.png" size="24">トレイル始点</icon>
+<icon code="928186" src="&baseurl;928186.png" size="24">トレイル交差</icon>
+<icon code="928187" src="&baseurl;928187.png" size="24">自転車トレイル</icon>
+<icon code="928188" src="&baseurl;928188.png" size="24">乗馬トレイル</icon>
+<icon code="928189" src="&baseurl;928189.png" size="24">モトクロストレイル</icon>
+<icon code="928190" src="&baseurl;928190.png" size="24">トラック便</icon>
+<icon code="928191" src="&baseurl;928191.png" size="24">駅</icon>
+<icon code="928192" src="&baseurl;928192.png" size="24">木</icon>
+<icon code="928193" src="&baseurl;928193.png" size="24">バス</icon>
+<icon code="928194" src="&baseurl;928194.png" size="24">獣医</icon>
+<icon code="928195" src="&baseurl;928195.png" size="24">井戸</icon>
+<icon code="928196" src="&baseurl;928196.png" size="24">レンチ</icon>
+<icon code="928197" src="&baseurl;928197.png" size="24">ワイナリー</icon>
+<icon code="931001" src="&baseurl;931001.png" size="24">温泉</icon>
+<icon code="931002" src="&baseurl;931002.png" size="24">宿</icon>
+<icon code="931003" src="&baseurl;931003.png" size="24">山小屋</icon>
+<icon code="931004" src="&baseurl;931004.png" size="24">キャンプ場</icon>
+<icon code="931005" src="&baseurl;931005.png" size="24">交通</icon>
+<icon code="931006" src="&baseurl;931006.png" size="24">道の駅</icon>
+<icon code="931007" src="&baseurl;931007.png" size="24">G.S.</icon>
+<icon code="931008" src="&baseurl;931008.png" size="24">駐車場</icon>
+<icon code="931009" src="&baseurl;931009.png" size="24">観光案内</icon>
+<icon code="931010" src="&baseurl;931010.png" size="24">名所</icon>
+<icon code="931011" src="&baseurl;931011.png" size="24">美術館</icon>
+<icon code="931012" src="&baseurl;931012.png" size="24">資料館･博物館</icon>
+<icon code="931013" src="&baseurl;931013.png" size="24">科学館･自然館</icon>
+<icon code="931014" src="&baseurl;931014.png" size="24">植物園</icon>
+<icon code="931015" src="&baseurl;931015.png" size="24">動物園</icon>
+<icon code="931016" src="&baseurl;931016.png" size="24">水族館</icon>
+<icon code="931017" src="&baseurl;931017.png" size="24">土産</icon>
+<icon code="931018" src="&baseurl;931018.png" size="24">コンビニ</icon>
+<icon code="931019" src="&baseurl;931019.png" size="24">スーパー</icon>
+<icon code="931020" src="&baseurl;931020.png" size="24">酒</icon>
+<icon code="931021" src="&baseurl;931021.png" size="24">氷</icon>
+<icon code="931022" src="&baseurl;931022.png" size="24">トイレ</icon>
+<icon code="932001" src="&baseurl;932001.png" size="24">和食</icon>
+<icon code="932002" src="&baseurl;932002.png" size="24">洋食</icon>
+<icon code="932003" src="&baseurl;932003.png" size="24">中華</icon>
+<icon code="932004" src="&baseurl;932004.png" size="24">レストラン</icon>
+<icon code="932005" src="&baseurl;932005.png" size="24">ファーストフード</icon>
+<icon code="932006" src="&baseurl;932006.png" size="24">喫茶</icon>
+<icon code="932007" src="&baseurl;932007.png" size="24">酒場</icon>
+<icon code="933001" src="&baseurl;933001.png" size="24">キャンプ</icon>
+<icon code="933002" src="&baseurl;933002.png" size="24">登山</icon>
+<icon code="933003" src="&baseurl;933003.png" size="24">ケービング</icon>
+<icon code="933004" src="&baseurl;933004.png" size="24">モーター</icon>
+<icon code="933005" src="&baseurl;933005.png" size="24">サイクル</icon>
+<icon code="933006" src="&baseurl;933006.png" size="24">フィッシング</icon>
+<icon code="933007" src="&baseurl;933007.png" size="24">ダイブ</icon>
+<icon code="933008" src="&baseurl;933008.png" size="24">遊泳</icon>
+<icon code="933009" src="&baseurl;933009.png" size="24">カヌー</icon>
+<icon code="933010" src="&baseurl;933010.png" size="24">ラフティング</icon>
+<icon code="933011" src="&baseurl;933011.png" size="24">ウィンドサーフィン</icon>
+<icon code="933012" src="&baseurl;933012.png" size="24">ヨット</icon>
+<icon code="933013" src="&baseurl;933013.png" size="24">サーフィン</icon>
+<icon code="933014" src="&baseurl;933014.png" size="24">マリン</icon>
+<icon code="933015" src="&baseurl;933015.png" size="24">スキー</icon>
+<icon code="933016" src="&baseurl;933016.png" size="24">スケート</icon>
+<icon code="933017" src="&baseurl;933017.png" size="24">スカイ</icon>
+<icon code="934001" src="&baseurl;934001.png" size="24">淡水魚</icon>
+<icon code="934002" src="&baseurl;934002.png" size="24">海水魚</icon>
+<icon code="934003" src="&baseurl;934003.png" size="24">昆虫</icon>
+<icon code="934004" src="&baseurl;934004.png" size="24">水の生物</icon>
+<icon code="934005" src="&baseurl;934005.png" size="24">海の生物</icon>
+<icon code="934006" src="&baseurl;934006.png" size="24">陸の生物</icon>
+<icon code="934007" src="&baseurl;934007.png" size="24">地質・鉱物</icon>
+<icon code="934008" src="&baseurl;934008.png" size="24">天気</icon>
+<icon code="934009" src="&baseurl;934009.png" size="24">フィールド</icon>
+<icon code="934010" src="&baseurl;934010.png" size="24">花</icon>
+<icon code="934011" src="&baseurl;934011.png" size="24">紅葉</icon>
+<icon code="934012" src="&baseurl;934012.png" size="24">探鳥地</icon>
+<icon code="934013" src="&baseurl;934013.png" size="24">しだ</icon>
+<icon code="934014" src="&baseurl;934014.png" size="24">こけ</icon>
+<icon code="934015" src="&baseurl;934015.png" size="24">山菜</icon>
+<icon code="934016" src="&baseurl;934016.png" size="24">木の実</icon>
+<icon code="934017" src="&baseurl;934017.png" size="24">園芸</icon>
+<icon code="934018" src="&baseurl;934018.png" size="24">野菜</icon>
+<icon code="934019" src="&baseurl;934019.png" size="24">果樹</icon>
+<icon code="936001" src="&baseurl;936001.png" size="24">カヤツリグサ</icon>
+<icon code="936002" src="&baseurl;936002.png" size="24">チガヤ</icon>
+<icon code="936003" src="&baseurl;936003.png" size="24">ススキ</icon>
+<icon code="936004" src="&baseurl;936004.png" size="24">イチゴツナギ</icon>
+<icon code="936005" src="&baseurl;936005.png" size="24">カヤツリグサ</icon>
+<icon code="936006" src="&baseurl;936006.png" size="24">スゲ</icon>
+<icon code="936007" src="&baseurl;936007.png" size="24">クロカワズスゲ</icon>
+<icon code="936008" src="&baseurl;936008.png" size="24">イグサ</icon>
+<icon code="937001" src="&baseurl;937001.png" size="24">花</icon>
+<icon code="937002" src="&baseurl;937002.png" size="24">ラン</icon>
+<icon code="937003" src="&baseurl;937003.png" size="24">アヤメ</icon>
+<icon code="937004" src="&baseurl;937004.png" size="24">ユリ</icon>
+<icon code="937005" src="&baseurl;937005.png" size="24">タンポポ</icon>
+<icon code="937006" src="&baseurl;937006.png" size="24">バラ</icon>
+<icon code="937007" src="&baseurl;937007.png" size="24">ナノハナ</icon>
+<icon code="937008" src="&baseurl;937008.png" size="24">クレマチス</icon>
+<icon code="937009" src="&baseurl;937009.png" size="24">スミレ</icon>
+<icon code="937010" src="&baseurl;937010.png" size="24">エンドウ</icon>
+<icon code="937011" src="&baseurl;937011.png" size="24">キキョウ</icon>
+<icon code="937012" src="&baseurl;937012.png" size="24">アサガオ</icon>
+<icon code="937013" src="&baseurl;937013.png" size="24">ホタルブクロ</icon>
+<icon code="937014" src="&baseurl;937014.png" size="24">スズラン</icon>
+<icon code="937015" src="&baseurl;937015.png" size="24">サルビア</icon>
+<icon code="937016" src="&baseurl;937016.png" size="24">サクラソウ</icon>
+<icon code="937017" src="&baseurl;937017.png" size="24">アザミ</icon>
+<icon code="937018" src="&baseurl;937018.png" size="24">シロツメクサ</icon>
+<icon code="937019" src="&baseurl;937019.png" size="24">セリ</icon>
+<icon code="937020" src="&baseurl;937020.png" size="24">コデマリ</icon>
+<icon code="937021" src="&baseurl;937021.png" size="24">トラノオ</icon>
+<icon code="937022" src="&baseurl;937022.png" size="24">シソ</icon>
+<icon code="937023" src="&baseurl;937023.png" size="24">トコロ</icon>
+<icon code="937024" src="&baseurl;937024.png" size="24">オオバコ</icon>
+<icon code="938001" src="&baseurl;938001.png" size="24">きのこ</icon>
+<icon code="938002" src="&baseurl;938002.png" size="24">ひだあり</icon>
+<icon code="938003" src="&baseurl;938003.png" size="24">傘のみ</icon>
+<icon code="938004" src="&baseurl;938004.png" size="24">傘、柄</icon>
+<icon code="938005" src="&baseurl;938005.png" size="24">傘、柄、ツバ</icon>
+<icon code="938006" src="&baseurl;938006.png" size="24">傘、柄、ツボ</icon>
+<icon code="938007" src="&baseurl;938007.png" size="24">傘、柄、ツバ、ツボ</icon>
+<icon code="938008" src="&baseurl;938008.png" size="24">管孔（イグチ類）</icon>
+<icon code="938009" src="&baseurl;938009.png" size="24">ひだなし</icon>
+<icon code="938010" src="&baseurl;938010.png" size="24">傘の裏しわひだ</icon>
+<icon code="938011" src="&baseurl;938011.png" size="24">棒状</icon>
+<icon code="938012" src="&baseurl;938012.png" size="24">ホウキ、サンゴ</icon>
+<icon code="938013" src="&baseurl;938013.png" size="24">サルノコシカケ</icon>
+<icon code="938014" src="&baseurl;938014.png" size="24">マイタケ</icon>
+<icon code="938015" src="&baseurl;938015.png" size="24">下向き針状突起</icon>
+<icon code="938016" src="&baseurl;938016.png" size="24">球形</icon>
+<icon code="938017" src="&baseurl;938017.png" size="24">卵状</icon>
+<icon code="938018" src="&baseurl;938018.png" size="24">耳状</icon>
+<icon code="938019" src="&baseurl;938019.png" size="24">チャワン</icon>
+<icon code="938020" src="&baseurl;938020.png" size="24">不定形</icon>
+<icon code="939001" src="&baseurl;939001.png" size="24">野鳥</icon>
+<icon code="939002" src="&baseurl;939002.png" size="24">カモメ、ミズナギドリ</icon>
+<icon code="939003" src="&baseurl;939003.png" size="24">サギ、ツル</icon>
+<icon code="939004" src="&baseurl;939004.png" size="24">ワシ、タカ</icon>
+<icon code="939005" src="&baseurl;939005.png" size="24">カモ、ハクチョウ</icon>
+<icon code="939006" src="&baseurl;939006.png" size="24">キジ、ハト</icon>
+<icon code="939007" src="&baseurl;939007.png" size="24">シギ、チドリ</icon>
+<icon code="939008" src="&baseurl;939008.png" size="24">フクロウ</icon>
+<icon code="939009" src="&baseurl;939009.png" size="24">ツバメ</icon>
+<icon code="939010" src="&baseurl;939010.png" size="24">カワセミ</icon>
+<icon code="939011" src="&baseurl;939011.png" size="24">キツツキ</icon>
+<icon code="939012" src="&baseurl;939012.png" size="24">セキレイ</icon>
+<icon code="939013" src="&baseurl;939013.png" size="24">スズメ、ムクドリ</icon>
+<icon code="939014" src="&baseurl;939014.png" size="24">カケス、カラス</icon>
+<icon code="951001" src="&baseurl;951001.png" size="24">青旗</icon>
+<icon code="951002" src="&baseurl;951002.png" size="24">緑旗</icon>
+<icon code="951003" src="&baseurl;951003.png" size="24">赤旗</icon>
+<icon code="951004" src="&baseurl;951004.png" size="24">青ピン</icon>
+<icon code="951005" src="&baseurl;951005.png" size="24">緑ピン</icon>
+<icon code="951006" src="&baseurl;951006.png" size="24">赤ピン</icon>
+<icon code="951007" src="&baseurl;951007.png" size="24">青ブロック</icon>
+<icon code="951008" src="&baseurl;951008.png" size="24">緑ブロック</icon>
+<icon code="951009" src="&baseurl;951009.png" size="24">赤ブロック</icon>
+<icon code="951010" src="&baseurl;951010.png" size="24">小都市</icon>
+<icon code="951011" src="&baseurl;951011.png" size="24">中都市</icon>
+<icon code="951012" src="&baseurl;951012.png" size="24">大都市</icon>
+<icon code="952001" src="&baseurl;952001.png" size="24">キャンプ場</icon>
+<icon code="952002" src="&baseurl;952002.png" size="24">トレイル</icon>
+<icon code="952003" src="&baseurl;952003.png" size="24">公園</icon>
+<icon code="952004" src="&baseurl;952004.png" size="24">森</icon>
+<icon code="952005" src="&baseurl;952005.png" size="24">狩り</icon>
+<icon code="952006" src="&baseurl;952006.png" size="24">魚</icon>
+<icon code="952007" src="&baseurl;952007.png" size="24">ジオキャッシュポイント</icon>
+<icon code="952008" src="&baseurl;952008.png" size="24">ジオキャッシュ発見済</icon>
+<icon code="952009" src="&baseurl;952009.png" size="24">ピクニック</icon>
+<icon code="952010" src="&baseurl;952010.png" size="24">トイレ</icon>
+<icon code="952011" src="&baseurl;952011.png" size="24">シャワー</icon>
+<icon code="952012" src="&baseurl;952012.png" size="24">海岸</icon>
+<icon code="952013" src="&baseurl;952013.png" size="24">オートキャンプ場</icon>
+<icon code="952014" src="&baseurl;952014.png" size="24">撮影ポイント</icon>
+<icon code="952015" src="&baseurl;952015.png" size="24">山頂</icon>
+<icon code="952016" src="&baseurl;952016.png" size="24">スキー</icon>
+<icon code="952017" src="&baseurl;952017.png" size="24">水泳</icon>
+<icon code="952018" src="&baseurl;952018.png" size="24">ゴルフ</icon>
+<icon code="952019" src="&baseurl;952019.png" size="24">バイク</icon>
+<icon code="952020" src="&baseurl;952020.png" size="24">水場</icon>
+<icon code="952021" src="&baseurl;952021.png" size="24">トンネル</icon>
+<icon code="952022" src="&baseurl;952022.png" size="24">パラシュート</icon>
+<icon code="952023" src="&baseurl;952023.png" size="24">グライダー</icon>
+<icon code="952024" src="&baseurl;952024.png" size="24">ウルトラライト</icon>
+<icon code="953001" src="&baseurl;953001.png" size="24">錨</icon>
+<icon code="953002" src="&baseurl;953002.png" size="24">人が海中に落ちた</icon>
+<icon code="953003" src="&baseurl;953003.png" size="24">diver down flag 1</icon>
+<icon code="953004" src="&baseurl;953004.png" size="24">diver down flag 2</icon>
+<icon code="953005" src="&baseurl;953005.png" size="24">どくろ</icon>
+<icon code="953006" src="&baseurl;953006.png" size="24">ライト</icon>
+<icon code="953007" src="&baseurl;953007.png" size="24">ブイ</icon>
+<icon code="953008" src="&baseurl;953008.png" size="24">沈船</icon>
+<icon code="953009" src="&baseurl;953009.png" size="24">ホーン</icon>
+<icon code="953010" src="&baseurl;953010.png" size="24">管理エリア</icon>
+<icon code="953011" src="&baseurl;953011.png" size="24">制限エリア</icon>
+<icon code="953012" src="&baseurl;953012.png" size="24">危険</icon>
+<icon code="954001" src="&baseurl;954001.png" size="24">家</icon>
+<icon code="954002" src="&baseurl;954002.png" size="24">小屋</icon>
+<icon code="954003" src="&baseurl;954003.png" size="24">ビル</icon>
+<icon code="954004" src="&baseurl;954004.png" size="24">教会</icon>
+<icon code="954005" src="&baseurl;954005.png" size="24">墓地</icon>
+<icon code="954006" src="&baseurl;954006.png" size="24">高塔</icon>
+<icon code="954007" src="&baseurl;954007.png" size="24">塔</icon>
+<icon code="954008" src="&baseurl;954008.png" size="24">無線灯台</icon>
+<icon code="954009" src="&baseurl;954009.png" size="24">油田</icon>
+<icon code="954010" src="&baseurl;954010.png" size="24">鉱山</icon>
+<icon code="954011" src="&baseurl;954011.png" size="24">学校</icon>
+<icon code="954012" src="&baseurl;954012.png" size="24">バツ</icon>
+<icon code="954013" src="&baseurl;954013.png" size="24">civil location</icon>
+<icon code="954014" src="&baseurl;954014.png" size="24">交番</icon>
+<icon code="954015" src="&baseurl;954015.png" size="24">ベル</icon>
+<icon code="954016" src="&baseurl;954016.png" size="24">自動車</icon>
+<icon code="954017" src="&baseurl;954017.png" size="24">レンタカー</icon>
+<icon code="954018" src="&baseurl;954018.png" size="24">修理工場</icon>
+<icon code="954019" src="&baseurl;954019.png" size="24">ガソリンスタンド</icon>
+<icon code="954020" src="&baseurl;954020.png" size="24">コンビニ</icon>
+<icon code="954021" src="&baseurl;954021.png" size="24">計量所</icon>
+<icon code="954022" src="&baseurl;954022.png" size="24">トラックターミナル</icon>
+<icon code="954023" src="&baseurl;954023.png" size="24">レッカー</icon>
+<icon code="954024" src="&baseurl;954024.png" size="24">料金所</icon>
+<icon code="954025" src="&baseurl;954025.png" size="24">駐車場</icon>
+<icon code="955001" src="&baseurl;955001.png" size="24">ブイ　アンバー</icon>
+<icon code="955002" src="&baseurl;955002.png" size="24">ブイ　黒</icon>
+<icon code="955003" src="&baseurl;955003.png" size="24">ブイ　青</icon>
+<icon code="955004" src="&baseurl;955004.png" size="24">ブイ　緑／白</icon>
+<icon code="955005" src="&baseurl;955005.png" size="24">ブイ　緑</icon>
+<icon code="955006" src="&baseurl;955006.png" size="24">ブイ　緑／赤</icon>
+<icon code="955007" src="&baseurl;955007.png" size="24">ブイ　オレンジ</icon>
+<icon code="955008" src="&baseurl;955008.png" size="24">ブイ　赤／緑</icon>
+<icon code="955009" src="&baseurl;955009.png" size="24">ブイ　赤／白</icon>
+<icon code="955010" src="&baseurl;955010.png" size="24">ブイ　赤</icon>
+<icon code="955011" src="&baseurl;955011.png" size="24">ブイ　紫</icon>
+<icon code="955012" src="&baseurl;955012.png" size="24">ブイ　白</icon>
+<icon code="955013" src="&baseurl;955013.png" size="24">ブイ　白／緑</icon>
+<icon code="955014" src="&baseurl;955014.png" size="24">ブイ　白／赤</icon>
+<icon code="956001" src="&baseurl;956001.png" size="24">ショッピング</icon>
+<icon code="956002" src="&baseurl;956002.png" size="24">電話</icon>
+<icon code="956003" src="&baseurl;956003.png" size="24">空港</icon>
+<icon code="956004" src="&baseurl;956004.png" size="24">案内所</icon>
+<icon code="956005" src="&baseurl;956005.png" size="24">レストラン</icon>
+<icon code="956006" src="&baseurl;956006.png" size="24">宿</icon>
+<icon code="956007" src="&baseurl;956007.png" size="24">ボートランプ</icon>
+<icon code="956008" src="&baseurl;956008.png" size="24">水上スキー</icon>
+<icon code="956009" src="&baseurl;956009.png" size="24">フィトネス</icon>
+<icon code="956010" src="&baseurl;956010.png" size="24">スケート</icon>
+<icon code="956011" src="&baseurl;956011.png" size="24">救急</icon>
+<icon code="956012" src="&baseurl;956012.png" size="24">薬局</icon>
+<icon code="956013" src="&baseurl;956013.png" size="24">橋</icon>
+<icon code="956014" src="&baseurl;956014.png" size="24">ダム</icon>
+<icon code="956015" src="&baseurl;956015.png" size="24">銀行</icon>
+<icon code="956016" src="&baseurl;956016.png" size="24">ビール</icon>
+<icon code="956017" src="&baseurl;956017.png" size="24">デパート</icon>
+<icon code="956018" src="&baseurl;956018.png" size="24">映画館</icon>
+<icon code="956019" src="&baseurl;956019.png" size="24">ファーストフード</icon>
+<icon code="956020" src="&baseurl;956020.png" size="24">ピザ</icon>
+<icon code="956021" src="&baseurl;956021.png" size="24">劇場</icon>
+<icon code="956022" src="&baseurl;956022.png" size="24">郵便局</icon>
+<icon code="956023" src="&baseurl;956023.png" size="24">博物館</icon>
+<icon code="956024" src="&baseurl;956024.png" size="24">野球場</icon>
+<icon code="956025" src="&baseurl;956025.png" size="24">ボーリング場</icon>
+<icon code="956026" src="&baseurl;956026.png" size="24">遊園地</icon>
+<icon code="956027" src="&baseurl;956027.png" size="24">スタジアム</icon>
+<icon code="956028" src="&baseurl;956028.png" size="24">動物園</icon>
+</iconlut>
