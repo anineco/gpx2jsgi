@@ -58,7 +58,7 @@ window.onload = function() {
 </table>
 <h2>設置方法</h2>
 <h3>準備</h3>
-<p>まず、<a href="http://developer.yahoo.co.jp/start/" class="extern">Yahoo!デベロッパーネットワーク</a>にアクセスして、アプリケーションIDを発行する必要があります。発行は無料です。以下では、発行されたアプリケーションIDを<var>APPID</var>と表記します。</p>
+<p>まず、<a href="https://developer.yahoo.co.jp/start" class="extern">Yahoo!デベロッパーネットワーク</a>にアクセスして、アプリケーションIDを発行する必要があります。発行は無料です。以下では、発行されたアプリケーションIDを<var>APPID</var>と表記します。</p>
 <p>次に、<a href="download.html">ダウンロード</a>のページから、gpsweb-X.X.zip（X.Xはバージョン番号）の最新版をダウンロードし、適当な場所で展開して下さい。以降の説明で用いるファイル一式が入っています。</p>
 <p>その他、ご自身独自のルート地図を作成する際には、地図に上乗せするGPSデータをKML形式で用意する必要があります。</p>
 <h3>ページ内表示</h3>
@@ -117,12 +117,12 @@ window.onload = function() {
 <table class="base">
 <tbody>
 <tr><th>URL</th><th>説明</th></tr>
-<tr><td>https://map.yahooapis.jp/js/V1/jsapi?appid=<var>APPID</var></td><td><a href="http://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/js/" class="extern">Yahoo! JavaScriptマップAPI</a></td></tr>
+<tr><td>https://map.yahooapis.jp/js/V1/jsapi?appid=<var>APPID</var></td><td><a href="https://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/js" class="extern">Yahoo! JavaScriptマップAPI</a></td></tr>
 <tr><td>js/ymap.js</td><td>上記APIを呼び出すJavaScriptファイル</td></tr>
 </tbody>
 </table>
 <p>通常、これらを変更する必要はありませんが、1ページに複数のYahoo!地図版ルート地図を表示する場合や、他のJavaScriptライブラリを同時に利用している場合、Yahoo!地図の機能をもっと活用したい場合には、ymap.jsの内容を理解して変更する必要があります（HTML+CSS+JavaScriptの知識がある人向け）。</p>
-<p>なお、サイトに公開する場合には、適宜<a href="http://developer.yahoo.co.jp/attribution/">クレジットの表示</a>を加えて下さい。</p>
+<p>なお、サイトに公開する場合には、適宜<a href="https://developer.yahoo.co.jp/attribution">クレジットの表示</a>を加えて下さい。</p>
 <h3>別ページ表示</h3>
 <p>例として、サイト内に次のようなディレクトリ構成で設置したymap_ex2.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。当該ページ内の「ルート地図」のリンクをクリックすると、別の窓が開いてルート地図を表示します。この方法では、1ページに設置できるルート地図の数は制限されません（ただし、同時に開けるルート地図は一つにしています）。</p>
 <div>ディレクトリ構成例</div>
