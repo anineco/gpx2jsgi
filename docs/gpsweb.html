@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Web地図を利用したGPSログ表示</title>
+<link rel="stylesheet" href="css/common.css" />
+<style type="text/css">
+div.gm-style-iw td { margin:0;padding:0;border:none; }
+div.yolp-infowindow td { margin:0;padding:0;border:none; }
+</style>
+<script type="text/javascript" src="http://map.jpn.org/sys/OpenLayers-2.13.1/OpenLayers.gsimaps.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&amp;region=JP"></script>
+<script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPWR0cjBWa012YVBQNiZzPWNvbnN1bWVyc2VjcmV0Jng9ZDU-"></script>
+<script type="text/javascript" src="js/omap.js"></script>
+<script type="text/javascript" src="js/gmap.js"></script>
+<script type="text/javascript" src="js/ymap.js"></script>
+<script type="text/javascript">//<![CDATA[
+window.onload = function() {
+	init_omap({
+		div: 'map_gsimap',
+		lon: 140.672862, lat: 37.864291, zoom: 15,
+		url: 'example/routemap.kml'
+	});
+	init_gmap({
+		div: 'map_google',
+		lng: 140.672862, lat: 37.864291, zoom: 15,
+		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+	});
+	init_ymap({
+		div: 'map_yahoo',
+		lng: 140.672862, lat: 37.864291, zoom: 16,
+		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+	});
+};
+//]]></script>
+</head>
+<body>
+<div class="menu">
+<ul>
+<li><a href="index.html">電脳覚書</a> &gt;</li>
+<li>TOP &gt;</li>
+<li><a href="gpx2jsgi.html">GPX2JSGI</a> |</li>
+<li><a href="omap.html">地理院地図</a> |</li>
+<li><a href="gmap.html">Googleマップ</a> |</li>
+<li><a href="ymap.html">Yahoo!地図</a> |</li>
+<li><a href="transition.html">旧版からの移行</a></li>
+</ul>
+</div><!-- end menu -->
+<h1>Web地図を利用したGPSログ表示</h1>
+<ul>
+<li>更新情報（2015-03-07）
+<img src="images/new.gif" alt="NEW" height="11" width="20" /><br />
+JSGI2KMLの説明を<a href="gpx2jsgi.html#jsgi2kml">GPX2JSGI</a>のページに移動。</li>
+<li><strong>電子国土Webシステム（Ver.1〜4）は2014年3月末にサポートが停止され、2015年7月14日以降は運用も停止されます。</strong><br />今後は新版の<a href="omap.html">地理院地図版ルート地図</a>をご利用下さい。</li>
+<li>既設の電子国土版ルート地図を地理院地図版ルート地図へ移行する方法については、<a href="transition.html">旧版からの移行</a>のページを参照下さい。</li>
+<li>このサイトの内容に関するご意見・ご質問は、<a href="https://anineco.sakura.ne.jp/bbs/">サポート掲示板</a>へお願いします。</li>
+</ul>
+<h2>このサイトについて</h2>
+<p>このサイトでは、ハンディGPSで記録したログ（軌跡データ）を、<a href="http://portal.cyberjapan.jp/" class="extern">地理院地図</a>の地形図に重ね合わせてホームページに表示する方法を紹介しています。GPSログを表示した地図のことを、本サイトでは「ルート地図」と呼んでいます。地理院地図を用いたルート地図の設置方法を主として扱っていますが、GoogleマップやYahoo!地図を用いたルート地図の設置方法も掲載しています。</p>
+<p>このサイトの内容は、GPSからのログの読み込みに<a href="http://www.kashmir3d.com/" class="extern">カシミール3D</a>を利用することを前提としています。カシミール3Dで作成したルート地図を、単に画像としてホームページに表示するのではなく、スクロールやズームイン・ズームアウト等の操作が可能なルート地図として表示します。</p>
+<p>このサイトでは、ルート地図を作成するためのユーティリティ<a href="gpx2jsgi.html">GPX2JSGI</a>（GPX→KMLコンバータ）もフリーソフトウェアとして配布しています。これは、作者のホームページ（<a href="https://anineco.org/" class="extern">あにねこ登山日誌</a>）の山行記録に添えるルート地図を、少ない手間で見栄えよく表示したいという目的で開発しているものです。</p>
+<p>このサイトの読者については、ハンディGPSとカシミール3Dの操作方法、および、ホームページ作成、HTML、JavaScriptについての基礎知識があることを想定しています。これらの知識については、必要に応じて他の情報源を参照して下さい。</p>
+<p>このサイトと、このサイトで設置方法を説明するルート地図は、以下のブラウザで閲覧した際に（一部の不具合を除き）適切に表示されます。</p>
+<ul>
+<li>Windows：Internet Explorer 6以降とFirefox、Chrome、Operaの各最新版</li>
+<li>Mac：Safari、Firefox、Chrome、Operaの各最新版</li>
+<li>Linux：Firefox、Chrome、Operaの各最新版</li>
+</ul>
+<p>このサイトの管理人の使用機材は下記のとおりです。主にこの環境で動作確認を行っています。</p>
+<ul>
+<li>メインPC：Apple Mac mini (Late 2012)、OS X 10.10 Yosemite、Safari 8</li>
+<li>サブPC：Epson Endeavor TY5100S、Windows 7、Internet Explorer 11、カシミール3D 最新版</li>
+<li>GPS：Garmin eTrex 20J</li>
+</ul>
+<h2>どんなルート地図ができるの？</h2>
+<p>図1に、様々な方式で設置したルート地図の表示例を示します。図1(a)は、カシミール3Dで作成したルート地図を画像ファイルとして出力し、HTMLのimg要素として表示したものです。トラックの往路を赤、復路を青に色付けし、ウェイポイントにアイコン画像を表示しています。</p>
+<p>図1(b)は、ルート地図を構成するGPSデータ（トラック、ウェイポイント）をカシミール3DでGPX形式のファイルとして保存し、<a href="gpx2jsgi.html">GPX2JSGI</a>でKML形式に変換して、地理院地図に重ね合わせたルート地図です。比較のため、表示領域の画素数は図1(a)の画像の画素数に合わせてあります。また、同じKMLファイルをGoogleマップとYahoo!地図にそれぞれ重ね合わせたものが、図1(c)と図1(d)のルート地図です。</p>
+<p>図1(b)〜(d)のルート地図では、マウス左ボタンを押しながら地図をドラッグすると、滑らかにスクロールさせることができます。また、(＋)、(−)ボタンをクリックしたり、マウスホイールを回転させると、地図のズームイン、ズームアウトができます。地図上のアイコンをクリックすると小窓がポップアップして、地名や簡単な説明が表示されます。種類の異なる地図や航空写真への切り替えも可能です。</p>
+<p>各項目にある<span class="routemap" style="color:blue;">ルート地図</span>ボタンをクリックすると、別ウィンドウを開いてルート地図を表示します。ウィンドウの大きさを変えると地図の表示範囲も追従して変化します。地図を見やすい大きさで表示することができ、大変便利です。</p>
+<p>図1(b)〜(d)のルート地図は、地図上にGPSログを表示するだけの最も基本的な機能を実装した例です。この他にも、本サイトが取り扱う範囲を超えますが、設定と工夫次第で見栄えを変えたり、様々な機能を追加することができます。</p>
+<table class="base">
+<caption>図1 ルート地図の表示例</caption>
+<tbody>
+<tr>
+<td><img src="example/Mt_Hayama.png" alt="*" width="430" height="240" /></td>
+<td valign="top">(a) カシミール3D【解説本】2万5千地形図</td>
+</tr>
+<tr>
+<td><div id="map_gsimap" style="width:430px;height:240px;"></div></td>
+<td valign="top">(b) 地理院地図版ルート地図（<a href="omap.html">解説</a>）<br />
+←ページ内表示｜別ウィンドウ表示→<a href="gsimaps.html?lat=37.864291&amp;lon=140.672862&amp;zoom=15&amp;url=example/routemap.kml" onclick="window.open(this.href,'ROUTEMAP','width=640,height=510,resizable=yes');return false;" class="routemap">ルート地図</a></td>
+</tr>
+<tr>
+<td><div id="map_google" style="width:430px;height:240px;"></div></td>
+<td valign="top">(c) Googleマップ版ルート地図（<a href="gmap.html">解説</a>）<br />
+←ページ内表示｜別ウィンドウ表示→<a href="googlemap.html?lat=37.864291&amp;lng=140.672862&amp;zoom=15&amp;url=example/routemap.kml" onclick="window.open(this.href,'ROUTEMAP','width=640,height=510,resizable=yes');return false;" class="routemap">ルート地図</a></td>
+</tr>
+<tr>
+<td><div id="map_yahoo" style="width:430px;height:240px;"></div></td>
+<td valign="top">(d) Yahoo!地図版ルート地図（<a href="ymap.html">解説</a>）<br />
+←ページ内表示｜別ウィンドウ表示→<a href="yahoomap.html?lat=37.864291&amp;lng=140.672862&amp;zoom=16&amp;url=example/routemap.kml" onclick="window.open(this.href,'ROUTEMAP','width=640,height=510,resizable=yes');return false;" class="routemap">ルート地図</a></td>
+</tr>
+</tbody>
+</table>
+<h2>ルート地図の設置手順の概要</h2>
+<div style="float:right;margin:20px;text-align:center;"><img src="images/dataflow.gif" width="469" height="313" alt="*" style="margin:10px;"/><br />図2 ルート地図設置のためのデータ処理の概要</div>
+<p>図2は、地理院地図を用いたルート地図を設置するためのデータ処理の概要を示したものです。</p>
+<ul style="list-style-type:none;padding-left:0;">
+<li><strong>①</strong> GPSから軌跡データをカシミール3Dに読み込みます。</li>
+<li><strong>②</strong> カシミール3Dで軌跡データを編集し、ウェイポイント等を追加したのち、GPX形式で出力します。</li>
+<li><strong>③</strong> <a href="gpx2jsgi.html">GPX2JSGI</a>を用いて、GPXデータを地理院地図で利用可能な上乗せデータ（KML形式）に変換します。</li>
+<li><strong>④</strong> 上乗せデータを、FTPソフト等を用いて、ユーザサイトにアップロードします。</li>
+<li><strong>⑤</strong> 地理院地図を呼び出すJavaScriptコードを記述したHTMLファイルを設置します。</li>
+</ul>
+<p>以上でルート地図が完成します。Webブラウザで⑤のHTMLファイルにアクセスすると、国土地理院の地図サーバから読み出した背景地図データに上乗せデータを重ね合わせたルート地図が表示されます。</p>
+<p>なお、GoogleマップやYahoo!地図を用いる場合も、JavaScriptコードの部分がそれぞれ異なりますが、データ処理の流れは基本的に同じです。</p>
+<h2>ルート地図の表示方式の比較</h2>
+<p>ルート地図の各表示方式をざっくり比較して表1に示します。</p>
+<table class="base">
+<caption>表1 ルート地図の表示方式の比較</caption>
+<tbody>
+<tr><th rowspan="2">比較項目</th><th rowspan="2">画像（img要素）</th><th colspan="3">地図系Web API</th></tr>
+<tr><th>地理院地図</th><th>Googleマップ</th><th>Yahoo!地図</th></tr>
+<tr><td>地図のスクロール</td><td>×</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><td>ズームイン／アウト</td><td>×</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><td>表示領域のサイズ変更</td><td>×</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><td>複数地図の切り替え</td><td>×</td><td>○</td><td>○</td><td>○</td></tr>
+<tr><td>航空写真への切り替え</td><td>×</td><td>○（※1）</td><td>○</td><td>○</td></tr>
+<tr><td>コード記述</td><td>○簡単</td><td>△やや複雑（※2）</td><td>△やや複雑（※2）</td><td>△やや複雑（※2）</td></tr>
+<tr><td>上乗せデータ形式</td><td>JPG</td><td>KML</td><td>KML、KMZ</td><td>KML</td></tr>
+<tr><td>データ変換</td><td>○簡単（ペイント）</td><td>△簡単（※3）</td><td>△簡単（※3）</td><td>△簡単（※3）</td></tr>
+<tr><td>利用許諾</td><td>必要（<a href="http://www.gsi.go.jp/LAW/2930-index.html" class="extern">国土地理院</a>）</td><td>不要</td><td>不要</td><td>不要（※4）</td></tr>
+<tr><td>特徴</td><td>単純で簡単</td><td>地形図が高精細</td><td>高機能でポピュラー</td><td>まだマイナー？</td></tr>
+</tbody>
+</table>
+<p>※1 山岳地帯の航空写真は未整備。<br />
+※2 複雑と言っても、HTMLファイルに定型的なJavaScriptコードを加えるだけです。<br />
+※3 <a href="gpx2jsgi.html">GPX2JSGI</a>を使えば簡単。手間はインストールだけです。<br />
+※4 アプリケーションIDの登録（無料）が必要です。</p>
+<h2>リンク集</h2>
+<p style="float:right;text-align:center;"><a href="images/gpsweb.png"><img src="images/gpsweb.png" alt="地図系Web APIを利用したGPS軌跡表示" border="0" height="40" width="115" /></a><br />
+（115x40）</p>
+<p>GPSと地理院地図の利用に関連する情報、活用事例へのリンクです（随時、追加中）。なお、当サイトへのリンクは御自由にどうぞ。リンクの際にもしバナーが必要でしたら、右のリンクバナーをご利用下さい。</p>
+<ul>
+<li><a href="http://portal.cyberjapan.jp/" class="extern">地理院地図（電子国土Web）</a><br />
+地理院地図についての詳細な情報は、ここの「技術情報」から入手できます。</li>
+<li><a href="http://www.gps-walk.com/" class="extern">GPSウォーキング</a><br />
+山行記録をGPSログと電子国土やGoogleマップを用いたルート地図で紹介しています。GPS活用方法についての情報も豊富です。</li>
+<li><a href="http://homepage2.nifty.com/sangaku/" class="extern">一等三角点探訪</a><br />
+三角点と地図に関する情報が満載。カシミール3Dで利用できるデータも配布しています。</li>
+<li><a href="http://homepage3.nifty.com/uyou3po/" class="extern">山歩き遊悠湯</a><br />
+ヤマトタケルさんのHP。地理院地図やYahoo!地図を活用して、デザインの良いGPSマップを作成されています。</li>
+<li><a href="http://park16.wakwak.com/~marsie/" class="extern">大子山岳会</a><br />
+マーシーさんのHP。非常に研究熱心で、工夫を凝らしたサイトを作成されています。</li>
+</ul>
+<h2>更新履歴</h2>
+<table class="base">
+<tbody>
+<tr>
+<td valign="top">2015-03-07</td>
+<td valign="top">JSGI2KMLの説明を<a href="gpx2jsgi.html#jsgi2kml">GPX2JSGI</a>のページに移動。</td>
+</tr>
+<tr>
+<td valign="top">2014-11-03</td>
+<td valign="top">サイト名を「電子国土Webシステムを利用したGPSログ表示」から改称し、全面的にリニューアル。<br />
+<a href="gpx2jsgi.html">GPX2JSGI</a> Ver.1.5を公開。</td>
+</tr>
+<tr>
+<td valign="top">2013-12-28</td>
+<td valign="top"><a href="gpx2jsgi.html#v13">GPX2JSGI Ver.1.3</a>（地理院地図対応版）を公開。JSGI2KML（JSGI→KMLコンバータ）Ver.1.3も同梱。<br />
+<a href="omap.html">地理院地図版ルート地図</a>を追加し、電子国土(Ver.4)版ルート地図を削除。</td>
+</tr>
+<tr>
+<td valign="top">2013-05-17</td>
+<td valign="top">電子国土(Ver.4)版ルート地図を追加し、電子国土(Ver.3)版ルート地図を削除。</td>
+</tr>
+<tr>
+<td valign="top">2012-01-12</td>
+<td valign="top"><a href="ymap.html">Yahoo!地図版ルート地図</a>の地図デザインに地形図を追加。</td>
+</tr>
+<tr>
+<td valign="top">2011-12-08</td>
+<td valign="top">電子国土版ルート地図の dmap-basic.html と routemap.html のバグ（IE9での表示の不具合）を修正。</td>
+</tr>
+<tr>
+<td valign="top">2011-11-11</td>
+<td valign="top">電子国土(Ver.3)版ルート地図を試験公開。<br />
+routemap.html と googlemap.html のバグ（IEでの表示の不具合）を修正。</td>
+</tr>
+<tr>
+<td valign="top">2011-03-28</td>
+<td valign="top">サイトを http://anineco.nyanta.jp/gpsweb.html に移転し、全面的にリニューアル。<br />
+<a href="gpx2jsgi.html">GPX2JSGI</a> Ver.1.2を公開。</td>
+</tr>
+<tr>
+<td valign="top">2010-10-23</td>
+<td valign="top"><a href="gpx2jsgi.html">GPX2JSGI</a> Ver.1.1βを公開。</td>
+</tr>
+<tr>
+<td class="nowrap">2010-10-12</td>
+<td valign="top"><a href="gpx2jsgi.html">GPX2JSGI</a>に、カシミール3D Ver.8.8.5 に関する注記を追加。&#160;</td>
+</tr>
+<tr>
+<td class="nowrap">2010-08-04</td>
+<td valign="top"><a href="gpx2jsgi.html">GPX2JSGI</a> Ver.1.0βを公開。</td>
+</tr>
+<tr>
+<td class="nowrap">2009-11-15</td>
+<td>リンク集に「<a href="http://www.ab.auone-net.jp/%7Enobspage/" class="extern">東海だより</a>」を追加。</td>
+</tr>
+<tr>
+<td class="nowrap">2009-04-26</td>
+<td><a href="gpx2jsgi.html">GPX2JSGI</a> Ver.1.0αを公開。</td>
+</tr>
+<tr>
+<td class="nowrap">2009-01-25</td>
+<td><a href="gpx2jsgi.html">GPX2JSGI</a> Ver.0.9αの公開に合わせて、サイトの構成と内容を全面的に改訂。</td>
+</tr>
+<tr>
+<td class="nowrap">2008-12-13</td>
+<td>ネイティブデータの読み込みに対応するため、routemap.html、routemap_sub.htmlを変更。</td>
+</tr>
+<tr>
+<td class="nowrap">2008-10-08</td>
+<td><a href="#linklist">リンクバナー</a>を作成。</td>
+</tr>
+<tr>
+<td class="nowrap">2008-10-05</td>
+<td><a href="https://anineco.sakura.ne.jp/bbs/">サポート掲示板</a>を開設。routemap_sub.htmlのバグを修正。</td>
+</tr>
+<tr>
+<td class="nowrap">2008-09-21</td>
+<td><a href="#linklist">リンク集</a>を作成。</td>
+</tr>
+<tr>
+<td class="nowrap">2008-08-18</td>
+<td>リニューアル公開。</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<div style="float:left;">
+<img src="count/dream.cgi?id=gpsweb&amp;fig=5&amp;gif=2" alt="*" height="21" width="70" />
+</div>
+<address>Copyright &copy; 2008 - 2015 <a href="index.html">あにねこ電脳覚書</a></address>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>地理院地図版ルート地図</title>
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<script type="text/javascript" src="http://map.jpn.org/sys/OpenLayers-2.13.1/OpenLayers.gsimaps.js"></script>
+<script type="text/javascript" src="js/omap.js"></script>
+<script type="text/javascript" src="js/routemap.js"></script>
+<script type="text/javascript">//<![CDATA[
+window.onload = function() {
+	init_omap({
+		div: 'map_gsimap',
+		lon: 140.672862, lat: 37.864291, zoom: 15,
+		url: 'example/routemap.kml'
+	});
+};
+//]]></script>
+</head>
+<body>
+<div class="menu">
+<ul>
+<li><a href="index.html">電脳覚書</a> &gt;</li>
+<li><a href="gpsweb.html">TOP</a> &gt;</li>
+<li><a href="gpx2jsgi.html">GPX2JSGI</a> |</li>
+<li>地理院地図 |</li>
+<li><a href="gmap.html">Googleマップ</a> |</li>
+<li><a href="ymap.html">Yahoo!地図</a> |</li>
+<li><a href="transition.html">旧版からの移行</a></li>
+</ul>
+</div><!-- end menu -->
+<h1>地理院地図版ルート地図</h1>
+<ul>
+<li>更新情報（2014-11-03）：全面的にリニューアルしました。
+<img src="images/new.gif" alt="NEW" height="11" width="20" /></li>
+<li>このサイトの内容に関するご意見・ご質問は、<a href="https://anineco.sakura.ne.jp/bbs/">サポート掲示板</a>へお願いします。</li>
+</ul>
+<h2>地理院地図とは</h2>
+<p><a href="http://portal.cyberjapan.jp/site/mapuse4/" class="extern">地理院地図</a>とは、2013年10月30日に<a href="http://www.gsi.go.jp/johofukyu/johofukyu40032.html" class="extern">公開</a>された、国土地理院の最新版の地図サイトです。電子国土Web（電子国土Webシステムをベースとする国土地理院の地図サイト）の後継として試験公開されていた電子国土Web.NEXTが、名称を改めて正式に公開されたものです。</p>
+<p>地理院地図の公開と共に、地理院地図で用いられている地理院タイル（標準的な構成でタイル化された地図画像）の一般利用への提供が開始されました。地理院タイルの構成は業界標準に従っているため、多くの地図系ウェブシステムから取り扱うことが容易で、高度なウェブ地図の開発が可能になっています。</p>
+<p>従来の電子国土Webシステムでは、国土地理院謹製の独自APIでウェブ地図の諸機能が提供されていましたが、新版ではAPIは提供されず、地図系ウェブシステムから地理院タイルを利用することにより、同等（あるいはそれ以上）の機能を実現します。地理院タイルを取り扱える地図系ウェブシステムの代表的なものとして、オープンソースJavaScriptライブラリの<a href="http://openlayers.org/" class="extern">OpenLayers</a>があります。国土地理院でもOpenLayersを主として用いており、地理院タイル＋OpenLayersによるウェブ地図開発の<a href="http://portal.cyberjapan.jp/help/development.html" class="extern">技術情報</a>を公開しています。本項でも、ルート地図の作成にOpenLayers 2.13.1を利用します。</p>
+<p>なお、地理院地図という用語は、前述のとおり国土地理院の地図サイトを指しますが、本HPでは地理院タイル＋OpenLayersで実現される新版の電子国土Webシステムという意味合いで、本項のタイトル等に用いています。</p>
+<p>地理院タイルは、Webサイトでの地図の閲覧を目的とする限りは、自由に利用可能とされています。利用に当たっては、<a href="http://portal.cyberjapan.jp/help/termsofuse.html" class="extern">国土地理院コンテンツ利用規約</a>をご一読下さい。出所（国土地理院）の明示や印刷に関する制約等の利用条件があります。</p>
+<h2>表示例</h2>
+<p>ページ内に固定サイズの地図を表示する「ページ内表示」と、リンクをクリックすると別のページが開いて、ページ全面に地図を表示する「別ページ表示」の二つの方法を説明します。</p>
+<p>いずれの方法でも、マウス左ボタンを用いて地図のスクロール、マウスホイールや地図左上のボタンにより表示縮尺の変更ができます。GPSデータのアイコンをクリックすると、説明がポップアップします。また、地図右上の<img src="http://map.jpn.org/sys/OpenLayers-2.13.1/img/layer-switcher-maximize.png" width="18" height="18" alt="(+]" />ボタンで標準地図と淡色地図の切り替えや、GPSデータの表示のON/OFFができます。</p>
+<p>別ページ表示では、ページのサイズを変えると地図の表示領域の大きさも追従して変化します。また、印刷等の機能を呼び出すメニューがついています。</p>
+<table class="base">
+<tbody>
+<tr>
+<td valign="top">ページ内表示</td>
+<td><div id="map_gsimap" style="width:430px;height:240px;"></div></td>
+</tr>
+<tr>
+<td valign="top">別ページ表示</td>
+<td><a href="gsimaps.html?lat=37.864291&amp;lon=140.672862&amp;zoom=15&amp;url=example/routemap.kml" onclick="return routemap(this.href)" class="routemap">ルート地図</a></td>
+</tr>
+</tbody>
+</table>
+<p>これだけでも十分に素晴らしいルート地図が出来上がっていますが、OpenLayersの豊富な機能を利用すると、さらにいろいろなこと（Googleマップと切り替えて表示等）ができます。以下ではその基礎となる簡単なページを例題として、地理院地図利用のルート地図を表示する方法を説明します。</p>
+<h2>設置方法</h2>
+<h3>準備</h3>
+<p><a href="download.shtml">ダウンロード</a>のページから、gpsweb-X.X.zip（X.Xはバージョン番号）の最新版をダウンロードし、適当な場所で展開して下さい。以降の説明で用いるファイル一式が入っています。</p>
+<p>その他、ご自身独自のルート地図を作成する際には、地図に上乗せするGPSデータを用意する必要があります。</p>
+<p>OpenLayersでは、KML形式やGPX形式など、様々な形式の上乗せデータを読み込んで地図にオーバーレイすることができますが、電子国土Webシステム（旧版）で用いていたJSGI形式は残念ながら読み込めません。JSGI形式は（元は地理情報標準第2版という国際規格案に基づそうですが）国土地理院独自の形式なので、OpenLayersのサポートを期待しても望み薄です。国土地理院も、電子国土WebシステムVer.4までは後方互換性のためにJSGI形式のサポートを検討していたようですが、断念して、地理院地図（電子国土Web）でもKML形式だけが読み書きの対象となっています。</p>
+<p>そのうえ、ファイルサイズについても、通常、KML形式&lt;GPX形式&lt;JSGI形式となり、概ね1:2:4程度の差があります。という訳で、上乗せデータとしては、現状ではほぼ唯一の選択肢のKML形式を利用します。</p>
+<p>なお、地理院地図で読み書き可能なKML形式は、国土地理院が定める<a href="http://portal.cyberjapan.jp/help/howtouse.html#h2-4" class="extern">KMLウェブ地図プロファイル</a>と称するKML形式のサブセット（略称、KMP形式）に限定されます。Ver.1.3とそれ以降の<a href="gpx2jsgi.html">GPX2JSGI</a>はKMP形式を出力します。このKMP形式は、GoogleマップやYahoo!地図でも共通して上乗せ可能です。以降のKML形式は、KMP形式を指します。</p>
+<h3>ページ内表示</h3>
+<p>例として、サイト内に次のようなディレクトリ構成で設置したomap_ex1.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。この方法では、1ページに表示できる地理院地図版ルート地図は一つに制限されます。</p>
+<div>ディレクトリ構成例</div>
+<pre style="margin-top:0;">
+public_html / index.html（トップページ）
+	|
+	+--js / omap.js
+	+--example / routemap.kml
+	+--<a href="omap_ex1.html">omap_ex1.html</a>
+</pre>
+<p>次にomap_ex1.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。</p>
+<div>omap_ex1.html</div>
+<pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="Content-Style-Type" content="text/css" /&gt;
+&lt;meta http-equiv="Content-Script-Type" content="text/javascript" /&gt;
+&lt;title&gt;地理院地図版ルート地図&lt;/title&gt;<span class="mark">
+&lt;script type="text/javascript" src="http://map.jpn.org/sys/OpenLayers-2.13.1/OpenLayers.gsimaps.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/omap.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+window.onload = function() {
+	init_omap({
+		div: '<var>map_gsimap</var>',
+		lon: <var>140.672862</var>, lat: <var>37.864291</var>, zoom: <var>15</var>,
+		url: '<var>example/routemap.kml</var>'
+	});
+};
+//]]&gt;&lt;/script&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;<span class="mark">
+&lt;div id="<var>map_gsimap</var>" style="width: <var>640px</var>; height: <var>480px</var>;"&gt;</span>
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>各パラメータの意味は次のとおりです。</p>
+<table class="base">
+<tbody>
+<tr><th>パラメータ名</th><th>値の例</th><th>説明</th></tr>
+<tr><td>div</td><td><var>map_gsimap</var></td><td>地図を設置するdiv要素のid</td></tr>
+<tr><td>lon</td><td><var>140.672862</var></td><td>表示領域の中心座標の経度（世界測地系、単位：度）</td></tr>
+<tr><td>lat</td><td><var>37.864291</var></td><td>　　　　〃　　　　　経度</td></tr>
+<tr><td>zoom</td><td><var>15</var></td><td>ズームレベル（0〜18）</td></tr>
+<tr><td>url</td><td><var>example/routemap.kml</var></td><td>KMLファイルのURL（相対URLのみ）</td></tr>
+<tr><td>id</td><td><var>map_gsimap</var></td><td>divパラメータと同じ識別名</td></tr>
+<tr><td>width</td><td><var>640px</var></td><td>表示領域の横幅</td></tr>
+<tr><td>height</td><td><var>480px</var></td><td>　　〃　　高さ</td></tr>
+</tbody>
+</table>
+<p>KMLファイル（routemap.kml）は、地図を設置するHTMLファイルと同じドメインに置いて、HTMLファイル（omap_ex1.html）のURLを起点する相対URLでアクセスできる必要があります。これはセキュリティの問題（CRSF）を防止するため、異なる生成元からの読み込みがJavaScriptにより制限されているためです。</p>
+<p>omap_ex1.htmlは、routemap.kmlの他に、次の2つのファイルを読み込んでいます。</p>
+<table class="base">
+<tbody>
+<tr><th>URL</th><th>説明</th></tr>
+<tr><td>//map.jpn.org/sys/OpenLayers-2.13.1/OpenLayers.gsimaps.js</td><td>OpenLayers JavaScriptライブラリ</td></tr>
+<tr><td>js/omap.js</td><td>OpenLayersを呼び出すJavaScriptファイル</td></tr>
+</tbody>
+</table>
+<p>通常、これらを変更する必要はありませんが、1ページに複数の地理院地図版ルート地図を表示する場合や、他のJavaScriptライブラリを同時に利用している場合、OpenLayersの機能をもっと活用したい場合には、omap.jsの内容を理解して変更する必要があります（HTML+CSS+JavaScriptの知識がある人向け）。</p>
+<p>なお、OpenLayers.gsimaps.jsについてはこのURLのまま指定して下さい。これは、GPX2JSGIが標準的に用いる24x24画素のアイコン画像をオリジナルのOpenLayersで表示させると自動的に32x32画素に拡大され、ボヤケて表示されるという問題を回避するため、OpenLayersのライブラリの一部（KML.js）に10行程度の変更を加えているためです。</p>
+<h3>別ページ表示</h3>
+<p>例として、サイト内に次のようなディレクトリ構成で設置したomap_ex2.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。当該ページ内の「ルート地図」のリンクをクリックすると、別の窓が開いてルート地図を表示します。この方法では、1ページに設置できるルート地図の数は制限されません（ただし、同時に開けるルート地図は一つにしています）。</p>
+<div>ディレクトリ構成例</div>
+<pre style="margin-top:0;">
+public_html / index.html（トップページ）
+	|
+	+--gsimaps.html
+	+--js / routemap.js
+	+--example / routemap.kml
+	+--<a href="omap_ex2.html">omap_ex2.html</a>
+</pre>
+<p>次にomap_ex2.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。パラメータの意味は、ページ内表示の場合と同じです。4つのパラメータはいずれも必須で、省略できません。</p>
+<div>omap_ex2.html</div>
+<pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="content-style-type" content="text/css" /&gt;
+&lt;meta http-equiv="content-script-type" content="text/javascript" /&gt;
+&lt;title&gt;地理院地図版ルート地図&lt;/title&gt;<span class="mark">
+&lt;script type="text/javascript" src="js/routemap.js"&gt;&lt;/script&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;<span class="mark">&lt;a href="gsimaps.html?lat=<var>37.864291</var>&amp;amp;lon=<var>140.672862</var>&amp;amp;zoom=<var>15</var>&amp;amp;url=<var>example/routemap.kml</var>"
+ onclick="return routemap(this.href)"&gt;ルート地図&lt;/a&gt;</span>&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>地図の表示領域の大きさを変更したい場合は、routemap.js内のパラメータを変更します。</p>
+<div>routemap.js</div>
+<pre style="margin-top:0;"><code>function routemap(url) {
+	window.open(url,'ROUTEMAP','width=<var>640</var>,height=<var>510</var>,resizable=yes');
+	return false;
+}
+</code></pre>
+<p>パラメータheightには、表示領域の高さ＋30（ピクセル）の値を指定します。</p>
+<hr />
+<address>Copyright &copy; 2008 - 2014 <a href="index.html">あにねこ電脳覚書</a></address>
+</body>
+</html>

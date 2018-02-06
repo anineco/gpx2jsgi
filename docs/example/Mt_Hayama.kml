@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--GPX2KML Ver.1.4 2014-01-03T20:56:44+09:00-->
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>ルート地図：羽山</name>
+    <Snippet>作成日 2014-01-02</Snippet>
+    <atom:author>
+      <atom:name>あにねこ</atom:name>
+    </atom:author>
+    <atom:link href="https://anineco.org/"/>
+    <Style id="id122932">
+      <LineStyle>
+        <color>b30000ff</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="id123924">
+      <LineStyle>
+        <color>b3ff0000</color>
+        <width>2</width>
+      </LineStyle>
+    </Style>
+    <Style id="N951005">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>https://anineco.org/symbols/Pin_Green.png</href>
+        </Icon>
+        <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      </IconStyle>
+      <LabelStyle>
+        <color>ffffffff</color>
+        <scale>0.75</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="N952002">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>https://anineco.org/symbols/Trail_Head.png</href>
+        </Icon>
+        <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      </IconStyle>
+      <LabelStyle>
+        <color>ffffffff</color>
+        <scale>0.75</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="N952014">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>https://anineco.org/symbols/Scenic_Area.png</href>
+        </Icon>
+        <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      </IconStyle>
+      <LabelStyle>
+        <color>ffffffff</color>
+        <scale>0.75</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="N952015">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>https://anineco.org/symbols/Summit.png</href>
+        </Icon>
+        <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      </IconStyle>
+      <LabelStyle>
+        <color>ffffffff</color>
+        <scale>0.75</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="N954025">
+      <IconStyle>
+        <scale>1</scale>
+        <Icon>
+          <href>https://anineco.org/symbols/Parking_Area.png</href>
+        </Icon>
+        <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
+      </IconStyle>
+      <LabelStyle>
+        <color>ffffffff</color>
+        <scale>0.75</scale>
+      </LabelStyle>
+    </Style>
+    <Folder>
+      <name>Route</name>
+    </Folder>
+    <Folder>
+      <name>Track</name>
+      <Placemark>
+        <name>羽山（往路）</name>
+        <styleUrl>#id122932</styleUrl>
+        <LineString>
+          <coordinates>140.668557,37.863465,205.38
+140.668671,37.863499,202.01
+140.668494,37.863512,200.57
+140.668463,37.863609,198.17
+140.668580,37.863576,202.49
+140.668538,37.863639,204.42
+140.668503,37.863543,208.74
+140.668639,37.863522,213.07
+140.668489,37.863531,207.30
+140.668501,37.863611,208.26
+140.668875,37.863584,211.63
+140.668743,37.863583,210.19
+140.668970,37.863489,211.15
+140.669153,37.863605,217.40
+140.669384,37.863396,227.49
+140.669626,37.862690,228.93
+140.669755,37.862642,233.26
+140.670212,37.862837,242.39
+140.670191,37.862961,244.31
+140.669975,37.863057,245.75
+140.670038,37.863405,250.56
+140.670794,37.864016,266.42
+140.670969,37.864070,268.35
+140.670988,37.864276,274.11
+140.671145,37.864375,276.04
+140.671535,37.864182,281.80
+140.671486,37.864322,281.32
+140.671628,37.864258,280.84
+140.672075,37.864487,300.07
+140.672135,37.864459,301.03
+140.672649,37.864815,326.02
+140.672678,37.865081,342.37
+140.672795,37.865153,341.89
+140.672713,37.865302,351.50
+140.672748,37.865519,373.61
+140.672604,37.865505,376.97
+140.672593,37.865562,377.45
+140.671923,37.865552,377.45
+140.671814,37.865649,376.49
+140.671843,37.865789,372.65
+140.672400,37.865966,378.42
+140.673152,37.865946,373.13
+140.673529,37.865805,375.53
+140.673740,37.865877,382.26
+140.674237,37.865762,390.91
+140.674502,37.865481,406.29
+140.674421,37.865295,406.77
+140.674433,37.865512,406.29
+140.674923,37.865651,402.45
+140.675359,37.865533,407.74
+140.676292,37.864912,453.88
+140.676202,37.864958,456.28
+140.676327,37.865009,457.24
+140.676309,37.864931,459.17
+140.676334,37.864987,457.24
+</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>羽山（復路）</name>
+        <styleUrl>#id123924</styleUrl>
+        <LineString>
+          <coordinates>140.676163,37.864978,445.23
+140.676389,37.864981,453.88
+140.676288,37.864924,456.28
+140.676422,37.864694,454.36
+140.676843,37.864359,422.16
+140.676966,37.864574,421.68
+140.677260,37.864644,416.39
+140.677215,37.864441,415.91
+140.676954,37.864145,410.62
+140.676134,37.863879,396.20
+140.675915,37.863628,392.36
+140.676008,37.863566,388.51
+140.675902,37.863478,383.70
+140.675697,37.863555,373.13
+140.675595,37.863483,372.17
+140.675528,37.863660,366.88
+140.675213,37.863677,365.44
+140.675074,37.863759,369.28
+140.674724,37.863751,368.80
+140.674520,37.863629,370.24
+140.674384,37.863680,368.32
+140.674292,37.863889,361.59
+140.674157,37.863965,358.71
+140.673794,37.863897,357.75
+140.673743,37.863805,358.23
+140.673227,37.863973,348.13
+140.673016,37.863881,348.62
+140.672648,37.863895,341.89
+140.672541,37.863996,338.52
+140.672661,37.864215,331.31
+140.672348,37.864325,318.33
+140.672266,37.864271,317.85
+140.672074,37.864376,312.09
+140.672022,37.864315,312.57
+140.671456,37.864301,307.28
+140.671281,37.864428,307.28
+140.671526,37.864307,304.88
+140.671465,37.864204,302.95
+140.671132,37.864353,293.82
+140.671039,37.864050,286.61
+140.670859,37.864028,281.80
+140.670630,37.863791,277.96
+140.670097,37.863562,276.04
+140.670011,37.863038,263.54
+140.670248,37.862835,258.25
+140.670139,37.862703,256.81
+140.669642,37.862616,249.60
+140.669506,37.862743,246.72
+140.669328,37.863392,236.14
+140.669177,37.863545,228.93
+140.668964,37.863418,222.20
+140.668539,37.863525,214.51
+140.668550,37.863449,215.47
+</coordinates>
+        </LineString>
+      </Placemark>
+    </Folder>
+    <Folder>
+      <name>Waypoint</name>
+      <Placemark>
+        <name>双子岩</name>
+        <styleUrl>#N952014</styleUrl>
+        <Point>
+          <coordinates>140.675914,37.863628,392.35</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>羽山</name>
+        <description><![CDATA[<table><tr><td>標高</td><td>458m</td></tr></table>]]></description>
+        <styleUrl>#N952015</styleUrl>
+        <Point>
+          <coordinates>140.676353,37.864992,454.36</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>羽山神社</name>
+        <description><![CDATA[<table><tr><td>駐車</td><td>2台</td></tr></table>]]></description>
+        <styleUrl>#N954025</styleUrl>
+        <Point>
+          <coordinates>140.668761,37.863572,210.18</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>羽山登山口</name>
+        <styleUrl>#N952002</styleUrl>
+        <Point>
+          <coordinates>140.671525,37.864281,281.80</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>山頂下駐車場</name>
+        <description><![CDATA[<table><tr><td>駐車</td><td>15台</td></tr></table>]]></description>
+        <styleUrl>#N954025</styleUrl>
+        <Point>
+          <coordinates>140.677214,37.864442,415.90</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>出戸羽山</name>
+        <styleUrl>#N952015</styleUrl>
+        <Point>
+          <coordinates>140.671975,37.865822,376.01</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>中羽山</name>
+        <styleUrl>#N951005</styleUrl>
+        <Point>
+          <coordinates>140.674422,37.865297,407.25</coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

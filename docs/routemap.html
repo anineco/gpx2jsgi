@@ -1,0 +1,28 @@
+<html>
+<head>
+<script type="text/javascript"><!--
+var param = { scl: 18000 };
+var baseurl = 'http://anineco.nyanta.jp/'; // 基準URL
+var ma = location.search.substr(1).split('&');
+for (var i = 0; i < ma.length; i++) {
+	var s = ma[i].split('=');
+	param[s[0]] = s[1];
+}
+param.lon = param.lon || param.lng;
+if (!param.zoom) {
+	param.zoom = 17;
+	var scl = 4500;
+	while (param.zoom > 0 && scl < param.scl) {
+		param.zoom--;
+		scl += scl;
+	}
+}
+var url = decodeURIComponent(param.url);
+if (url.slice(0, 5) != 'http:') {
+	url = baseurl + url;
+}
+param.url = encodeURIComponent(url);
+location.replace('http://map.jpn.org/compat/proxy2.html?lat=' + param.lat + '&lon=' + param.lon + '&zoom=' + param.zoom + '&url=' + param.url);
+//--></script>
+</head>
+</html>

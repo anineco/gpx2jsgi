@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Googleマップ版ルート地図</title>
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;region=JP"></script>
+<script type="text/javascript" src="js/gmap.js"></script>
+<script type="text/javascript" src="js/routemap.js"></script>
+<script type="text/javascript">//<![CDATA[
+window.onload = function() {
+	init_gmap({
+		div: 'map_google',
+		lng: 140.672862, lat: 37.864291, zoom: 15,
+		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+	});
+};
+//]]></script>
+</head>
+<body>
+<div class="menu">
+<ul>
+<li><a href="index.html">電脳覚書</a> &gt;</li>
+<li><a href="gpsweb.html">TOP</a> &gt;</li>
+<li><a href="gpx2jsgi.html">GPX2JSGI</a> |</li>
+<li><a href="omap.html">地理院地図</a> |</li>
+<li>Googleマップ |</li>
+<li><a href="ymap.html">Yahoo!地図</a> |</li>
+<li><a href="transition.html">旧版からの移行</a></li>
+</ul>
+</div><!-- end menu -->
+<h1>Googleマップ版ルート地図</h1>
+<ul>
+<li>更新情報（2014-11-03）：全面的にリニューアルしました。
+<img src="images/new.gif" alt="NEW" height="11" width="20" /></li>
+<li>このサイトに関するご意見・ご質問・ご要望は、<a href="https://anineco.sakura.ne.jp/bbs/">サポート掲示板</a>へお願いします。</li>
+</ul>
+<h2>表示例</h2>
+<p>ページ内に固定サイズの地図を表示する「ページ内表示」と、リンクをクリックすると別のページが開いて、ページ全面に地図を表示する「別ページ表示」の二つの方法を説明します。</p>
+<p>いずれの方法でも、マウス左ボタンを用いて地図のスクロール、マウスホイールや地図左上のボタンにより表示縮尺の変更ができます。GPSデータのアイコンをクリックすると、説明がポップアップします。また、地図右上のボタンで航空写真に切り替えることができます。</p>
+<p>別ページ表示では、ページのサイズを変えると地図の表示領域の大きさも追従して変化します。また、GPSデータの表示のON/OFFや印刷等の機能を呼び出すメニューがついています。</p>
+<table class="base">
+<tbody>
+<tr>
+<td valign="top">ベージ内表示</td>
+<td><div id="map_google" style="width:430px;height:240px;"></div></td>
+</tr>
+<tr>
+<td valign="top">別ページ表示</td>
+<td><a href="googlemap.html?lat=37.864291&amp;lng=140.672862&amp;zoom=15&amp;url=example/routemap.kml" onclick="return routemap(this.href)" class="routemap">ルート地図</a></td>
+</tr>
+</tbody>
+</table>
+<h2>設置方法</h2>
+<h3>準備</h3>
+<p><a href="download.shtml">ダウンロード</a>のページから、gpsweb-X.X.zip（X.Xはバージョン番号）の最新版をダウンロードし、適当な場所で展開して下さい。以降の説明で用いるファイル一式が入っています。</p>
+<p>その他、ご自身独自のルート地図を作成する際には、地図に上乗せするGPSデータをKML形式で用意する必要があります。</p>
+<h3>ページ内表示</h3>
+<p>例として、サイト内に次のようなディレクトリ構成で設置したgmap_ex1.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。この方法では、1ページに表示できるGoogleマップ版ルート地図は一つに制限されます。</p>
+<div class="verbatim">ディレクトリ構成例</div>
+<pre style="margin-top:0;">
+public_html / index.html（トップページ）
+	|
+	+--js / gmap.js
+	+--example / routemap.kml
+	+--<a href="gmap_ex1.html">gmap_ex1.html</a>
+</pre>
+<p>次にgmap_ex1.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。</p>
+<div class="verbatim">gmap_ex1.html</div>
+<pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="Content-Style-Type" content="text/css" /&gt;
+&lt;meta http-equiv="Content-Script-Type" content="text/javascript" /&gt;
+&lt;title&gt;Googleマップ版ルート地図&lt;/title&gt;<span class="mark">
+&lt;script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&amp;amp;region=JP"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/gmap.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+window.onload = function() {
+	init_gmap({
+		div: '<var>map_google</var>',
+		lng: <var>140.672862</var>, lat: <var>37.864291</var>, zoom: <var>15</var>,
+		url: '<var>http://anineco.nyanta.jp/example/routemap.kml</var>'
+	});
+};
+//]]&gt;&lt;/script&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;<span class="mark">
+&lt;div id="<var>map_google</var>" style="width: <var>640px</var>; height: <var>480px</var>;"&gt;&lt;/div&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>各パラメータの意味は次のとおりです。</p>
+<table class="base">
+<tbody>
+<tr><th>パラメータ名</th><th>値の例</th><th>説明</th></tr>
+<tr><td>div</td><td><var>map_google</var></td><td>地図を設置するdiv要素のid</td></tr>
+<tr><td>lng</td><td><var>140.672862</var></td><td>表示領域の中心座標の経度（世界測地系、単位：度）</td></tr>
+<tr><td>lat</td><td><var>37.864291</var></td><td>　　　　〃　　　　　経度</td></tr>
+<tr><td>zoom</td><td><var>15</var></td><td>ズームレベル</td></tr>
+<tr><td>url</td><td><var>http://anineco.nyanta.jp/example/routemap.kml</var></td><td>KMLファイルのURL</td></tr>
+<tr><td>id</td><td><var>map_google</var></td><td>divパラメータと同じ識別名</td></tr>
+<tr><td>width</td><td><var>640px</var></td><td>表示領域の横幅</td></tr>
+<tr><td>height</td><td><var>480px</var></td><td>　　〃　　高さ</td></tr>
+</tbody>
+</table>
+<p>gmap_ex1.htmlは、routemap.kmlの他に、次の2つのファイルを読み込んでいます。</p>
+<table class="base">
+<tbody>
+<tr><th>URL</th><th>説明</th></tr>
+<tr><td>//maps.google.com/maps/api/js?sensor=false&amp;region=JP</td><td><a href="https://developers.google.com/maps/documentation/javascript/?hl=ja" class="extern">Google Maps API V3</a></td></tr>
+<tr><td>js/gmap.js</td><td>上記APIを呼び出すJavaScriptファイル</td></tr>
+</tbody>
+</table>
+<p>通常、これらを変更する必要はありませんが、1ページに複数のGoogleマップ版ルート地図を表示する場合や、他のJavaScriptライブラリを同時に利用している場合、Googleマップの機能をもっと活用したい場合には、gmap.jsの内容を理解して変更する必要があります（HTML+CSS+JavaScriptの知識がある人向け）。</p>
+<h3>別ページ表示</h3>
+<p>例として、サイト内に次のようなディレクトリ構成で設置したgmap_ex2.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。当該ページ内の「ルート地図」のリンクをクリックすると、別の窓が開いてルート地図を表示します。この方法では、1ページに設置できるルート地図の数は制限されません（ただし、同時に開けるルート地図は一つにしています）。</p>
+<div>ディレクトリ構成例</div>
+<pre style="margin-top:0;">
+public_html / index.html（トップページ）
+	|
+	+--googlemap.html
+	+--js / routemap.js
+	+--example / routemap.kml
+	+--<a href="gmap_ex2.html">gmap_ex2.html</a>
+</pre>
+<p>googlemap.htmlの中の基準URL（下記の緑字の部分）は、設置したサイトに合わせて変更して下さい。</p>
+<div>googlemap.html（抜粋）</div>
+<pre style="margin-top:0;"><code>&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+google.maps.event.addDomListener(window, 'load', function() {
+	var baseurl = '<var>http://anineco.nyanta.jp/</var>'; // 基準URL
+</code></pre>
+<p>次にomap_ex2.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。パラメータの意味は、ページ内表示の場合と同じです。なお、パラメータurlに相対URLを指定した場合は、基準URLからの相対URLとなります。4つのパラメータはいずれも必須で、省略できません。</p>
+<div>gmap_ex2.html</div>
+<pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="content-style-type" content="text/css" /&gt;
+&lt;meta http-equiv="content-script-type" content="text/javascript" /&gt;
+&lt;title&gt;Googleマップ版ルート地図&lt;/title&gt;<span class="mark">
+&lt;script type="text/javascript" src="js/routemap.js"&gt;&lt;/script&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;<span class="mark">&lt;a href="googlemap.html?lat=<var>37.864291</var>&amp;amp;lng=<var>140.672862</var>&amp;amp;zoom=<var>15</var>&amp;amp;url=<var>example/routemap.kml</var>"
+ onclick="return routemap(this.href)"&gt;ルート地図&lt;/a&gt;</span>&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>地図の表示領域の大きさを変更したい場合は、routemap.js内のパラメータを変更します。</p>
+<div>routemap.js</div>
+<pre style="margin-top:0;"><code>function routemap(url) {
+	window.open(url,'ROUTEMAP','width=<var>640</var>,height=<var>510</var>,resizable=yes');
+	return false;
+}
+</code></pre>
+<p>パラメータheightには、表示領域の高さ＋30（ピクセル）の値を指定します。</p>
+<hr />
+<address>Copyright &copy; 2008 - 2014 <a href="index.html">あにねこ電脳覚書</a></address>
+</body>
+</html>

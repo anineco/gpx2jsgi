@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript"><!--
+var param = {};
+top.map.openJSGIXML = function(url) {
+	param.url = encodeURIComponent(url);
+};
+top.map.setMapCenter = function(x, y, scale) {
+	param.lat = y;
+	param.lon = x;
+	param.zoom = 17;
+	var scl = 4500;
+	while (param.zoom > 0 && scl < scale) {
+		param.zoom--;
+		scl *= 2;
+	}
+};
+top.map.createScaleBar = function() {};
+top.map.enablePopup = function() {};
+top.map.setMouseMode = function() {};
+top.map.openMap = function() {};
+top.app_main();
+location.replace('http://map.jpn.org/compat/proxy1.html?lat=' + param.lat + '&lon=' + param.lon + '&zoom=' + param.zoom + '&url=' + param.url);
+//--></script>
+</head>
+</html>

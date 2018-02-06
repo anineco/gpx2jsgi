@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Yahoo!地図版ルート地図</title>
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPWR0cjBWa012YVBQNiZzPWNvbnN1bWVyc2VjcmV0Jng9ZDU-"></script>
+<script type="text/javascript" src="js/ymap.js"></script>
+<script type="text/javascript" src="js/routemap.js"></script>
+<script type="text/javascript">//<![CDATA[
+window.onload = function() {
+	init_ymap({
+		div: 'map_yahoo',
+		lng: 140.672862, lat: 37.864291, zoom: 16,
+		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+	});
+};
+//]]></script>
+</head>
+<body>
+<div class="menu">
+<ul>
+<li><a href="index.html">電脳覚書</a> &gt;</li>
+<li><a href="gpsweb.html">TOP</a> &gt;</li>
+<li><a href="gpx2jsgi.html">GPX2JSGI</a> |</li>
+<li><a href="omap.html">地理院地図</a> |</li>
+<li><a href="gmap.html">Googleマップ</a> |</li>
+<li>Yahoo!地図 |</li>
+<li><a href="transition.html">旧版からの移行</a></li>
+</ul>
+</div><!-- end menu -->
+<h1>Yahoo!地図版ルート地図</h1>
+<ul>
+<li>更新情報（2014-11-03）：全面的にリニューアルしました。
+<img src="images/new.gif" alt="NEW" height="11" width="20" /></li>
+<li>このサイトに関するご意見・ご質問・ご要望は、<a href="https://anineco.sakura.ne.jp/bbs/">サポート掲示板</a>へお願いします。</li>
+</ul>
+<h2>表示例</h2>
+<p>ページ内に固定サイズの地図を表示する「ページ内表示」と、リンクをクリックすると別のページが開いて、ページ全面に地図を表示する「別ページ表示」の二つの方法を説明します。</p>
+<p>いずれの方法でも、マウス左ボタンを用いて地図のスクロール、マウスホイールや地図左上のボタンにより表示縮尺の変更ができます。GPSデータのアイコンをクリックすると、説明がポップアップします。また、地図右上のボタンで（市街地の表示に適した）地図や写真に切り替えることができます。</p>
+<p>別ページ表示では、ページのサイズを変えると地図の表示領域の大きさも追従して変化します。また、GPSデータの表示のON/OFFや印刷等の機能を呼び出すメニューがついています。</p>
+<table class="base">
+<tbody>
+<tr>
+<td>ページ内表示</td>
+<td><div id="map_yahoo" style="width:430px;height:240px;"></div></td>
+</tr>
+<tr>
+<td>別ページ表示</td>
+<td><a href="yahoomap.html?lat=37.864291&amp;lng=140.672862&amp;zoom=16&amp;url=example/routemap.kml" onclick="return routemap(this.href)" class="routemap">ルート地図</a></td>
+</tr>
+</tbody>
+</table>
+<h2>設置方法</h2>
+<h3>準備</h3>
+<p>まず、<a href="http://developer.yahoo.co.jp/start/" class="extern">Yahoo!デベロッパーネットワーク</a>にアクセスして、アプリケーションIDを発行する必要があります。発行は無料です。以下では、発行されたアプリケーションIDを<var>APPID</var>と表記します。</p>
+<p>次に、<a href="download.shtml">ダウンロード</a>のページから、gpsweb-X.X.zip（X.Xはバージョン番号）の最新版をダウンロードし、適当な場所で展開して下さい。以降の説明で用いるファイル一式が入っています。</p>
+<p>その他、ご自身独自のルート地図を作成する際には、地図に上乗せするGPSデータをKML形式で用意する必要があります。</p>
+<h3>ページ内表示</h3>
+<p>例として、サイト内に次のようなディレクトリ構成で設置したymap_ex1.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。この方法では、1ページに表示できるYahoo!地図版ルート地図は一つに制限されます。</p>
+<div>ディレクトリ構成例</div>
+<pre style="margin-top:0;">
+public_html / index.html（トップページ）
+	|
+	+--js / ymap.js
+	+--example / routemap.kml
+	+--<a href="ymap_ex1.html">ymap_ex1.html</a>
+</pre>
+<p>次にymap_ex1.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。</p>
+<div>ymap_ex1.html</div>
+<pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="Content-Style-Type" content="text/css" /&gt;
+&lt;meta http-equiv="Content-Script-Type" content="text/javascript" /&gt;
+&lt;title&gt;Yahoo!地図版ルート地図&lt;/title&gt;<span class="mark">
+&lt;script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=<var>APPID</var>"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/ymap.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+window.onload = function() {
+	init_ymap({
+		div: '<var>map_yahoo</var>',
+		lng: <var>140.672862</var>, lat: <var>37.864291</var>, zoom: <var>16</var>,
+		url: '<var>http://anineco.nyanta.jp/example/routemap.kml</var>'
+	});
+};
+//]]&gt;&lt;/script&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;<span class="mark">
+&lt;div id="<var>map_yahoo</var>" style="width: <var>640px</var>; height: <var>480px</var>;"&gt;&lt;/div&gt;</span>
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>各パラメータの意味は次のとおりです。</p>
+<table class="base">
+<tbody>
+<tr><th>パラメータ名</th><th>値の例</th><th>説明</th></tr>
+<tr><td>appid</td><td><var>APPID</var></td><td>取得したアプリケーションID</td></tr>
+<tr><td>div</td><td><var>map_yahoo</var></td><td>地図を設置するdiv要素のid</td></tr>
+<tr><td>lng</td><td><var>140.672862</var></td><td>表示領域の中心座標の経度（世界測地系、単位：度）</td></tr>
+<tr><td>lat</td><td><var>37.864291</var></td><td>　　　　〃　　　　　経度</td></tr>
+<tr><td>zoom</td><td><var>15</var></td><td>ズームレベル</td></tr>
+<tr><td>url</td><td><var>http://anineco.nyanta.jp/example/routemap.kml</var></td><td>KMLファイルのURL</td></tr>
+<tr><td>id</td><td><var>map_yahoo</var></td><td>divパラメータと同じ識別名</td></tr>
+<tr><td>width</td><td><var>640px</var></td><td>表示領域の横幅</td></tr>
+<tr><td>height</td><td><var>480px</var></td><td>　　〃　　高さ</td></tr>
+</tbody>
+</table>
+<p>ymap_ex1.htmlは、routemap.kmlの他に、次の2つのファイルを読み込んでいます。</p>
+<table class="base">
+<tbody>
+<tr><th>URL</th><th>説明</th></tr>
+<tr><td>https://map.yahooapis.jp/js/V1/jsapi?appid=<var>APPID</var></td><td><a href="http://developer.yahoo.co.jp/webapi/map/openlocalplatform/v1/js/" class="extern">Yahoo! JavaScriptマップAPI</a></td></tr>
+<tr><td>js/ymap.js</td><td>上記APIを呼び出すJavaScriptファイル</td></tr>
+</tbody>
+</table>
+<p>通常、これらを変更する必要はありませんが、1ページに複数のYahoo!地図版ルート地図を表示する場合や、他のJavaScriptライブラリを同時に利用している場合、Yahoo!地図の機能をもっと活用したい場合には、ymap.jsの内容を理解して変更する必要があります（HTML+CSS+JavaScriptの知識がある人向け）。</p>
+<p>なお、サイトに公開する場合には、適宜<a href="http://developer.yahoo.co.jp/attribution/">クレジットの表示</a>を加えて下さい。</p>
+<h3>別ページ表示</h3>
+<p>例として、サイト内に次のようなディレクトリ構成で設置したymap_ex2.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。当該ページ内の「ルート地図」のリンクをクリックすると、別の窓が開いてルート地図を表示します。この方法では、1ページに設置できるルート地図の数は制限されません（ただし、同時に開けるルート地図は一つにしています）。</p>
+<div>ディレクトリ構成例</div>
+<pre style="margin-top:0;">
+public_html / index.html（トップページ）
+	|
+	+--yahoomap.html
+	+--js / routemap.js
+	+--example / routemap.kml
+	+--<a href="ymap_ex2.html">ymap_ex2.html</a>
+</pre>
+<p>yahoomap.htmlの中のAPPIDと基準URL（下記の緑字の部分）は、設置したサイトに合わせて変更して下さい。</p>
+<div>yahoomap.html（抜粋）</div>
+<pre style="margin-top:0;"><code>&lt;script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=<var>APPID</var>"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;//&lt;![CDATA[
+window.onload = function() {
+	var baseurl = '<var>http://anineco.nyanta.jp/</var>'; // 基準URL
+</code></pre>
+<p>次にymap_ex2.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。パラメータの意味は、ページ内表示の場合と同じです。なお、パラメータurlに相対URLを指定した場合は、基準URLからの相対URLとなります。4つのパラメータはいずれも必須で、省略できません。</p>
+<div>ymap_ex2.html</div>
+<pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"&gt;
+&lt;head&gt;
+&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8" /&gt;
+&lt;meta http-equiv="content-style-type" content="text/css" /&gt;
+&lt;meta http-equiv="content-script-type" content="text/javascript" /&gt;
+&lt;title&gt;Yahoo!地図版ルート地図&lt;/title&gt;<span class="mark">
+&lt;script type="text/javascript" src="js/routemap.js"&gt;&lt;/script&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;<span class="mark">&lt;a href="yahoomap.html?lat=<var>37.864291</var>&amp;amp;lng=<var>140.672862</var>&amp;amp;zoom=<var>16</var>&amp;amp;url=<var>example/routemap.kml</var>"
+ onclick="return routemap(this.href)"&gt;ルート地図&lt;/a&gt;</span>&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>地図の表示領域の大きさを変更したい場合は、routemap.js内のパラメータを変更します。</p>
+<div>routemap.js</div>
+<pre style="margin-top:0;"><code>function routemap(url) {
+	window.open(url,'ROUTEMAP','width=<var>640</var>,height=<var>510</var>,resizable=yes');
+	return false;
+}
+</code></pre>
+<p>パラメータheightには、表示領域の高さ＋30（ピクセル）の値を指定します。</p>
+<hr />
+<address>Copyright &copy; 2008 - 2014 <a href="index.html">あにねこ電脳覚書</a></address>
+</body>
+</html>

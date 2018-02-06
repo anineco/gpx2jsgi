@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=Shift_JIS">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-script-type" content="text/javascript">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="robots" content="noindex,nofollow">
+<title>ルート地図</title>
+<style type="text/css"><!--
+* { margin: 0; padding: 0; }
+body { background-color: #ccc; font-family: sans-serif; }
+form { padding: 3px 5px 0 5px; font-size: small; }
+input { margin-top: 3px; font-size: smaller; }
+--></style>
+<script type="text/javascript"><!--
+function repaint() {
+	var scl = top.map.getMapScale();
+	var sel = document.MENU.SCALE;
+	var i = sel.selectedIndex;
+	var v = sel.options[i].value;
+	if (v == scl) { return; }
+	var d = (scl > v) ? 1 : -1;
+	for (i += d; i >= 0 && i < sel.length; i += d) {
+		if (sel.options[i].value == scl) {
+			sel.selectedIndex = i;
+			return;
+		}
+	}
+}
+function changeScale(obj) {
+	var scl = obj.options[obj.selectedIndex].value;
+	top.map.setMapScale(scl);
+	top.map.openMap();
+}
+function displayOnOff(layer, sw) {
+	if (sw) {
+		var na = top.map.getLayers();
+		for (var i = 0; i < na.length; i++) {
+			if (na[i].slice(0,layer.length) == layer) {
+				top.map.focusLayer(na[i]);
+			}
+		}
+	}
+	top.map.displayLayer(layer, sw);
+	if (top.map.LT_Limited) {
+		top.map.redrawMap();
+	}
+}
+function GPS_OnOff(sw) {
+	displayOnOff('Route', sw);
+	displayOnOff('Track', sw);
+	displayOnOff('Waypoint', sw);
+}
+function centerPosition() {
+	var lat = Number(top.map.getCy()).toFixed(6);
+	var lng = Number(top.map.getCx()).toFixed(6);
+	return '緯度=' + lat + '\n' + '経度=' + lng;
+}
+//--></script>
+</head>
+<body>
+<form name="MENU" action="#">
+<div style="float: left; margin-right: 5px;">
+縮尺
+<select name="SCALE" onchange="changeScale(this)">
+<option value="2500">1/2500</option>
+<option value="4500">1/4500</option>
+<option value="9000">1/9000</option>
+<option value="18000" selected>1/18000</option>
+<option value="36000">1/36000</option>
+<option value="75000">1/75000</option>
+<option value="150000">1/15万</option>
+<option value="300000">1/30万</option>
+<option value="600000">1/60万</option>
+<option value="1200000">1/120万</option>
+<option value="10000000">1/1000万</option>
+</select>
+</div>
+<div style="float: left; margin-right: 5px;">
+<input name="C4" type="checkbox" onclick="GPS_OnOff(this.checked)" checked>
+GPSデータ
+</div>
+<div style="float: left;">
+<input name="B1" type="button" value="中心座標" onclick="alert(centerPosition())">
+<!--
+<input name="B2" type="button" value="レイヤ" onclick="top.map.openDisplayLayerWindow()">
+-->
+<input name="B3" type="button" value="印刷" onclick="top.map.printMap()">
+<!--
+<input name="B4" type="button" value="保存" onclick="top.map.saveJSGIXML('JSGIXML')">
+-->
+</div>
+<div style="float: right;">
+<input name="B5" type="button" value="閉じる" onclick="top.close()">
+</div>
+</form>
+</body>
+</html>

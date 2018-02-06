@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<title>Yahoo!地図版ルート地図</title>
+<script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPWR0cjBWa012YVBQNiZzPWNvbnN1bWVyc2VjcmV0Jng9ZDU-"></script>
+<script type="text/javascript" src="js/ymap.js"></script>
+<script type="text/javascript">//<![CDATA[
+window.onload = function() {
+	init_ymap({
+		div: 'map_yahoo',
+		lng: 140.672862, lat: 37.864291, zoom: 16,
+		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+	});
+};
+//]]></script>
+</head>
+<body>
+<div id="map_yahoo" style="width: 640px; height: 480px;"></div>
+</body>
+</html>
