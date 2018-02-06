@@ -23,15 +23,13 @@
 </div><!-- end menu -->
 <h1>GPX2JSGI（GPX→KMLコンバータ）</h1>
 <ul>
-<li>更新情報（2014-11-03）：GPX2JSGI Ver.1.5 を公開しました（<a href="download.shtml">ダウンロード</a>）。
-<img src="images/new.gif" alt="NEW" height="11" width="20" /><br />
-(1) 出力形式の初期値をKML形式に変更。<br />
-(2) データフォルダの iconlut.xml が参照されないことがあるバグを修正。</li>
-<li>このサイトに関するご意見・ご質問・ご要望は、<a href="bbs/index.cgi">サポート掲示板</a>へお願いします。</li>
+<li>更新情報（2015-03-07）：<a href="#jsgi2kml">JSGI2KML</a>の説明を追加。
+<img src="images/new.gif" alt="NEW" height="11" width="20" /></li>
+<li>このサイトに関するご意見・ご質問・ご要望は、<a href="https://anineco.sakura.ne.jp/bbs/">サポート掲示板</a>へお願いします。</li>
 </ul>
 <h2>GPX2JSGIとは？</h2>
 <p>GPX2JSGI（GPX→KMLコンバータ）は、カシミール3Dで作成してGPX形式で保存したGPSデータ（ウェイポイント、ルート、トラック）を、地理院地図やGoogleマップ、Yahoo!地図にオーバーレイ（上乗せ表示）できるKML形式に変換するデスクトップアプリケーションです。当初は、電子国土Webシステムで上乗せデータとして用いられるJSGI形式への変換を行うソフトウェアとして開発したものですが、その後、KML形式への変換も行えるように機能を拡張したものです。</p>
-<p>電子国土Webシステムが旧版となった現在では、JSGI形式への変換は不要な機能となってしましましたが、GPX2JSGIの名称は当面そのままとする予定です。ここでは、KML形式への変換機能についてのみ説明します。</p>
+<p>電子国土Webシステムが旧版となった現在では、JSGI形式への変換は不要な機能となってしまいましたが、GPX2JSGIの名称は当面そのままとする予定です。ここでは、KML形式への変換機能についてのみ説明します。</p>
 <h3>主な機能と特徴</h3>
 <ul>
 <li>カシミール3Dで保存したGPX形式のファイルを、KML形式のファイルに変換します。</li>
@@ -49,7 +47,7 @@
 <h3>著作権について</h3>
 <p>GPX2JSGIのソフトウェアおよび付属文書の著作権は、作者のあにねこ（anineco@nifty.com）が保持します。本ソフトウェアは無償で提供され、複製を入手した人は商用・非商用を問わず自由に使用、複写、変更、結合、掲載、配布することができます。本ソフトウェアの複製または変更した物を掲載、配布する場合は、ソースコード中の著作権表示は削除できません。</p>
 <p>GPX2JSGIの配布パッケージに同梱されている外部プログラムの著作権については、表1のリンク先を参照して下さい。</p>
-<table border="1" cellpadding="1" cellspacing="1">
+<table class="base">
 <caption>表1 GPX2JSGIの配布パッケージに同梱される外部プログラム</caption>
 <tbody>
 <tr>
@@ -191,7 +189,7 @@ js/*               … マニュアル用JavaScript。
 <h2><a name="technote"></a>技術情報</h2>
 <h3><a name="datafolder"></a>データフォルダ</h3>
 <p>Ver.1.2およびそれ以降のGPX2JSGIでは、実行時に参照するアイコン変換表やその他のデータを %APPDATA%\map.jpn.org\gpx2jsgi をパスとするフォルダに置きます。このフォルダを、GPX2JSGIの<b>データフォルダ</b>と呼びます。ここで、%APPDATA%はWindowsのApplication Dataフォルダを指す環境変数で、OSによって次のように定められています。</p>
-<table summary="*" border="1" cellpadding="1" cellspacing="1" width="100%">
+<table class="base">
   <tbody>
     <tr>
       <th>OS</th>
@@ -212,8 +210,8 @@ js/*               … マニュアル用JavaScript。
 <h3><a name="iconlut"></a>アイコン変換表</h3>
 <p>アイコン変換表は、カシミール3Dのアイコンのコード番号と、シンボル画像のURLの対応を定義します。GPX2JSGIが変換を実行する際には、データフォルダのiconlut.xmlがアイコン変換表として参照されます。GPX2JSGIを起動した際にこのファイルがない場合は、アプリフォルダから自動的にコピーされます。アイコン変換表を編集することにより、シンボル画像を自由にカスタマイズすることができます。</p>
 <p>下記は、アイコン変換表のファイル形式を説明するために、iconlut.xmlの冒頭の数行を抜粋したものです。丸数字は説明のために付したもので、実際のファイルには書かれていません。</p>
-<pre class="verbatim-hard">
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+<div>iconlut.xml（抜粋）</div>
+<pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?&gt;
 &lt;!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
 &lt;!ENTITY baseurl "<var>http://map.jpn.org/icons/</var>"&gt;&nbsp;<span style="color:red;">①</span>
@@ -221,13 +219,19 @@ js/*               … マニュアル用JavaScript。
 &lt;iconlut&gt;
 &lt;icon code="901001" src="&amp;baseurl;901001.png" size="24"&gt;ピン&lt;/icon&gt;&nbsp;<span style="color:red;">②</span>
 &nbsp;：
-</pre>
+</code></pre>
 <p>行①は、baseurlという名前（実体名）の内容が、文字列<var>http://map.jpn.org/icons/</var>を示すことを宣言しています。行②は、コード番号901001に対応するシンボル画像のURLとサイズ（24x24画素）を定義しています。シンボル画像の位置の基準は画像の中央で固定です。&amp;baseurl;を実体参照と言い、行①の宣言により実体名の内容に置き換えられるので、このコード番号に対応するシンボル画像のURLは<var>http://map.jpn.org/icons/901001.png</var>となります。</p>
-<h3>付属ユーティリティ</h3>
+<h2>付属ユーティリティ</h2>
+<h3>ICONVIEW</h3>
 <p>ICONVIEWは、カシミール3Dでウェイポイントに設定可能なアイコンをシンボル画像（透過処理済PNG形式）に一括変換し、それ用のアイコン変換表を作成するユーティリティです。動作には、カシミール3Dがインストールされていることが必要です。</p>
 <p>アプリフォルダの中のiconview.exe（青い羽根のアイコン）をクリックしてGUIを起動し、『画像作成』ボタンを押します。作成完了のメッセージを確認してから、引き続いて『一覧表示』ボタンを押します。ブラウザが起動し、作成したシンボル画像の一覧を表示します。『終了』ボタンでICONVIEWを終了します。</p>
-<p>ICONVIEWを実行すると、シンボル画像セットがデータフォルダ内のiconsというフォルダに、アイコン変換表がデータフォルダのiconlut_local.xmlというファイルにそれぞれ出力されます。iconlut_local.xmlのファイル名をiconkml.xmlに変えて、KML形式用のアイコン変換表として用いると、KMLファイルと使用されるシンボル画像をすべて含んだ自立型パッケージのKMZファイルを作成することができます。</p>
-<p><span style="color:red;">！注意！</span>カシミール3Dに付随するデータの著作権は、作者のDAN杉本氏に属するものとされています（<a href="http://www.kashmir3d.com/kash/manual/" class="extern">カシミール3Dマニュアル</a>の24.著作権の章を参照）。ICONVIEWで作成したシンボル画像（カシミール3Dに付随するデータと看做される）は、地図系Web APIやGoogle Earth等を用いて表示されるルート地図の上への表示、および、それらに関連する凡例や説明のための表示に限って、かつ非商用で使用し、その他の用途や商用での使用、特に画像ファイルを単体で配布することはご遠慮下さい。</p>
+<p>ICONVIEWを実行すると、シンボル画像セットがデータフォルダ内のiconsというフォルダに、アイコン変換表がデータフォルダのiconlut_local.xmlというファイルにそれぞれ出力されます。<!-- iconlut_local.xmlのファイル名をiconkml.xmlに変えて、KML形式用のアイコン変換表として用いると、KMLファイルと使用されるシンボル画像をすべて含んだ自立型パッケージのKMZファイルを作成することができます。--></p>
+<p><strong>！注意！</strong>カシミール3Dに付随するデータの著作権は、作者のDAN杉本氏に属するものとされています（<a href="http://www.kashmir3d.com/kash/manual/" class="extern">カシミール3Dマニュアル</a>の24.著作権の章を参照）。ICONVIEWで作成したシンボル画像（カシミール3Dに付随するデータと看做される）は、地図系Web APIやGoogle Earth等を用いて表示されるルート地図の上への表示、および、それらに関連する凡例や説明のための表示に限って、かつ非商用で使用し、その他の用途や商用での使用、特に画像ファイルを単体で配布することはご遠慮下さい。</p>
+<h3><a name="jsgi2kml">JSGI2KML</a></h3>
+<p>JSGI2KMLは、JSGI形式のファイルをKML形式に一括変換するユーティリティです。</p>
+<p>アプリフォルダの中のjsgi2kml.exe（青い羽根のアイコン）をクリックすると、GUIが起動して窓が開きます。まず、『←フォルダ』ボタンと『←ファイル』ボタンで変換元のJSGIファイル（拡張子xml）を選択します。『←フォルダ』でフォルダを選択すると、その下のフォルダ階層を再帰的に探索してJSGIファイルをリストアップします。『←ファイル』ボタンは、GPX2JSGIの『←追加」と同じ機能で、ファイル単位で選択します。リストにはいったファイルは『除外』と『クリア』でリストから取り除くことができます。</p>
+<p>『変換』ボタンは、リストの全ファイルに対してJSGI形式からKML形式への変換を開始します。変換結果の出力先は変換元と同じフォルダ内で、変換元のファイル名の拡張子をxmlからkmlに変えたものとなります。変換先に既に同名のファイルがある場合には、リスト上でファイル名の背景が赤になっていますので、『変換』ボタンを押す前に良く確認し、変換で上書きしたく場合はリストから除外して下さい。多数のファイルがリストにある場合には、リストをスクロールして確認することができます。</p>
+<p>変換終了後、変換結果のログファイルを見るか、確認を求めるダイアログが開きます。ログファイルを確認する場合はNotepadが開きますので、必要に応じてログファイルを別名で保存する等の処理を行った後、Notepadを閉じて下さい。なお、ネットワークドライブに対してファイルの再帰的探索ができないことと、ログファイルに記録された変換開始と終了時刻が1時間ずれているという不具合が確認されています。</p>
 <h2>謝辞</h2>
 <p>カシミール3Dという素晴らしいソフトウェアを開発して、無償で提供頂いている作者のDAN杉本氏に感謝致します。また、tclkit、libxml、iconv、zlib、GPSBabel、Info-ZIP、ImageMagickという強力なオープンソフトウェアの開発者にも感謝です。本ソフトウェアが、カシミール3Dと電子国土Webシステムのさらなる活用のお役に立てば幸いです。</p>
 <h2>参考文献</h2>
@@ -245,10 +249,14 @@ js/*               … マニュアル用JavaScript。
   <li><a href="http://docs.activestate.com/activetcl/8.5/" class="extern">ActiveTcl User Guide</a></li>
 </ul>
 <h2><a name="history">更新履歴</a></h2>
-<table summary="*" border="1" cellpadding="1" cellspacing="1" width="100%">
+<table class="base">
   <tbody>
     <tr>
-      <td valign="top" nowrap="nowrap">2014-11-03</td>
+      <td valign="top" class="nowrap;">2015-03-07</td>
+      <td valign="top"><a href="#jsgi2kml">JSGI2KML</a>の説明を追加。</td>
+    </tr>
+    <tr>
+      <td valign="top" class="nowrap;">2014-11-03</td>
       <td valign="top">GPX2JSGI Ver.1.5を公開（Ver.1.4は未公開）。<br />
 (1) 出力形式の初期値をKML形式に変更。<br />
 (2) データフォルダの iconlut.xml が参照されないことがあるバグを修正。</td>
@@ -355,6 +363,6 @@ GPX2JSGI（GPX→JSGIコンバータ）Ver.1.2 を公開。<br />
   </tbody>
 </table>
 <hr />
-<address>Copyright &copy; 2008 - 2014 <a href="index.html">あにねこ電脳覚書</a></address>
+<address>Copyright &copy; 2008 - 2015 <a href="index.html">あにねこ電脳覚書</a></address>
 </body>
 </html>

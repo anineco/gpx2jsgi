@@ -46,13 +46,19 @@ h4 {
 }
 
 table {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+table.base {
 	margin: 0 auto;
 	padding: 0pt;
 	border-collapse: collapse;
 	border: 2px solid #000;
 }
 
-th {
+.base th {
 	margin: 0px;
 	padding: 5px;
 	border: 1px solid #000;
@@ -60,6 +66,12 @@ th {
 }
 
 td {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.base td {
 	margin: 0px;
 	padding: 5px;
 	border: 1px solid #000;
@@ -83,21 +95,16 @@ strong {
 	color: red;
 }
 
-code {
-	font-family: Verdana;
-	font-size: small;
-}
-
 pre {
 	margin: 5pt;
 	padding: 5pt;
 	border: #ccf 1px solid;
-	line-height: 140%;
 	font-family: Verdana;
 	font-size: small;
+	line-height: 140%;
 }
 
-.verbatim {
+code {
 	font-family: Verdana;
 }
 
@@ -112,3 +119,26 @@ var {
 address {
 	float: right;
 }
+
+.olFramedCloudPopupContent h2 {
+	background-color: #fff;
+}
+
+.olFramedCloudPopupContent td {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.gm-style-iw td {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.yolp-infowindow td {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
