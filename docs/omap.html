@@ -24,8 +24,8 @@ window.onload = function() {
 <body>
 <div class="menu">
 <ul>
-<li><a href="index.html">電脳覚書</a> &gt;</li>
-<li><a href="gpsweb.html">TOP</a> &gt;</li>
+<li><a href="https://anineco.sakura.ne.jp/wiki/">電脳覚書</a> &gt;</li>
+<li><a href="index.html">TOP</a> &gt;</li>
 <li><a href="gpx2jsgi.html">GPX2JSGI</a> |</li>
 <li>地理院地図 |</li>
 <li><a href="gmap.html">Googleマップ</a> |</li>
@@ -42,7 +42,7 @@ window.onload = function() {
 <h2>地理院地図とは</h2>
 <p><a href="http://maps.gsi.go.jp/" class="extern">地理院地図</a>とは、2013年10月30日に公開された、国土地理院の最新版の地図サイトです。電子国土Web（電子国土Webシステムをベースとする国土地理院の地図サイト）の後継として試験公開されていた電子国土Web.NEXTが、名称を改めて正式に公開されたものです。</p>
 <p>地理院地図の公開と共に、地理院地図で用いられている地理院タイル（標準的な構成でタイル化された地図画像）の一般利用への提供が開始されました。地理院タイルの構成は業界標準に従っているため、多くの地図系ウェブシステムから取り扱うことが容易で、高度なウェブ地図の開発が可能になっています。</p>
-<p>従来の電子国土Webシステムでは、国土地理院謹製の独自APIでウェブ地図の諸機能が提供されていましたが、新版ではAPIは提供されず、地図系ウェブシステムから地理院タイルを利用することにより、同等（あるいはそれ以上）の機能を実現します。地理院タイルを取り扱える地図系ウェブシステムの代表的なものとして、オープンソースJavaScriptライブラリの<a href="http://openlayers.org/" class="extern">OpenLayers</a>があります。国土地理院でもOpenLayersを主として用いており、地理院タイル＋OpenLayersによるウェブ地図開発の<a href="https://maps.gsi.go.jp/help/index.html#tech" class="extern">技術情報</a>を公開しています。本項でも、ルート地図の作成にOpenLayers 2.13.1を利用します。</p>
+<p>従来の電子国土Webシステムでは、国土地理院謹製の独自APIでウェブ地図の諸機能が提供されていましたが、新版ではAPIは提供されず、地図系ウェブシステムから地理院タイルを利用することにより、同等（あるいはそれ以上）の機能を実現します。地理院タイルを取り扱える地図系ウェブシステムの代表的なものとして、オープンソースJavaScriptライブラリの<a href="http://openlayers.org/" class="extern">OpenLayers</a>があります。国土地理院でもOpenLayersを主として用いており、地理院タイル＋OpenLayersによるウェブ地図開発の<a href="https://maps.gsi.go.jp/help/https://anineco.sakura.ne.jp/wiki/#tech" class="extern">技術情報</a>を公開しています。本項でも、ルート地図の作成にOpenLayers 2.13.1を利用します。</p>
 <p>なお、地理院地図という用語は、前述のとおり国土地理院の地図サイトを指しますが、本HPでは地理院タイル＋OpenLayersで実現される新版の電子国土Webシステムという意味合いで、本項のタイトル等に用いています。</p>
 <p>地理院タイルは、Webサイトでの地図の閲覧を目的とする限りは、自由に利用可能とされています。利用に当たっては、<a href="https://maps.gsi.go.jp/help/use.html" class="extern">地理院タイルのご利用について</a>をご一読下さい。出所（国土地理院）の明示や印刷に関する制約等の利用条件があります。</p>
 <h2>表示例</h2>
@@ -73,7 +73,7 @@ window.onload = function() {
 <p>例として、サイト内に次のようなディレクトリ構成で設置したomap_ex1.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。この方法では、1ページに表示できる地理院地図版ルート地図は一つに制限されます。</p>
 <div>ディレクトリ構成例</div>
 <pre style="margin-top:0;">
-public_html / index.html（トップページ）
+public_html / https://anineco.sakura.ne.jp/wiki/（トップページ）
 	|
 	+--js / omap.js
 	+--example / routemap.kml
@@ -136,7 +136,7 @@ window.onload = function() {
 <p>例として、サイト内に次のようなディレクトリ構成で設置したomap_ex2.htmlにルート地図を表示する場合を説明します。リンクをクリックすると、当該ページを閲覧できます（ブラウザの戻るボタンで戻って下さい）。当該ページ内の「ルート地図」のリンクをクリックすると、別の窓が開いてルート地図を表示します。この方法では、1ページに設置できるルート地図の数は制限されません（ただし、同時に開けるルート地図は一つにしています）。</p>
 <div>ディレクトリ構成例</div>
 <pre style="margin-top:0;">
-public_html / index.html（トップページ）
+public_html / https://anineco.sakura.ne.jp/wiki/（トップページ）
 	|
 	+--gsimaps.html
 	+--js / routemap.js
@@ -170,6 +170,6 @@ public_html / index.html（トップページ）
 </code></pre>
 <p>パラメータheightには、表示領域の高さ＋30（ピクセル）の値を指定します。</p>
 <hr />
-<address>Copyright &copy; 2008 - 2014 <a href="index.html">あにねこ電脳覚書</a></address>
+<address>Copyright &copy; 2008 - 2014 <a href="https://anineco.sakura.ne.jp/wiki/">あにねこ電脳覚書</a></address>
 </body>
 </html>
