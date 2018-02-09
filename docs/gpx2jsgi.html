@@ -249,7 +249,7 @@ js/*               … マニュアル用JavaScript。
 <li><strong>③</strong> ラベルの色を16進数 aabbggrr で表します。ここで aa は不透明度、bb は青、gg は緑、rr は赤を表す2桁の16進数です。</li>
 <li><strong>④</strong> ラベルの表示倍率を表します。倍率1の場合は16pxの文字で表示されます。</li>
 </ul>
-<p>詳しくは<a href="https://developers.google.com/kml/documentation/kmlreference?hl=ja">KML Reference</a>のIconStyleとLabelStyleの項を参照下さい。上記の個所を恒常的に変更する場合は、GPX2JSGIパッケージ内の<code>gpx2kml.xsl</code>の次の個所を変更したのち、KMLファイルを再出力するという方法もあります。次の例では、文字色を白、文字サイズを12pxに変更しています。</p>
+<p>詳しくは<a href="https://developers.google.com/kml/documentation/kmlreference?hl=ja">KML Reference</a>のIconStyleとLabelStyleの項を参照下さい。上記の個所を恒常的に変更する場合は、アプリフォルダ内の<code>gpx2kml.xsl</code>の次の個所を変更したのち、KMLファイルへ再変換するという方法もあります。次の例では、文字色を白、文字サイズを12pxに変更しています。</p>
 <div>gpx2kml.xsl（抜粋）</div>
 <pre style="margin-top:0;"><code>&lt;Style id="{$id}"&gt;
   &lt;IconStyle&gt;
