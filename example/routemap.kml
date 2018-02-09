@@ -7,7 +7,7 @@
     <atom:author>
       <atom:name>あにねこ</atom:name>
     </atom:author>
-    <atom:link href="http://anineco.org/"/>
+    <atom:link href="https://anineco.org/"/>
     <Style id="id174268">
       <LineStyle>
         <color>b30000ff</color>
@@ -24,7 +24,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>http://anineco.org/symbols/Pin_Green.png#N951005.24.24</href>
+          <href>https://anineco.org/symbols/Pin_Green.png#N951005.24.24</href>
         </Icon>
         <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
       </IconStyle>
@@ -37,7 +37,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>http://anineco.org/symbols/Trail_Head.png#N952002.24.24</href>
+          <href>https://anineco.org/symbols/Trail_Head.png#N952002.24.24</href>
         </Icon>
         <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
       </IconStyle>
@@ -50,7 +50,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>http://anineco.org/symbols/Scenic_Area.png#N952014.24.24</href>
+          <href>https://anineco.org/symbols/Scenic_Area.png#N952014.24.24</href>
         </Icon>
         <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
       </IconStyle>
@@ -63,7 +63,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>http://anineco.org/symbols/Summit.png#N952015.24.24</href>
+          <href>https://anineco.org/symbols/Summit.png#N952015.24.24</href>
         </Icon>
         <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
       </IconStyle>
@@ -76,7 +76,7 @@
       <IconStyle>
         <scale>1</scale>
         <Icon>
-          <href>http://anineco.org/symbols/Parking_Area.png#N954025.24.24</href>
+          <href>https://anineco.org/symbols/Parking_Area.png#N954025.24.24</href>
         </Icon>
         <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
       </IconStyle>

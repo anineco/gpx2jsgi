@@ -13,7 +13,7 @@
       <individualName>あにねこ</individualName>
       <contactInfo>
         <onlineResource>
-          <linkage>http://anineco.org/</linkage>
+          <linkage>https://anineco.org/</linkage>
           <name>なし</name>
         </onlineResource>
         <address>
@@ -644,7 +644,7 @@
         <displaylevel>all</displaylevel>
         <symbol>
           <!--kashmir3d:icon 952014-->
-          <uri>http://anineco.org/symbols/Scenic_Area.png</uri>
+          <uri>https://anineco.org/symbols/Scenic_Area.png</uri>
           <size>24,static</size>
         </symbol>
       </style>
@@ -670,7 +670,7 @@
         <displaylevel>all</displaylevel>
         <symbol>
           <!--kashmir3d:icon 952015-->
-          <uri>http://anineco.org/symbols/Summit.png</uri>
+          <uri>https://anineco.org/symbols/Summit.png</uri>
           <size>24,static</size>
         </symbol>
       </style>
@@ -696,7 +696,7 @@
         <displaylevel>all</displaylevel>
         <symbol>
           <!--kashmir3d:icon 954025-->
-          <uri>http://anineco.org/symbols/Parking_Area.png</uri>
+          <uri>https://anineco.org/symbols/Parking_Area.png</uri>
           <size>24,static</size>
         </symbol>
       </style>
@@ -722,7 +722,7 @@
         <displaylevel>all</displaylevel>
         <symbol>
           <!--kashmir3d:icon 952002-->
-          <uri>http://anineco.org/symbols/Trail_Head.png</uri>
+          <uri>https://anineco.org/symbols/Trail_Head.png</uri>
           <size>24,static</size>
         </symbol>
       </style>
@@ -748,7 +748,7 @@
         <displaylevel>all</displaylevel>
         <symbol>
           <!--kashmir3d:icon 954025-->
-          <uri>http://anineco.org/symbols/Parking_Area.png</uri>
+          <uri>https://anineco.org/symbols/Parking_Area.png</uri>
           <size>24,static</size>
         </symbol>
       </style>
@@ -774,7 +774,7 @@
         <displaylevel>all</displaylevel>
         <symbol>
           <!--kashmir3d:icon 952015-->
-          <uri>http://anineco.org/symbols/Summit.png</uri>
+          <uri>https://anineco.org/symbols/Summit.png</uri>
           <size>24,static</size>
         </symbol>
       </style>
@@ -800,7 +800,7 @@
         <displaylevel>all</displaylevel>
         <symbol>
           <!--kashmir3d:icon 951005-->
-          <uri>http://anineco.org/symbols/Pin_Green.png</uri>
+          <uri>https://anineco.org/symbols/Pin_Green.png</uri>
           <size>24,static</size>
         </symbol>
       </style>
