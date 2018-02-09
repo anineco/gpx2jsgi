@@ -12,19 +12,12 @@
 div.gm-style-iw td { margin:0;padding:0;border:none; }
 div.yolp-infowindow td { margin:0;padding:0;border:none; }
 </style>
-<script type="text/javascript" src="http://map.jpn.org/sys/OpenLayers-2.13.1/OpenLayers.gsimaps.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxcuxvdd1SeIgtubznQ_JC7e08BZrIHkk"></script>
 <script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPWR0cjBWa012YVBQNiZzPWNvbnN1bWVyc2VjcmV0Jng9ZDU-"></script>
-<script type="text/javascript" src="js/omap.js"></script>
 <script type="text/javascript" src="js/gmap.js"></script>
 <script type="text/javascript" src="js/ymap.js"></script>
 <script type="text/javascript">//<![CDATA[
 window.onload = function() {
-	init_omap({
-		div: 'map_gsimap',
-		lon: 140.672862, lat: 37.864291, zoom: 15,
-		url: 'example/Mt_Hayama.kml'
-	});
 	init_gmap({
 		div: 'map_google',
 		lng: 140.672862, lat: 37.864291, zoom: 15,
@@ -55,9 +48,6 @@ window.onload = function() {
 <li>更新情報（2015-03-07）
 <img src="images/new.gif" alt="NEW" height="11" width="20" /><br />
 JSGI2KMLの説明を<a href="gpx2jsgi.html#jsgi2kml">GPX2JSGI</a>のページに移動。</li>
-<!--
-<li><strong>電子国土Webシステム（Ver.1〜4）は2014年3月末にサポートが停止され、2015年7月14日以降は運用も停止されます。</strong><br />今後は新版の<a href="omap.html">地理院地図版ルート地図</a>をご利用下さい。</li>
--->
 <li>既設の電子国土版ルート地図を地理院地図版ルート地図へ移行する方法については、<a href="transition.html">旧版からの移行</a>のページを参照下さい。</li>
 <li>このサイトの内容に関するご意見・ご質問は、<a href="https://anineco.sakura.ne.jp/bbs/">サポート掲示板</a>へお願いします。</li>
 </ul>
@@ -92,7 +82,7 @@ JSGI2KMLの説明を<a href="gpx2jsgi.html#jsgi2kml">GPX2JSGI</a>のページに
 <td valign="top">(a) カシミール3D【解説本】2万5千地形図</td>
 </tr>
 <tr>
-<td><div id="map_gsimap" style="width:430px;height:240px;"></div></td>
+<td><iframe src="gsimaps_wo_panel.html?lat=37.864291&amp;lon=140.672862&amp;zoom=15&amp;url=example/Mt_Hayama.kml" width="430" height="240"></iframe></td>
 <td valign="top">(b) 地理院地図版ルート地図（<a href="omap.html">解説</a>）<br />
 ←ページ内表示｜別ウィンドウ表示→<a href="gsimaps.html?lat=37.864291&amp;lon=140.672862&amp;zoom=15&amp;url=example/Mt_Hayama.kml" onclick="window.open(this.href,'ROUTEMAP','width=640,height=510,resizable=yes');return false;" class="routemap">ルート地図</a></td>
 </tr>
