@@ -21,14 +21,14 @@ body { width:259mm;height:172mm; } /* A4 */
 <script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=dj00aiZpPWR0cjBWa012YVBQNiZzPWNvbnN1bWVyc2VjcmV0Jng9ZDU-"></script>
 <script type="text/javascript">//<![CDATA[
 window.onload = function() {
-	var baseurl = 'https://anineco.github.io/gpx2jsgi/'; // 基準URL
+	var baseurl = 'https://anineco.sakura.ne.jp/'; // 基準URL
 	var ma = location.search.substr(1).split('&');
 	var param = {};
 	for (var i = 0; i < ma.length; i++) {
 		var s = ma[i].split('=');
 		param[s[0]] = decodeURIComponent(s[1]);
 	}
-	param.url = (param.url.slice(0, 5) == 'http:' ? '' : baseurl) + param.url;
+	param.url = (param.url.match(/^https?:/) ? '' : baseurl) + param.url;
 
 	var ymap = new Y.Map('map_canvas');
 	ymap.removeLayerSet(Y.LayerSetId.B1); // 地下街
@@ -75,7 +75,7 @@ window.onload = function() {
 <div style="float:left;">
 <!-- Begin Yahoo! JAPAN Web Services Attribution Snippet -->
 <a href="https://developer.yahoo.co.jp/about" onclick="window.open(this.href,null);return false">
-<img src="http://i.yimg.jp/images/yjdn/yjdn_attbtn2_105_17.gif" width="105" height="17" title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" style="border:none;" /></a>
+<img src="https://i.yimg.jp/images/yjdn/yjdn_attbtn2_105_17.gif" width="105" height="17" title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" style="border:none;" /></a>
 <!-- End Yahoo! JAPAN Web Services Attribution Snippet -->
 </div>
 <div style="float:left;margin-left:5px;"><input id="gps" type="checkbox" checked="checked" />

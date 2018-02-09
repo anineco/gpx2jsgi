@@ -20,14 +20,14 @@ body { width:259mm;height:172mm; } /* A4 */
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxcuxvdd1SeIgtubznQ_JC7e08BZrIHkk"></script>
 <script type="text/javascript">//<![CDATA[
 google.maps.event.addDomListener(window, 'load', function() {
-	var baseurl = 'https://anineco.github.io/gpx2jsgi/'; // 基準URL
+	var baseurl = 'https://anineco.sakura.ne.jp/'; // 基準URL
 	var ma = location.search.substr(1).split('&');
 	var param = {};
 	for (var i = 0; i < ma.length; i++) {
 		var s = ma[i].split('=');
 		param[s[0]] = decodeURIComponent(s[1]);
 	}
-	param.url = (param.url.slice(0, 5) == 'http:' ? '' : baseurl) + param.url;
+	param.url = (param.url.match(/^https?:/) ? '' : baseurl) + param.url;
 
 	var map = new google.maps.Map(document.getElementById('map_canvas'), {
 		zoom: Number(param.zoom),
