@@ -77,8 +77,8 @@
    <hotSpot x="0.5" y="0.5" xunits="fraction" yunits="fraction"/>
   </IconStyle>
   <LabelStyle>
-   <color>ffff0000</color>
-   <scale>1.1</scale>
+   <color>ffffffff</color>
+   <scale>0.75</scale>
   </LabelStyle>
  </Style>
 </xsl:template>
