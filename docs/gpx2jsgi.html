@@ -218,13 +218,13 @@ js/*               … マニュアル用JavaScript。
 <pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?&gt;
 &lt;!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
-&lt;!ENTITY baseurl "<var>http://map.jpn.org/icons/</var>"&gt;&nbsp;<strong>①</strong>
+&lt;!ENTITY baseurl "<var>http://map.jpn.org/icon/</var>"&gt;&nbsp;<strong>①</strong>
 ]&gt;
 &lt;iconlut&gt;
 &lt;icon code="901001" src="&amp;baseurl;901001.png" size="24"&gt;ピン&lt;/icon&gt;&nbsp;<strong>②</strong>
 &nbsp;：
 </code></pre>
-<p>行①は、baseurlという名前（実体名）の内容が、文字列<var>http://map.jpn.org/icons/</var>を示すことを宣言しています。行②は、コード番号901001に対応するシンボル画像のURLとサイズ（24x24画素）を定義しています。シンボル画像の位置の基準は画像の中央で固定です。&amp;baseurl;を実体参照と言い、行①の宣言により実体名の内容に置き換えられるので、このコード番号に対応するシンボル画像のURLは<var>http://map.jpn.org/icons/901001.png</var>となります。</p>
+<p>行①は、baseurlという名前（実体名）の内容が、文字列<var>http://map.jpn.org/icon/</var>を示すことを宣言しています。行②は、コード番号901001に対応するシンボル画像のURLとサイズ（24x24画素）を定義しています。シンボル画像の位置の基準は画像の中央で固定です。&amp;baseurl;を実体参照と言い、行①の宣言により実体名の内容に置き換えられるので、このコード番号に対応するシンボル画像のURLは<var>http://map.jpn.org/icon/901001.png</var>となります。</p>
 <h3><a name="customize"></a>カスタマイズ</h3>
 <p>地理院地図版ルート地図の場合、シンボル画像の右上に地点名（ラベル）が表示されます。シンボル画像の表示倍率や、ラベルの文字色・文字サイズなどは、KMLファイル内のスタイル指定（<code>&lt;Style&gt;〜&lt;/Style&gt;</code>）により、カスタマイズが可能です。</p>
 <div>KMLファイル（抜粋）</div>
