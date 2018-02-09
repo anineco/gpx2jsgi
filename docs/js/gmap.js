@@ -3,7 +3,7 @@ function init_gmap(param) {
 //	var param = {
 //		div: 'map_google',
 //		lng: 140.672862, lat: 37.864291, zoom: 15,
-//		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+//		url: 'https://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml'
 //	};
 	var map = new google.maps.Map(document.getElementById(param.div), {
 		zoom: Number(param.zoom),

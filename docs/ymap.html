@@ -16,7 +16,7 @@ window.onload = function() {
 	init_ymap({
 		div: 'map_yahoo',
 		lng: 140.672862, lat: 37.864291, zoom: 16,
-		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+		url: 'https://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml'
 	});
 };
 //]]></script>
@@ -52,7 +52,7 @@ window.onload = function() {
 </tr>
 <tr>
 <td>別ページ表示</td>
-<td><a href="yahoomap.html?lat=37.864291&amp;lng=140.672862&amp;zoom=16&amp;url=example/routemap.kml" onclick="return routemap(this.href)" class="routemap">ルート地図</a></td>
+<td><a href="yahoomap.html?lat=37.864291&amp;lng=140.672862&amp;zoom=16&amp;url=example/Mt_Hayama.kml" onclick="return routemap(this.href)" class="routemap">ルート地図</a></td>
 </tr>
 </tbody>
 </table>
@@ -68,7 +68,7 @@ window.onload = function() {
 public_html / index.html（トップページ）
 	|
 	+--js / ymap.js
-	+--example / routemap.kml
+	+--example / Mt_Hayama.kml
 	+--<a href="ymap_ex1.html">ymap_ex1.html</a>
 </pre>
 <p>次にymap_ex1.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。</p>
@@ -88,7 +88,7 @@ window.onload = function() {
 	init_ymap({
 		div: '<var>map_yahoo</var>',
 		lng: <var>140.672862</var>, lat: <var>37.864291</var>, zoom: <var>16</var>,
-		url: '<var>http://anineco.nyanta.jp/example/routemap.kml</var>'
+		url: '<var>https://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml</var>'
 	});
 };
 //]]&gt;&lt;/script&gt;</span>
@@ -107,13 +107,13 @@ window.onload = function() {
 <tr><td>lng</td><td><var>140.672862</var></td><td>表示領域の中心座標の経度（世界測地系、単位：度）</td></tr>
 <tr><td>lat</td><td><var>37.864291</var></td><td>　　　　〃　　　　　経度</td></tr>
 <tr><td>zoom</td><td><var>15</var></td><td>ズームレベル</td></tr>
-<tr><td>url</td><td><var>http://anineco.nyanta.jp/example/routemap.kml</var></td><td>KMLファイルのURL</td></tr>
+<tr><td>url</td><td><var>https://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml</var></td><td>KMLファイルのURL</td></tr>
 <tr><td>id</td><td><var>map_yahoo</var></td><td>divパラメータと同じ識別名</td></tr>
 <tr><td>width</td><td><var>640px</var></td><td>表示領域の横幅</td></tr>
 <tr><td>height</td><td><var>480px</var></td><td>　　〃　　高さ</td></tr>
 </tbody>
 </table>
-<p>ymap_ex1.htmlは、routemap.kmlの他に、次の2つのファイルを読み込んでいます。</p>
+<p>ymap_ex1.htmlは、Mt_Hayama.kmlの他に、次の2つのファイルを読み込んでいます。</p>
 <table class="base">
 <tbody>
 <tr><th>URL</th><th>説明</th></tr>
@@ -131,7 +131,7 @@ public_html / index.html（トップページ）
 	|
 	+--yahoomap.html
 	+--js / routemap.js
-	+--example / routemap.kml
+	+--example / Mt_Hayama.kml
 	+--<a href="ymap_ex2.html">ymap_ex2.html</a>
 </pre>
 <p>yahoomap.htmlの中のAPPIDと基準URL（下記の緑字の部分）は、設置したサイトに合わせて変更して下さい。</p>
@@ -139,7 +139,7 @@ public_html / index.html（トップページ）
 <pre style="margin-top:0;"><code>&lt;script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=<var>APPID</var>"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;//&lt;![CDATA[
 window.onload = function() {
-	var baseurl = '<var>http://anineco.nyanta.jp/</var>'; // 基準URL
+	var baseurl = '<var>https://anineco.github.io/gpx2jsgi/</var>'; // 基準URL
 </code></pre>
 <p>次にymap_ex2.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。パラメータの意味は、ページ内表示の場合と同じです。なお、パラメータurlに相対URLを指定した場合は、基準URLからの相対URLとなります。4つのパラメータはいずれも必須で、省略できません。</p>
 <div>ymap_ex2.html</div>
@@ -154,7 +154,7 @@ window.onload = function() {
 &lt;script type="text/javascript" src="js/routemap.js"&gt;&lt;/script&gt;</span>
 &lt;/head&gt;
 &lt;body&gt;
-&lt;p&gt;<span class="mark">&lt;a href="yahoomap.html?lat=<var>37.864291</var>&amp;amp;lng=<var>140.672862</var>&amp;amp;zoom=<var>16</var>&amp;amp;url=<var>example/routemap.kml</var>"
+&lt;p&gt;<span class="mark">&lt;a href="yahoomap.html?lat=<var>37.864291</var>&amp;amp;lng=<var>140.672862</var>&amp;amp;zoom=<var>16</var>&amp;amp;url=<var>example/Mt_Hayama.kml</var>"
  onclick="return routemap(this.href)"&gt;ルート地図&lt;/a&gt;</span>&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;

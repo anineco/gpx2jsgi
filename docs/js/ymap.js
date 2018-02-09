@@ -3,7 +3,7 @@ function init_ymap(param) {
 //	var param = {
 //		div: 'map_yahoo',
 //		lng: 140.672862, lat: 37.864291, zoom: 16,
-//		url: 'http://anineco.nyanta.jp/example/routemap.kml'
+//		url: 'http://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml'
 //	};
 	var ymap = new Y.Map(param.div);
 	ymap.removeLayerSet(Y.LayerSetId.B1); // 地下街

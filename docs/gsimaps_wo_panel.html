@@ -71,7 +71,7 @@ html,body { overflow:hidden;height:100%; }
 @media print {
 body { width:259mm;height:172mm; } /* A4 */
 #map_canvas { width:100%;height:100%; }
-#map_panel, .ol-zoom { display:none; }
+.ol-zoom { display:none; }
 /* .ol-attribution { position:absolute;right:3px;bottom:5px;background-color:#000; } */
 /* .ol-scale-line { position:absolute;left:10px;bottom:15px; } */
 }
@@ -162,46 +162,6 @@ window.onload = function() {
     view: view
   });
 
-  var sel = document.getElementById('zoom');
-  for (var i = 18; i >= 0; i--) {
-    var opt = document.createElement('option');
-    var txt = document.createTextNode(i);
-    opt.setAttribute('value', i);
-    opt.appendChild(txt);
-    sel.appendChild(opt);
-  }
-  sel.selectedIndex = param.zoom;
-  sel.onchange = function() {
-    view.setZoom(this.options[this.selectedIndex].value);
-  };
-
-  map.on('moveend', function() {
-    var i = sel.selectedIndex;
-    i = i - (view.getZoom() - sel.options[i].value);
-    if (i >= 0 && i < sel.length) {
-      sel.selectedIndex = i;
-    }
-  });
-
-  document.getElementById('mtyp').onchange = function() {
-    var v = this.options[this.selectedIndex].value;
-    std.setVisible(v == 'std');
-    ort.setVisible(v == 'ort');
-  };
-
-  document.getElementById('gps').onchange = function() {
-    kml.setVisible(this.checked);
-  };
-
-  document.getElementById('center').onclick = function() {
-    var center = ol.proj.transform(view.getCenter(), 'EPSG:3857', 'EPSG:4326');
-    alert(ol.coordinate.format(center, '緯度={y}\n経度={x}', 6));
-  };
-
-  document.getElementById('help').onclick = function() {
-    alert('Shift+Alt+マウス左ボタンで地図を回転、右上の[↑]ボタンで回転をリセットできます。シンボル画像をクリックすると地点名などが表示されます。');
-  };
-
   map.on('pointermove', function(evt) {
     if (evt.dragging) {
       return;
@@ -232,28 +192,10 @@ window.onload = function() {
 </script>
 </head>
 <body style="margin:0;">
-<div id="map_canvas" style="width:100%;position:absolute;top:0;bottom:30px;"></div>
+<div id="map_canvas" style="width:100%;position:absolute;top:0;bottom:0;"></div>
 <div id="popup" class="ol-popup">
 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
 <div id="popup-content"></div>
-</div>
-<div id="map_panel" style="width:100%;height:30px;position:absolute;bottom:0;background-color:#ccc;">
-<form action="#" style="margin:0;padding:3px 5px 0px 5px;font-family:sans-serif;font-size:small;">
-<div style="float:left;">ズーム
-<select id="zoom"></select></div>
-<div style="float:left;margin-left:5px;">マップ
-<select id="mtyp">
-<option value="std" selected="selected">標準地図</option>
-<option value="ort">写真</option>
-</select>
-</div>
-<div style="float:left;margin-left:5px;"><input id="gps" type="checkbox" checked="checked">
-GPSデータ</div>
-<div style="float:left;margin-left:5px;"><input id="center" type="button" value="中心座標"></div>
-<div style="float:left;margin-left:5px;" class="pc"><input type="button" value="印刷" onclick="window.print()"></div>
-<div style="float:left;margin-left:5px;"><input id="help" type="button" value="ヘルプ"></div>
-<div style="float:right;"><input type="button" value="閉じる" onclick="window.close()"></div>
-</form>
 </div>
 </body>
 </html>

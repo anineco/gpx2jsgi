@@ -92,6 +92,7 @@ a.extern:after {
 }
 
 strong {
+	font-family: sans-serif;
 	color: red;
 }
 
@@ -99,13 +100,13 @@ pre {
 	margin: 5pt;
 	padding: 5pt;
 	border: #ccf 1px solid;
-	font-family: Verdana;
+	font-family: Consolas;
 	font-size: small;
 	line-height: 140%;
 }
 
 code {
-	font-family: Verdana;
+	font-family: Consolas;
 }
 
 .mark {

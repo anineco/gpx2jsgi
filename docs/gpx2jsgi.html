@@ -49,12 +49,14 @@
 <p>GPX2JSGIの配布パッケージに同梱されている外部プログラムの著作権については、表1のリンク先を参照して下さい。</p>
 <table class="base">
 <caption>表1 GPX2JSGIの配布パッケージに同梱される外部プログラム</caption>
-<tbody>
+<thead>
 <tr>
 <th valign="top">配布元</th>
 <th valign="top">利用している配布ファイル</th>
 <th valign="top">ライセンス</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td valign="top"><a href="http://code.google.com/p/tclkit/" class="extern">tclkit</a></td>
 <td valign="top">tclkitsh-8.5.9-win32.upx.exe<br />tclkit-8.5.9-win32.upx.exe<br />sdx-20110317.kit</td>
@@ -190,11 +192,13 @@ js/*               … マニュアル用JavaScript。
 <h3><a name="datafolder"></a>データフォルダ</h3>
 <p>Ver.1.2およびそれ以降のGPX2JSGIでは、実行時に参照するアイコン変換表やその他のデータを %APPDATA%\map.jpn.org\gpx2jsgi をパスとするフォルダに置きます。このフォルダを、GPX2JSGIの<b>データフォルダ</b>と呼びます。ここで、%APPDATA%はWindowsのApplication Dataフォルダを指す環境変数で、OSによって次のように定められています。</p>
 <table class="base">
-  <tbody>
+  <thead>
     <tr>
       <th>OS</th>
       <th>Application Dataフォルダ</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td valign="top">Windows XP</td>
 	  <td valign="top">\Documents and Settings\<var>&lt;ユーザ名&gt;</var>\Application Data</td>
@@ -214,13 +218,56 @@ js/*               … マニュアル用JavaScript。
 <pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?&gt;
 &lt;!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
-&lt;!ENTITY baseurl "<var>http://map.jpn.org/icons/</var>"&gt;&nbsp;<span style="color:red;">①</span>
+&lt;!ENTITY baseurl "<var>http://map.jpn.org/icons/</var>"&gt;&nbsp;<strong>①</strong>
 ]&gt;
 &lt;iconlut&gt;
-&lt;icon code="901001" src="&amp;baseurl;901001.png" size="24"&gt;ピン&lt;/icon&gt;&nbsp;<span style="color:red;">②</span>
+&lt;icon code="901001" src="&amp;baseurl;901001.png" size="24"&gt;ピン&lt;/icon&gt;&nbsp;<strong>②</strong>
 &nbsp;：
 </code></pre>
 <p>行①は、baseurlという名前（実体名）の内容が、文字列<var>http://map.jpn.org/icons/</var>を示すことを宣言しています。行②は、コード番号901001に対応するシンボル画像のURLとサイズ（24x24画素）を定義しています。シンボル画像の位置の基準は画像の中央で固定です。&amp;baseurl;を実体参照と言い、行①の宣言により実体名の内容に置き換えられるので、このコード番号に対応するシンボル画像のURLは<var>http://map.jpn.org/icons/901001.png</var>となります。</p>
+<h3><a name="customize"></a>カスタマイズ</h3>
+<p>詳しくは<a href="https://developers.google.com/kml/documentation/kmlreference?hl=ja">KML Reference</a>のIconStyleとLabelStyleの項を参照して下さい。</p>
+<div>routemap.kml（抜粋）</div>
+<pre style="margin-top:0;"><code>&lt;Style id="N952015"&gt;
+  &lt;IconStyle&gt;
+    &lt;scale&gt;<var>1</var>&lt;/scale&gt;&nbsp;<strong>①</strong>
+    &lt;Icon&gt;
+      &lt;href&gt;http://map.jpn.org/icon/952015.png#N952015.24.24&lt;/href&gt;
+    &lt;/Icon&gt;
+    &lt;hotSpot x="<var>0.5</var>" y="<var>0.5</var>" xunits="fraction" yunits="fraction"/&gt;&nbsp;<strong>②</strong>
+  &lt;/IconStyle&gt;
+  &lt;LabelStyle&gt;
+    &lt;color&gt;<var>ffff0000</var>&lt;/color&gt;&nbsp;<strong>③</strong>
+    &lt;scale&gt;<var>1.1</var>&lt;/scale&gt;&nbsp;<strong>④</strong>
+  &lt;/LabelStyle&gt;
+&lt;/Style&gt;
+</code></pre>
+<ul style="list-style-type:none;padding-left:0;">
+<li><strong>①</strong> アイコン画像の表示倍率を指定します。</li>
+<li><strong>②</strong> 緯度、経度で指定される地点に対応するアイコン画像内の点の相対座標を指定します。(x,y)=(0.5,0.5)は画像の中心を表します。</li>
+<li><strong>③</strong> ラベルの色を16進数 aabbggrr で表します。ここで aa は不透明度、bb は青、gg は緑、rr は赤を表す2桁の16進数です。</li>
+<li><strong>④</strong> ラベルの表示倍率を表します。倍率1の場合は16pxの文字で表示されます。</li>
+</ul>
+<div>gpx2kml.xsl（抜粋）</div>
+<pre style="margin-top:0;"><code>&lt;Style id="{$id}"&gt;
+  &lt;IconStyle&gt;
+    &lt;scale&gt;<var>1</var>&lt;/scale&gt;&nbsp;<strong>①</strong>
+    &lt;Icon&gt;
+      &lt;href&gt;
+        &lt;xsl:value-of select="$icon/@src"/&gt;
+        &lt;xsl:if test="starts-with($icon/@src,'http:')"&gt;
+          &lt;xsl:value-of select="concat('#',$id,'.',$icon/@size,'.',$icon/@size)"/&gt;
+        &lt;/xsl:if&gt;
+      &lt;/href&gt;
+    &lt;/Icon&gt;
+    &lt;hotSpot x="<var>0.5</var>" y="<var>0.5</var>" xunits="fraction" yunits="fraction"/&gt;&nbsp;<strong>②</strong>
+  &lt;/IconStyle&gt;
+  &lt;LabelStyle&gt;
+    &lt;color&gt;<var>ffffffff</var>&lt;/color&gt;&nbsp;<strong>③</strong>
+    &lt;scale&gt;<var>0.75</var>&lt;/scale&gt;&nbsp;<strong>④</strong>
+  &lt;/LabelStyle&gt;
+&lt;/Style&gt;
+</code></pre>
 <h2>付属ユーティリティ</h2>
 <h3>ICONVIEW</h3>
 <p>ICONVIEWは、カシミール3Dでウェイポイントに設定可能なアイコンをシンボル画像（透過処理済PNG形式）に一括変換し、それ用のアイコン変換表を作成するユーティリティです。動作には、カシミール3Dがインストールされていることが必要です。</p>
