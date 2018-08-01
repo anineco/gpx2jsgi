@@ -16,7 +16,7 @@ window.onload = function() {
 	init_ymap({
 		div: 'map_yahoo',
 		lng: 140.672862, lat: 37.864291, zoom: 16,
-		url: 'https://anineco.sakura.ne.jp/example/Mt_Hayama.kml'
+		url: 'https://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml'
 	});
 };
 //]]></script>
@@ -88,7 +88,7 @@ window.onload = function() {
 	init_ymap({
 		div: '<var>map_yahoo</var>',
 		lng: <var>140.672862</var>, lat: <var>37.864291</var>, zoom: <var>16</var>,
-		url: '<var>https://anineco.sakura.ne.jp/example/Mt_Hayama.kml</var>'
+		url: '<var>https://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml</var>'
 	});
 };
 //]]&gt;&lt;/script&gt;</span>
@@ -107,7 +107,7 @@ window.onload = function() {
 <tr><td>lng</td><td><var>140.672862</var></td><td>表示領域の中心座標の経度（世界測地系、単位：度）</td></tr>
 <tr><td>lat</td><td><var>37.864291</var></td><td>　　　　〃　　　　　経度</td></tr>
 <tr><td>zoom</td><td><var>15</var></td><td>ズームレベル</td></tr>
-<tr><td>url</td><td><var>https://anineco.sakura.ne.jp/example/Mt_Hayama.kml</var></td><td>KMLファイルのURL</td></tr>
+<tr><td>url</td><td><var>https://anineco.github.io/gpx2jsgi/example/Mt_Hayama.kml</var></td><td>KMLファイルのURL</td></tr>
 <tr><td>id</td><td><var>map_yahoo</var></td><td>divパラメータと同じ識別名</td></tr>
 <tr><td>width</td><td><var>640px</var></td><td>表示領域の横幅</td></tr>
 <tr><td>height</td><td><var>480px</var></td><td>　　〃　　高さ</td></tr>
@@ -139,7 +139,7 @@ public_html / index.html（トップページ）
 <pre style="margin-top:0;"><code>&lt;script type="text/javascript" src="https://map.yahooapis.jp/js/V1/jsapi?appid=<var>APPID</var>"&gt;&lt;/script&gt;
 &lt;script type="text/javascript"&gt;//&lt;![CDATA[
 window.onload = function() {
-	var baseurl = '<var>https://anineco.sakura.ne.jp/</var>'; // 基準URL
+	var baseurl = '<var>https://anineco.github.io/gpx2jsgi/</var>'; // 基準URL
 </code></pre>
 <p>次にymap_ex2.htmlの内容を示します。赤字はルート地図の表示のために追加した部分、緑字は設定する必要があるパラメータを示します。パラメータの意味は、ページ内表示の場合と同じです。なお、パラメータurlに相対URLを指定した場合は、基準URLからの相対URLとなります。4つのパラメータはいずれも必須で、省略できません。</p>
 <div>ymap_ex2.html</div>
