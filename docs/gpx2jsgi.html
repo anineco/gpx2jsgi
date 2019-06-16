@@ -12,7 +12,7 @@
 <body>
 <div class="menu">
 <ul>
-<li><a href="http://anineco.nyanta.jp/">電脳覚書</a> &gt;</li>
+<li><a href="https://anineco.nyanta.jp/">電脳覚書</a> &gt;</li>
 <li><a href="index.html">TOP</a> &gt;</li>
 <li>GPX2JSGI |</li>
 <li><a href="omap.html">地理院地図</a> |</li>
@@ -25,7 +25,7 @@
 <ul>
 <li>更新情報（2015-03-07）：<a href="#jsgi2kml">JSGI2KML</a>の説明を追加。
 <img src="images/new.gif" alt="NEW" height="11" width="20" /></li>
-<li>このサイトに関するご意見・ご質問・ご要望は、<a href="http://anineco.nyanta.jp/bbs/">サポート掲示板</a>へお願いします。</li>
+<li>このサイトに関するご意見・ご質問・ご要望は、<a href="https://anineco.nyanta.jp/bbs/">サポート掲示板</a>へお願いします。</li>
 </ul>
 <h2>GPX2JSGIとは？</h2>
 <p>GPX2JSGI（GPX→KMLコンバータ）は、カシミール3Dで作成してGPX形式で保存したGPSデータ（ウェイポイント、ルート、トラック）を、地理院地図やGoogleマップ、Yahoo!地図にオーバーレイ（上乗せ表示）できるKML形式に変換するデスクトップアプリケーションです。当初は、電子国土Webシステムで上乗せデータとして用いられるJSGI形式への変換を行うソフトウェアとして開発したものですが、その後、KML形式への変換も行えるように機能を拡張したものです。</p>
@@ -169,7 +169,7 @@ js/*               … マニュアル用JavaScript。
 <p>カシミール3Dの「ウェイポイント/ルートポイントのプロパティ」（図4）の設定項目が、地理院地図でどのように表示されるかを説明します。</p>
 <p style="text-align:center;"><img src="images/wptprop.png" alt="図4" height="343" width="403" /><br />図4 ウェイポイント/ルートポイントのプロパティ</p>
 <ul>
-  <li><b>アイコン</b>：カシミール3Dで指定したアイコンは、GPX形式の中では「コード番号」で記録されます。GPX2JSGIは、<a href="#datafolder">データフォルダ</a>の「アイコン変換表」（ファイル名 iconlut.xml）を参照して、コード番号を対応するシンボル画像のURLに変換します。初期設定では、http://map.jpn.org/（GPX2JSGIの配布サイトの別名です）に設置済のシンボル画像のセットにアクセスします。この画像セットは、カシミール3Dのアイコンの全てに対応しています。アイコン変換表の詳細と、シンボル画像のカスタマイズの方法については、<a href="#technote">技術情報</a>を参照して下さい。</li>
+  <li><b>アイコン</b>：カシミール3Dで指定したアイコンは、GPX形式の中では「コード番号」で記録されます。GPX2JSGIは、<a href="#datafolder">データフォルダ</a>の「アイコン変換表」（ファイル名 iconlut.xml）を参照して、コード番号を対応するシンボル画像のURLに変換します。初期設定では、https://map.jpn.org/（GPX2JSGIの配布サイトの別名です）に設置済のシンボル画像のセットにアクセスします。この画像セットは、カシミール3Dのアイコンの全てに対応しています。アイコン変換表の詳細と、シンボル画像のカスタマイズの方法については、<a href="#technote">技術情報</a>を参照して下さい。</li>
   <li><b>名前</b>、<b>GPSでの備考</b>：地理院地図において、シンボル（点型データ）にマウスポインタを重ねると、ポップアップ窓で表示されます。GPSでの備考にはシンボルの属性情報を「項目名1=値1,項目名2=値2,…」のように項目名と値を「=」（イコール）で接続し、カンマ区切りで列挙して記述します。項目名の先頭に「@」（アットマーク）を付けると、その項目は表示されません。また、項目名を「URL」とすると、値はURLと解釈されてハイパーリンクが張られます。</li>
 </ul>
 <h3>ルート</h3>
@@ -218,13 +218,13 @@ js/*               … マニュアル用JavaScript。
 <pre style="margin-top:0;"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?&gt;
 &lt;!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
-&lt;!ENTITY baseurl "<var>http://map.jpn.org/icon/</var>"&gt;&nbsp;<strong>①</strong>
+&lt;!ENTITY baseurl "<var>https://map.jpn.org/icon/</var>"&gt;&nbsp;<strong>①</strong>
 ]&gt;
 &lt;iconlut&gt;
 &lt;icon code="901001" src="&amp;baseurl;901001.png" size="24"&gt;ピン&lt;/icon&gt;&nbsp;<strong>②</strong>
 &nbsp;：
 </code></pre>
-<p>行①は、baseurlという名前（実体名）の内容が、文字列<var>http://map.jpn.org/icon/</var>を示すことを宣言しています。行②は、コード番号901001に対応するシンボル画像のURLとサイズ（24x24画素）を定義しています。シンボル画像の位置の基準は画像の中央で固定です。&amp;baseurl;を実体参照と言い、行①の宣言により実体名の内容に置き換えられるので、このコード番号に対応するシンボル画像のURLは<var>http://map.jpn.org/icon/901001.png</var>となります。</p>
+<p>行①は、baseurlという名前（実体名）の内容が、文字列<var>https://map.jpn.org/icon/</var>を示すことを宣言しています。行②は、コード番号901001に対応するシンボル画像のURLとサイズ（24x24画素）を定義しています。シンボル画像の位置の基準は画像の中央で固定です。&amp;baseurl;を実体参照と言い、行①の宣言により実体名の内容に置き換えられるので、このコード番号に対応するシンボル画像のURLは<var>https://map.jpn.org/icon/901001.png</var>となります。</p>
 <h3><a name="customize"></a>カスタマイズ</h3>
 <p>地理院地図版ルート地図の場合、シンボル画像の右上に地点名（ラベル）が表示されます。シンボル画像の表示倍率や、ラベルの文字色・文字サイズなどは、KMLファイル内のスタイル指定（<code>&lt;Style&gt;〜&lt;/Style&gt;</code>）により、カスタマイズが可能です。</p>
 <div>KMLファイル（抜粋）</div>
@@ -232,7 +232,7 @@ js/*               … マニュアル用JavaScript。
   &lt;IconStyle&gt;
     &lt;scale&gt;<var>1</var>&lt;/scale&gt;&nbsp;<strong>①</strong>
     &lt;Icon&gt;
-      &lt;href&gt;http://map.jpn.org/icon/952015.png#N952015.24.24&lt;/href&gt;
+      &lt;href&gt;https://map.jpn.org/icon/952015.png#N952015.24.24&lt;/href&gt;
     &lt;/Icon&gt;
     &lt;hotSpot x="<var>0.5</var>" y="<var>0.5</var>" xunits="fraction" yunits="fraction"/&gt;&nbsp;<strong>②</strong>
   &lt;/IconStyle&gt;
@@ -318,13 +318,13 @@ js/*               … マニュアル用JavaScript。
     </tr>
     <tr>
       <td valign="top" class="nowrap">2011-03-28</td>
-      <td valign="top">GPX2JSGIの公式サイトを<a href="http://anineco.nyanta.jp/gpx2jsgi.html">http://anineco.nyanta.jp/gpx2jsgi.html</a>に移転して、全面的にリニューアル。<br />
+      <td valign="top">GPX2JSGIの公式サイトを<a href="https://anineco.nyanta.jp/gpx2jsgi.html">https://anineco.nyanta.jp/gpx2jsgi.html</a>に移転して、全面的にリニューアル。<br />
 GPX2JSGI（GPX→JSGIコンバータ）Ver.1.2 を公開。<br />
 (1) インストールの簡易化<br />
 ・必要な外部プログラム全てを配布パッケージに同梱。<br />
 ・Tclスクリプトをtclkitを用いて実行形式にラッピング。ActiveTclのインストールも不要。<br />
 (2) アイコン変換機能の拡充<br />
-・カシミール3Dのアイコンに対応するシンボル画像をhttp://map.jpn.org/に設置。<br />
+・カシミール3Dのアイコンに対応するシンボル画像をhttps://map.jpn.org/に設置。<br />
 ・ルートポイントに設定したアイコンをシンボル画像に変換する機能を追加。<br />
 (3) KML形式への変換にフル対応<br />
 ・JSGI形式と同様に、アイコンをシンボル画像に変換。<br />
@@ -412,6 +412,6 @@ GPX2JSGI（GPX→JSGIコンバータ）Ver.1.2 を公開。<br />
   </tbody>
 </table>
 <hr />
-<address>Copyright &copy; 2008 - 2015 <a href="http://anineco.nyanta.jp/">あにねこ電脳覚書</a></address>
+<address>Copyright &copy; 2008 - 2015 <a href="https://anineco.nyanta.jp/">あにねこ電脳覚書</a></address>
 </body>
 </html>
