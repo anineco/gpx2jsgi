@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?>
-<!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
+<!DOCTYPE iconlut [
+<!ELEMENT iconlut (icon*)>
+<!ELEMENT icon (#PCDATA)>
+<!ATTLIST icon code CDATA #REQUIRED
+               size CDATA #REQUIRED
+               src CDATA #REQUIRED>
 <!ENTITY baseurl "https://map.jpn.org/icon/">
 ]>
 <iconlut>
