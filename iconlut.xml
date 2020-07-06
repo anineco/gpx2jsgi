@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="iconlut2html.xsl"?>
 <!DOCTYPE iconlut SYSTEM "iconlut.dtd" [
-<!ENTITY baseurl "http://map.jpn.org/icon/">
+<!ENTITY baseurl "https://map.jpn.org/icon/">
 ]>
 <iconlut>
 <icon code="901001" src="&baseurl;901001.png" size="24">ピン</icon>
